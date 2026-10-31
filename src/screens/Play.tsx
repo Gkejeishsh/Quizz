@@ -153,11 +153,9 @@ export function Play({ testId }: { testId: string }) {
 
   const toggleFlag = () => {
     haptic('light')
-    setFlags((prev) => {
-      const next = prev.includes(q?.n ?? -1) ? prev.filter((n) => n !== q?.n) : [...prev, q!.n]
-      persist(answersRef.current, indexRef.current, next)
-      return next
-    })
+    const next = flags.includes(q.n) ? flags.filter((n) => n !== q.n) : [...flags, q.n]
+    setFlags(next)
+    persist(answersRef.current, indexRef.current, next)
   }
 
   const clearAdvance = () => {

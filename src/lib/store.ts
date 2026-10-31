@@ -108,7 +108,10 @@ export const useStore = create<Store>()((set, get) => {
       attempts: s.attempts,
       drafts: s.drafts,
     }
-    saveState(snapshot).catch((err) => console.warn('Quizz: could not persist state', err))
+    saveState(snapshot).catch((err) => {
+      console.warn('Quizz: could not persist state', err)
+      get().toast('Could not save to this device — storage may be full', 'error')
+    })
   }
   const schedulePersist = () => {
     if (persistTimer) clearTimeout(persistTimer)
