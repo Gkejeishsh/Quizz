@@ -3,6 +3,10 @@ import type { SVGProps } from 'react'
 type P = SVGProps<SVGSVGElement>
 
 const base = (props: P) => ({
+  // Explicit intrinsic size: a bare <svg> would otherwise default to 300x150.
+  // Any CSS rule (.btn > svg, .icon-btn svg, inline styles…) still wins.
+  width: '1em',
+  height: '1em',
   viewBox: '0 0 24 24',
   fill: 'none',
   stroke: 'currentColor',

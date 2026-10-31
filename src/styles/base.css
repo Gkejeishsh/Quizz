@@ -277,16 +277,14 @@ a {
 /* ---------------- icons ---------------- */
 
 /*
- * Inline SVGs carry no intrinsic size, so a bare <svg> falls back to 300x150 and
- * escapes its container (that is what happened to the book icon in "Show
- * explanation"). Icons now start at the text size; components that want a
- * bigger one set it on their own class.
+ * Icons (src/components/Icons.tsx) carry width/height="1em" so they can never
+ * escape their button — a bare <svg> defaults to 300x150. Their size is still
+ * controlled by component classes below (.btn > svg, .icon-btn svg, …).
+ * This rule is deliberately on `flex` only: KaTeX draws radicals and delimiters
+ * with <svg> elements whose size must stay exactly as it set it.
  */
 svg {
-  width: 1em;
-  height: 1em;
   flex: none;
-  vertical-align: -0.125em;
 }
 
 button {
