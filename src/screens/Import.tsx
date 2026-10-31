@@ -172,7 +172,7 @@ export function ImportScreen() {
           <input
             ref={inputRef}
             type="file"
-            accept=".quizz,.json,application/json"
+            accept=".quizz,.json,application/json,application/octet-stream,text/plain"
             hidden
             onChange={(e) => {
               const f = e.target.files?.[0]

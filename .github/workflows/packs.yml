@@ -1,0 +1,63 @@
+name: packs
+
+# Publishes every .quizz file in packs/ as a GitHub Release asset.
+# Release assets are served with Content-Disposition: attachment, so tapping a
+# link downloads the file instead of showing it as text in the browser.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'arena/**']
+    paths:
+      - 'packs/**.quizz'
+      - '.github/workflows/packs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Create or reuse the packs release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG=packs
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" \
+              --title "Quizz test packs" \
+              --latest=false \
+              --notes "Downloadable \`.quizz\` test files.
+
+          Open Quizz → **Add new test** → choose the downloaded file. Nothing else needed: the app copies the whole test into its own database, so you can delete the file afterwards."
+          fi
+
+      - name: Upload each pack
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          gh release upload packs packs/*.quizz --clobber
+          echo "uploaded:" && ls -1 packs/*.quizz
+
+      - name: Refresh the release notes with a download table
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "Downloadable \`.quizz\` test files."
+            echo
+            echo "| Test file | Size |"
+            echo "|---|---|"
+            gh release view packs --json assets \
+              --jq '.assets | sort_by(.name) | .[] | "| [\(.name)](\(.url)) | \(.size / 1024 | floor) KB |"'
+            echo
+            echo "Open Quizz → **Add new test** → choose the downloaded file. The app copies the whole test into its own database, so you can delete the file afterwards."
+          } > /tmp/notes.md
+          gh release edit packs --notes-file /tmp/notes.md
+          cat /tmp/notes.md
