@@ -1,0 +1,127 @@
+/* ===========================================================
+   Quizz — design tokens
+   Dark is the primary theme; light is a full peer.
+   =========================================================== */
+
+:root {
+  /* type */
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-ui: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* spacing (8pt) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-14: 56px;
+
+  /* radii */
+  --r-xs: 10px;
+  --r-sm: 14px;
+  --r-md: 18px;
+  --r-lg: 24px;
+  --r-xl: 30px;
+  --r-pill: 999px;
+
+  /* motion */
+  --dur-instant: 90ms;
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-screen: 260ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-exit: cubic-bezier(0.3, 0, 0.8, 0.15);
+
+  /* insets — overwritten by the native shell (Capacitor), env() as fallback */
+  --inset-top: env(safe-area-inset-top, 0px);
+  --inset-right: env(safe-area-inset-right, 0px);
+  --inset-bottom: env(safe-area-inset-bottom, 0px);
+  --inset-left: env(safe-area-inset-left, 0px);
+
+  --app-max: 560px;
+  --tabbar-h: 68px;
+}
+
+/* ---------------- dark ---------------- */
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #080a11;
+  --bg-soft: #0b0e17;
+  --surface: #11141f;
+  --surface-2: #181d2c;
+  --surface-3: #212739;
+  --ink: #edeff8;
+  --ink-2: #a6adc4;
+  --ink-3: #757d95;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+
+  --primary: #8e8dff;
+  --primary-deep: #5a5bf0;
+  --primary-soft: #1a1c3a;
+  --on-primary: #ffffff;
+  --accent: #38e1f0;
+  --success: #3be0b0;
+  --success-soft: rgba(59, 224, 176, 0.12);
+  --danger: #ff6b76;
+  --danger-soft: rgba(255, 107, 118, 0.13);
+  --warning: #f5b942;
+  --warning-soft: rgba(245, 185, 66, 0.13);
+
+  --grad-brand: linear-gradient(135deg, #7b6bff 0%, #5a5bf0 48%, #0fb5c9 100%);
+  --grad-text: linear-gradient(120deg, #b9b4ff 0%, #8e8dff 45%, #38e1f0 100%);
+  --grad-glow: radial-gradient(120% 90% at 20% 0%, rgba(123, 107, 255, 0.22), transparent 60%),
+    radial-gradient(100% 80% at 95% 8%, rgba(56, 225, 240, 0.13), transparent 62%);
+
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -24px rgba(0, 0, 0, 0.9);
+  --shadow-float: 0 30px 60px -30px rgba(0, 0, 0, 0.95);
+  --shadow-primary: 0 14px 34px -16px rgba(90, 91, 240, 0.85);
+  --scrim: rgba(3, 4, 8, 0.66);
+  --skeleton: linear-gradient(90deg, #151a27 25%, #1e2435 37%, #151a27 63%);
+}
+
+/* ---------------- light ---------------- */
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: #f4f5fa;
+  --bg-soft: #eef0f7;
+  --surface: #ffffff;
+  --surface-2: #eceff7;
+  --surface-3: #e2e6f2;
+  --ink: #0c1020;
+  --ink-2: #4c5368;
+  --ink-3: #7a8199;
+  --line: rgba(12, 16, 32, 0.09);
+  --line-strong: rgba(12, 16, 32, 0.16);
+
+  --primary: #5a5bf0;
+  --primary-deep: #4a45d8;
+  --primary-soft: #ececff;
+  --on-primary: #ffffff;
+  --accent: #0fb5c9;
+  --success: #0e9f6e;
+  --success-soft: rgba(14, 159, 110, 0.1);
+  --danger: #d93a46;
+  --danger-soft: rgba(217, 58, 70, 0.1);
+  --warning: #b47407;
+  --warning-soft: rgba(180, 116, 7, 0.12);
+
+  --grad-brand: linear-gradient(135deg, #7b6bff 0%, #5a5bf0 52%, #0fa8c4 100%);
+  --grad-text: linear-gradient(120deg, #5a4fe0 0%, #5a5bf0 45%, #0b93ab 100%);
+  --grad-glow: radial-gradient(120% 90% at 20% 0%, rgba(123, 107, 255, 0.18), transparent 62%),
+    radial-gradient(100% 80% at 95% 6%, rgba(15, 181, 201, 0.12), transparent 60%);
+
+  --shadow-card: 0 1px 2px rgba(12, 16, 32, 0.05), 0 12px 28px -18px rgba(12, 16, 32, 0.25);
+  --shadow-float: 0 24px 50px -24px rgba(12, 16, 32, 0.28);
+  --shadow-primary: 0 14px 30px -14px rgba(90, 91, 240, 0.55);
+  --scrim: rgba(12, 16, 32, 0.38);
+  --skeleton: linear-gradient(90deg, #e8ebf3 25%, #f2f4fa 37%, #e8ebf3 63%);
+}

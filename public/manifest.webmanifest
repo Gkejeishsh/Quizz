@@ -1,0 +1,13 @@
+{
+  "name": "Quizz — offline quiz player",
+  "short_name": "Quizz",
+  "description": "Play your AI-generated tests as real quizzes, offline.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080A11",
+  "theme_color": "#080A11",
+  "icons": [
+    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
