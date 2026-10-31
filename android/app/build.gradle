@@ -15,7 +15,6 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode (project.findProperty('quizzVersionCode') ?: 1).toInteger()
         versionName (project.findProperty('quizzVersionName') ?: "1.0.0")
-        resourceConfigurations += ['en']
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -24,8 +23,8 @@ android {
         }
     }
     signingConfigs {
-        if (hasKeystore) {
-            release {
+        release {
+            if (hasKeystore) {
                 storeFile keystoreFile
                 storePassword System.getenv('QUIZZ_KEYSTORE_PASSWORD') ?: 'quizz-personal-key'
                 keyAlias System.getenv('QUIZZ_KEY_ALIAS') ?: 'quizz'
@@ -49,7 +48,7 @@ android {
         }
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE*', 'META-INF/NOTICE*']
         }
