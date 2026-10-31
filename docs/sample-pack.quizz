@@ -1,0 +1,63 @@
+{
+  "format": "quizz-pack",
+  "formatVersion": 1,
+  "id": "pck_sample_chem03",
+  "title": "Sample — Chemical Bonding",
+  "subject": "Chemistry",
+  "language": "en",
+  "createdAt": "2026-10-31T09:12:00Z",
+  "instructions": "Attempt all questions. 1 mark each. No negative marking.",
+  "durationMinutes": 0,
+  "source": {
+    "fileName": "sample-chem-ch3.pdf",
+    "pages": 3,
+    "generator": "ChatGPT"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "n": 1,
+      "type": "single",
+      "question": "Which of the following molecules contains a triple covalent bond?",
+      "options": [
+        { "key": "A", "text": "O₂" },
+        { "key": "B", "text": "N₂" },
+        { "key": "C", "text": "Cl₂" },
+        { "key": "D", "text": "H₂" }
+      ],
+      "answer": ["B"],
+      "explanation": "N₂ is held together by one sigma and two pi bonds, i.e. a triple bond (N≡N). O₂ has a double bond, while Cl₂ and H₂ have single bonds.",
+      "difficulty": "medium",
+      "tags": ["covalent-bonding"]
+    },
+    {
+      "n": 2,
+      "type": "single",
+      "question": "The number of electrons shared between two nitrogen atoms in N₂ is:",
+      "options": [
+        { "key": "A", "text": "2" },
+        { "key": "B", "text": "4" },
+        { "key": "C", "text": "6" },
+        { "key": "D", "text": "8" }
+      ],
+      "answer": ["C"],
+      "explanation": "A triple bond consists of three shared electron pairs, hence 3 × 2 = 6 electrons are shared.",
+      "difficulty": "easy"
+    },
+    {
+      "n": 3,
+      "type": "single",
+      "question": "If $x = 3$, what is the value of $2x + 1$? (mixed-subject example for LaTeX rendering)",
+      "options": [
+        { "key": "A", "text": "$x + 1 = 4$" },
+        { "key": "B", "text": "$2x = 6$" },
+        { "key": "C", "text": "$2x + 1 = 7$" },
+        { "key": "D", "text": "$x^2 = 9$" }
+      ],
+      "answer": ["C"],
+      "explanation": "Substituting $x = 3$ gives $2(3) + 1 = 7$.",
+      "difficulty": "easy"
+    }
+  ],
+  "assets": {}
+}

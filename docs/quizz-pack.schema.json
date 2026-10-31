@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://quizz.local/schema/quizz-pack.schema.json",
+  "title": "Quizz Pack",
+  "description": "A self-contained test (questions, answer keys, explanations) consumed by the Quizz Android app. No AI, no network required.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "formatVersion", "id", "title", "createdAt", "questions"],
+  "properties": {
+    "format": { "const": "quizz-pack" },
+    "formatVersion": { "type": "integer", "enum": [1] },
+    "id": { "type": "string", "pattern": "^pck_[A-Za-z0-9_-]{6,40}$" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "subject": { "type": "string", "maxLength": 60 },
+    "language": { "type": "string", "default": "en" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "instructions": { "type": "string", "maxLength": 2000 },
+    "durationMinutes": { "type": "integer", "minimum": 0, "maximum": 600, "default": 0 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fileName": { "type": "string" },
+        "pages": { "type": "integer", "minimum": 1 },
+        "generator": { "type": "string" },
+        "checksum": { "type": "string" }
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "text"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["passage", "diagram", "table", "section"] },
+          "title": { "type": "string" },
+          "text": { "type": "string" },
+          "asset": { "type": ["string", "null"] },
+          "instructions": { "type": "string" }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 500,
+      "items": { "$ref": "#/definitions/question" }
+    },
+    "assets": {
+      "type": "object",
+      "description": "Optional embedded binary assets keyed by id, referenced from question.asset or option.asset.",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["mime", "data"],
+        "properties": {
+          "mime": { "enum": ["image/png", "image/jpeg", "image/webp", "image/svg+xml"] },
+          "data": { "type": "string", "contentEncoding": "base64" },
+          "width": { "type": "integer" },
+          "height": { "type": "integer" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["n", "type", "question", "options", "answer"],
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Question number exactly as printed in the source PDF."
+        },
+        "group": { "type": ["string", "null"] },
+        "type": { "enum": ["single", "multi", "truefalse"] },
+        "question": { "type": "string", "minLength": 1 },
+        "asset": { "type": ["string", "null"] },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "text"],
+            "properties": {
+              "key": { "type": "string", "pattern": "^[A-F]$" },
+              "text": { "type": "string", "minLength": 1 },
+              "asset": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "answer": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": { "type": "string", "pattern": "^[A-F]$" }
+        },
+        "explanation": { "type": "string" },
+        "difficulty": { "enum": ["easy", "medium", "hard"] },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "single" } } },
+          "then": { "properties": { "answer": { "maxItems": 1 } } }
+        }
+      ]
+    }
+  }
+}
