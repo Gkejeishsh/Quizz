@@ -6,6 +6,10 @@ apply plugin: 'com.android.application'
 def keystoreFile = rootProject.file('quizz-release.jks')
 def hasKeystore = keystoreFile.exists()
 
+// Version can be overridden by CI: -PquizzVersionCode=12 -PquizzVersionName=1.2.0
+def quizzVersionCode = (project.hasProperty('quizzVersionCode') ? project.property('quizzVersionCode') : '1').toString().toInteger()
+def quizzVersionName = (project.hasProperty('quizzVersionName') ? project.property('quizzVersionName') : '1.0.0').toString()
+
 android {
     namespace = "com.quizz.app"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -13,8 +17,8 @@ android {
         applicationId "com.quizz.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode (project.findProperty('quizzVersionCode') ?: 1).toInteger()
-        versionName (project.findProperty('quizzVersionName') ?: "1.0.0")
+        versionCode quizzVersionCode
+        versionName quizzVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
