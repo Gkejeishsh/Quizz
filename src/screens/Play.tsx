@@ -313,11 +313,6 @@ export function Play({ testId }: { testId: string }) {
               })}
             </div>
 
-            {isMulti && (
-              <button className="btn btn--primary btn--block" style={{ marginTop: 16 }} onClick={goNext}>
-                {index === total - 1 ? 'Finish test' : 'Next question'}
-              </button>
-            )}
           </motion.div>
         </AnimatePresence>
       </div>

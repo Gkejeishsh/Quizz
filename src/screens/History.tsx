@@ -141,9 +141,9 @@ export function HistoryScreen() {
                       <span style={{ fontSize: 10, color: 'var(--ink-3)', textTransform: 'uppercase', letterSpacing: '.06em' }}>best</span>
                     </span>
                     <ChevronRight style={{ width: 16, height: 16, opacity: 0.45, flex: 'none' }} />
-                    <div style={{ flex: 'none' }}>
+                    <span style={{ flex: 'none', display: 'block' }}>
                       <Sparkline values={pcts.length ? pcts : [percent(g.latest.score, g.latest.total)]} />
-                    </div>
+                    </span>
                   </motion.button>
                 )
               })}
