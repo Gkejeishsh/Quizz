@@ -2,9 +2,9 @@ import { useRef, useState } from 'react'
 import { motion } from 'motion/react'
 import { useStore } from '../lib/store'
 import { validatePack, packToReport, type ValidationResult } from '../lib/pack'
-import { DEMO_PACKS } from '../data/demoPacks'
+import { DEMO_PACKS, DEMO_PACK_FILES } from '../data/demoPacks'
 import { Page, Sheet, Field, Segmented } from '../components/ui'
-import { AlertCircle, CheckCircle, FileText, FolderPlus, Info, Plus, Upload } from '../components/Icons'
+import { AlertCircle, CheckCircle, Download, FileText, FolderPlus, Info, Plus, Upload } from '../components/Icons'
 import { cn } from '../lib/cn'
 import { haptic } from '../lib/haptics'
 import type { Pack } from '../lib/types'
@@ -26,12 +26,14 @@ export function ImportScreen() {
   const [saveOpen, setSaveOpen] = useState(false)
   const [errorResult, setErrorResult] = useState<ValidationResult | null>(null)
   const [duplicate, setDuplicate] = useState<{ pack: Pack; existingName: string } | null>(null)
+  const [pendingWarnings, setPendingWarnings] = useState<string[]>([])
   const [newCatOpen, setNewCatOpen] = useState(false)
   const [newCatName, setNewCatName] = useState('')
   const inputRef = useRef<HTMLInputElement | null>(null)
 
-  const openSave = (pack: Pack) => {
+  const openSave = (pack: Pack, warnings: string[] = []) => {
     setPending(pack)
+    setPendingWarnings(warnings)
     setName(pack.title)
     const match = categories.find((c) => c.name.toLowerCase() === (pack.subject ?? '').toLowerCase())
     setCategoryId(match?.id ?? categories.find((c) => !c.locked)?.id ?? categories[0].id)
@@ -56,7 +58,10 @@ export function ImportScreen() {
         setErrorResult(result)
         return
       }
-      openSave(result.pack)
+      openSave(
+        result.pack,
+        result.issues.filter((i) => i.level === 'warning').map((i) => i.message),
+      )
     } catch {
       setErrorResult({
         ok: false,
@@ -197,7 +202,7 @@ export function ImportScreen() {
             return (
               <div key={pack.id} className="list-row" style={{ padding: 0 }}>
                 <button
-                  onClick={() => (existing ? push({ name: 'test', testId: existing.id }) : openSave(pack))}
+                  onClick={() => (existing ? push({ name: 'test', testId: existing.id }) : openSave(pack, []))}
                   style={{ flex: 1, minWidth: 0, textAlign: 'left', padding: '14px 16px', display: 'flex', gap: 13, alignItems: 'center' }}
                 >
                   <span
@@ -232,6 +237,22 @@ export function ImportScreen() {
                     {existing ? 'Saved' : 'Add'}
                   </span>
                 </button>
+                {(() => {
+                  const file = DEMO_PACK_FILES.find((f) => f.id === pack.id)
+                  if (!file) return null
+                  return (
+                    <a
+                      href={file.url}
+                      download={file.fileName}
+                      aria-label={`Download ${file.fileName}`}
+                      title="Download this .quizz file"
+                      className="icon-btn"
+                      style={{ marginRight: 6, textDecoration: 'none', color: 'var(--ink-3)' }}
+                    >
+                      <Download />
+                    </a>
+                  )
+                })()}
               </div>
             )
           })}
@@ -248,6 +269,27 @@ export function ImportScreen() {
         title="Save test"
         desc={pending ? `${pending.questions.length} questions · ${pending.questions.filter((q) => q.explanation).length} with explanations` : ''}
       >
+        {pendingWarnings.length > 0 && (
+          <div
+            style={{
+              display: 'flex',
+              gap: 9,
+              alignItems: 'flex-start',
+              padding: '10px 12px',
+              borderRadius: 'var(--r-xs)',
+              background: 'var(--warning-soft)',
+              color: 'var(--warning)',
+              fontSize: 12.5,
+              lineHeight: 1.5,
+            }}
+          >
+            <AlertCircle style={{ width: 16, height: 16, flex: 'none', marginTop: 1 }} />
+            <span>
+              {pendingWarnings.length} warning{pendingWarnings.length > 1 ? 's' : ''}: {pendingWarnings.slice(0, 2).join(' · ')}
+              {pendingWarnings.length > 2 ? ' …' : ''}
+            </span>
+          </div>
+        )}
         <Field label="Test name">
           <input
             className="input"

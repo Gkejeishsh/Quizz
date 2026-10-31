@@ -43,6 +43,7 @@
   --inset-bottom: env(safe-area-inset-bottom, 0px);
   --inset-left: env(safe-area-inset-left, 0px);
 
+  --type-scale: 1;
   --app-max: 560px;
   --tabbar-h: 68px;
 }

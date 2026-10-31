@@ -5,6 +5,10 @@ import { cn } from '../lib/cn'
 import { haptic } from '../lib/haptics'
 import { ArrowLeft, Check, CheckCircle, Info, AlertCircle } from './Icons'
 
+/** Tracks how many sheets/dialogs are open so hardware back closes them first. */
+export const sheetRegistry = { open: 0 }
+export const CLOSE_SHEET_EVENT = 'quizz:close-sheet'
+
 export const SPRING_SNAPPY = { type: 'spring' as const, stiffness: 900, damping: 42, mass: 0.7 }
 export const SPRING_SETTLE = { type: 'spring' as const, stiffness: 520, damping: 34, mass: 0.9 }
 export const SPRING_SHEET = { type: 'spring' as const, stiffness: 380, damping: 34, mass: 1 }
@@ -69,14 +73,24 @@ export function Sheet({
   children: ReactNode
 }) {
   const reduce = useReducedMotion()
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
+
   useEffect(() => {
     if (!open) return
+    sheetRegistry.open += 1
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
+      if (e.key === 'Escape') onCloseRef.current()
     }
+    const onRequest = () => onCloseRef.current()
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [open, onClose])
+    window.addEventListener(CLOSE_SHEET_EVENT, onRequest)
+    return () => {
+      sheetRegistry.open = Math.max(0, sheetRegistry.open - 1)
+      window.removeEventListener('keydown', onKey)
+      window.removeEventListener(CLOSE_SHEET_EVENT, onRequest)
+    }
+  }, [open])
 
   return (
     <AnimatePresence>

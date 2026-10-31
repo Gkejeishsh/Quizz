@@ -92,6 +92,7 @@ export type Attempt = {
   mode: 'full' | 'wrong-only'
   timed: boolean
   timeUp: boolean
+  flags?: number[]
 }
 
 export type Draft = {
@@ -103,6 +104,7 @@ export type Draft = {
   startedAt: number
   deadline: number | null
   timed: boolean
+  flags?: number[]
 }
 
 export type Settings = {

@@ -129,6 +129,8 @@ export function HistoryScreen() {
                         {!test && <span className="sep">·</span>}
                         <span>{g.attempts.length} attempt{g.attempts.length > 1 ? 's' : ''}</span>
                         <span className="sep">·</span>
+                        <span>last {percent(g.latest.score, g.latest.total)}%</span>
+                        <span className="sep">·</span>
                         <span>{formatDate(g.latest.finishedAt)}</span>
                       </span>
                     </span>

@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  check:
+  web:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,6 +15,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx tsc --noEmit
-      - run: npx vitest run
+      - run: npm run check
       - run: npx vite build
+
+  converter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pdfplumber reportlab
+      - run: python3 tools/test_quizzify.py
+      - run: python3 tools/validate_pack.py packs/*.quizz

@@ -1,0 +1,232 @@
+{
+  "format": "quizz-pack",
+  "formatVersion": 1,
+  "id": "pck_demo_math01",
+  "title": "Algebra & Geometry — Quick Check",
+  "subject": "Maths",
+  "language": "en",
+  "createdAt": "2026-10-31T11:29:05.414Z",
+  "source": {
+    "fileName": "maths-quick-check-demo.pdf",
+    "pages": 2,
+    "generator": "Demo pack"
+  },
+  "questions": [
+    {
+      "n": 1,
+      "type": "single",
+      "question": "If $x = 3$, what is the value of $2x + 1$?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$4$"
+        },
+        {
+          "key": "B",
+          "text": "$6$"
+        },
+        {
+          "key": "C",
+          "text": "$7$"
+        },
+        {
+          "key": "D",
+          "text": "$9$"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Substitute $x = 3$: $2(3) + 1 = 6 + 1 = 7$."
+    },
+    {
+      "n": 2,
+      "type": "single",
+      "question": "Solve for $x$: $3x - 5 = 16$.",
+      "options": [
+        {
+          "key": "A",
+          "text": "$x = 5$"
+        },
+        {
+          "key": "B",
+          "text": "$x = 7$"
+        },
+        {
+          "key": "C",
+          "text": "$x = 9$"
+        },
+        {
+          "key": "D",
+          "text": "$x = 21$"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Add 5 to both sides: $3x = 21$. Divide by 3: $x = 7$."
+    },
+    {
+      "n": 3,
+      "type": "single",
+      "question": "The area of a circle with radius $r = 5\\text{ cm}$ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "$10\\pi\\text{ cm}^2$"
+        },
+        {
+          "key": "B",
+          "text": "$25\\pi\\text{ cm}^2$"
+        },
+        {
+          "key": "C",
+          "text": "$50\\pi\\text{ cm}^2$"
+        },
+        {
+          "key": "D",
+          "text": "$5\\pi\\text{ cm}^2$"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Area $= \\pi r^2 = \\pi (5)^2 = 25\\pi\\text{ cm}^2$."
+    },
+    {
+      "n": 4,
+      "type": "single",
+      "question": "What is the value of $(x + 2)(x - 2)$?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$x^2 + 4$"
+        },
+        {
+          "key": "B",
+          "text": "$x^2 - 4$"
+        },
+        {
+          "key": "C",
+          "text": "$x^2 - 4x + 4$"
+        },
+        {
+          "key": "D",
+          "text": "$x^2 + 4x + 4$"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "This is the difference of two squares: $(a+b)(a-b) = a^2 - b^2$, so $(x+2)(x-2) = x^2 - 4$."
+    },
+    {
+      "n": 5,
+      "type": "single",
+      "question": "The angles of a triangle are in the ratio $2:3:4$. The largest angle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "$40°$"
+        },
+        {
+          "key": "B",
+          "text": "$60°$"
+        },
+        {
+          "key": "C",
+          "text": "$80°$"
+        },
+        {
+          "key": "D",
+          "text": "$90°$"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The ratio adds to $2+3+4 = 9$ parts, and the angles sum to $180°$, so one part is $20°$. The largest angle is $4 \\times 20° = 80°$."
+    },
+    {
+      "n": 6,
+      "type": "single",
+      "question": "If $f(x) = x^2 + 2x$, what is $f(-1)$?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$-1$"
+        },
+        {
+          "key": "B",
+          "text": "$0$"
+        },
+        {
+          "key": "C",
+          "text": "$1$"
+        },
+        {
+          "key": "D",
+          "text": "$3$"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "$f(-1) = (-1)^2 + 2(-1) = 1 - 2 = -1$."
+    },
+    {
+      "n": 7,
+      "type": "single",
+      "question": "The slope of the line passing through $(1, 2)$ and $(4, 11)$ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "$2$"
+        },
+        {
+          "key": "B",
+          "text": "$3$"
+        },
+        {
+          "key": "C",
+          "text": "$4$"
+        },
+        {
+          "key": "D",
+          "text": "$9$"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Slope $= \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{11 - 2}{4 - 1} = \\frac{9}{3} = 3$."
+    },
+    {
+      "n": 8,
+      "type": "single",
+      "question": "Which of the following is a prime number?",
+      "options": [
+        {
+          "key": "A",
+          "text": "$21$"
+        },
+        {
+          "key": "B",
+          "text": "$27$"
+        },
+        {
+          "key": "C",
+          "text": "$29$"
+        },
+        {
+          "key": "D",
+          "text": "$33$"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "$29$ has no divisors other than $1$ and itself. $21 = 3 \\times 7$, $27 = 3 \\times 9$ and $33 = 3 \\times 11$."
+    }
+  ]
+}

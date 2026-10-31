@@ -5,7 +5,7 @@ import { scoreQuestions } from '../lib/scoring'
 import { formatClock } from '../lib/dates'
 import { MathText } from '../components/MathText'
 import { Sheet } from '../components/ui'
-import { ArrowLeft, Check, Clock, X } from '../components/Icons'
+import { ArrowLeft, Check, Clock, Flag, X } from '../components/Icons'
 import { haptic } from '../lib/haptics'
 import { cn } from '../lib/cn'
 import { SPRING_SETTLE } from '../components/ui'
@@ -22,6 +22,7 @@ export function Play({ testId }: { testId: string }) {
 
   const reduce = useReducedMotion()
   const [answers, setAnswers] = useState<Record<string, string[]>>(() => ({ ...(draft?.answers ?? {}) }))
+  const [flags, setFlags] = useState<number[]>(() => draft?.flags ?? [])
   const [index, setIndex] = useState(() => Math.min(draft?.index ?? 0, Math.max(0, (draft?.questionNs.length ?? 1) - 1)))
   const [dir, setDir] = useState(1)
   const [exitOpen, setExitOpen] = useState(false)
@@ -29,6 +30,7 @@ export function Play({ testId }: { testId: string }) {
   const [finished, setFinished] = useState(false)
   const finishedRef = useRef(false)
   const lock = useRef(false)
+  const advanceTimer = useRef<number | null>(null)
 
   const questionNs = useMemo(() => draft?.questionNs ?? test?.pack.questions.map((q) => q.n) ?? [], [draft, test])
   const byNumber = useMemo(() => new Map(test?.pack.questions.map((q) => [q.n, q]) ?? []), [test])
@@ -51,6 +53,11 @@ export function Play({ testId }: { testId: string }) {
     (timeUp = false) => {
       if (finishedRef.current) return
       finishedRef.current = true
+      if (advanceTimer.current) {
+        window.clearTimeout(advanceTimer.current)
+        advanceTimer.current = null
+      }
+      lock.current = false
       setFinished(true)
       const store = useStore.getState()
       const currentTest = store.tests.find((t) => t.id === testId)
@@ -76,9 +83,10 @@ export function Play({ testId }: { testId: string }) {
         score: result.score,
         total: result.total,
         marked: result.marked,
-        mode: 'full',
+        mode: ns.length < currentTest.pack.questions.length ? 'wrong-only' : 'full',
         timed: !!d?.deadline,
         timeUp,
+        flags: d?.flags ?? [],
       })
       if (timeUp) {
         toast('Time’s up — your answers are saved', 'neutral')
@@ -96,6 +104,14 @@ export function Play({ testId }: { testId: string }) {
     if (!deadline || finished) return
     if (now >= deadline) finish(true)
   }, [now, deadline, finished, finish])
+
+  useEffect(() => () => clearAdvance(), [])
+
+  useEffect(() => {
+    const onExit = () => setExitOpen(true)
+    window.addEventListener('quizz:exit-request', onExit)
+    return () => window.removeEventListener('quizz:exit-request', onExit)
+  }, [])
 
   if (!test || !q) {
     return (
@@ -118,8 +134,9 @@ export function Play({ testId }: { testId: string }) {
   const remaining = deadline ? deadline - now : null
   const timerTone = remaining === null ? '' : remaining < 60_000 ? 'timer-chip--danger' : remaining < 300_000 ? 'timer-chip--warn' : ''
   const group = q.group ? test.pack.groups?.find((g) => g.id === q.group) : undefined
+  const isFlagged = flags.includes(q.n)
 
-  const persist = (nextAnswers: Record<string, string[]>, nextIndex: number) => {
+  const persist = (nextAnswers: Record<string, string[]>, nextIndex: number, nextFlags = flags) => {
     saveDraft({
       testId: test.id,
       testName: test.name,
@@ -129,10 +146,30 @@ export function Play({ testId }: { testId: string }) {
       startedAt: draft?.startedAt ?? Date.now(),
       deadline,
       timed: !!deadline,
+      flags: nextFlags,
     })
   }
 
+  const toggleFlag = () => {
+    haptic('light')
+    setFlags((prev) => {
+      const next = prev.includes(q?.n ?? -1) ? prev.filter((n) => n !== q?.n) : [...prev, q!.n]
+      persist(answersRef.current, indexRef.current, next)
+      return next
+    })
+  }
+
+  const clearAdvance = () => {
+    if (advanceTimer.current) {
+      window.clearTimeout(advanceTimer.current)
+      advanceTimer.current = null
+    }
+    lock.current = false
+  }
+
   const goNext = () => {
+    if (finishedRef.current) return
+    clearAdvance()
     if (index >= total - 1) {
       finish(false)
       return
@@ -143,6 +180,8 @@ export function Play({ testId }: { testId: string }) {
   }
 
   const goPrev = () => {
+    if (finishedRef.current) return
+    clearAdvance()
     if (index === 0) return
     setDir(-1)
     setIndex((i) => i - 1)
@@ -166,9 +205,12 @@ export function Play({ testId }: { testId: string }) {
     answersRef.current = nextAnswers
     setAnswers(nextAnswers)
     persist(nextAnswers, index)
+    clearAdvance()
     lock.current = true
-    window.setTimeout(() => {
+    advanceTimer.current = window.setTimeout(() => {
+      advanceTimer.current = null
       lock.current = false
+      if (finishedRef.current) return
       if (indexRef.current >= total - 1) finish(false)
       else goNext()
     }, haptics ? 220 : 160)
@@ -185,6 +227,15 @@ export function Play({ testId }: { testId: string }) {
             <b>{String(index + 1).padStart(2, '0')}</b> / {total}
           </div>
         </div>
+        <button
+          className="icon-btn"
+          onClick={toggleFlag}
+          aria-label={isFlagged ? 'Remove flag' : 'Flag this question'}
+          aria-pressed={isFlagged}
+          style={{ color: isFlagged ? 'var(--warning)' : undefined }}
+        >
+          <Flag style={{ fill: isFlagged ? 'currentColor' : 'none' }} />
+        </button>
         {remaining !== null && (
           <div className={cn('timer-chip', timerTone)}>
             <Clock />
@@ -276,12 +327,8 @@ export function Play({ testId }: { testId: string }) {
           <button className="btn btn--soft" style={{ width: 92 }} onClick={goPrev} disabled={index === 0} aria-label="Previous question">
             <ArrowLeft style={{ width: 18, height: 18 }} />
           </button>
-          <button
-            className="btn btn--secondary grow"
-            onClick={goNext}
-            disabled={!picked.length}
-          >
-            {index === total - 1 ? 'Finish test' : 'Skip / next'}
+          <button className="btn btn--secondary grow" onClick={goNext}>
+            {index === total - 1 ? 'Finish test' : picked.length ? 'Next' : 'Skip'}
           </button>
         </div>
       </div>
@@ -293,6 +340,19 @@ export function Play({ testId }: { testId: string }) {
         <button
           className="btn btn--primary btn--block"
           onClick={() => {
+            // the timer belongs to this attempt only: leaving discards it,
+            // but the answers stay so the test can be resumed later
+            saveDraft({
+              testId: test.id,
+              testName: test.name,
+              answers: answersRef.current,
+              index: indexRef.current,
+              questionNs,
+              startedAt: draft?.startedAt ?? Date.now(),
+              deadline: null,
+              timed: false,
+              flags,
+            })
             setExitOpen(false)
             pop()
           }}

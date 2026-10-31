@@ -67,10 +67,10 @@ it('plays a test end to end and records the attempt in history', async () => {
   // answer all 8 questions
   for (let i = 0; i < 8; i++) {
     await waitFor(() => {
-      const options = document.querySelectorAll('button[aria-pressed]')
+      const options = document.querySelectorAll('button.option')
       expect(options.length).toBeGreaterThan(0)
     }, { timeout: 4000 })
-    const options = document.querySelectorAll<HTMLButtonElement>('button[aria-pressed]')
+    const options = document.querySelectorAll<HTMLButtonElement>('button.option')
     fireEvent.click(options[0])
     await new Promise((r) => setTimeout(r, 320))
   }

@@ -1,0 +1,233 @@
+{
+  "format": "quizz-pack",
+  "formatVersion": 1,
+  "id": "pck_demo_chem01",
+  "title": "Chemical Bonding — Practice Test",
+  "subject": "Chemistry",
+  "language": "en",
+  "createdAt": "2026-10-31T11:29:05.414Z",
+  "instructions": "Attempt all 8 questions. 1 mark each. No negative marking.",
+  "source": {
+    "fileName": "chemistry-bonding-demo.pdf",
+    "pages": 3,
+    "generator": "Demo pack"
+  },
+  "questions": [
+    {
+      "n": 1,
+      "type": "single",
+      "question": "Which of the following molecules contains a triple covalent bond?",
+      "options": [
+        {
+          "key": "A",
+          "text": "O₂"
+        },
+        {
+          "key": "B",
+          "text": "N₂"
+        },
+        {
+          "key": "C",
+          "text": "Cl₂"
+        },
+        {
+          "key": "D",
+          "text": "H₂"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "N₂ is held together by one sigma and two pi bonds — a triple bond (N≡N). O₂ has a double bond, while Cl₂ and H₂ have single bonds."
+    },
+    {
+      "n": 2,
+      "type": "single",
+      "question": "The number of electrons shared between the two nitrogen atoms in N₂ is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "A triple bond consists of three shared electron pairs, so 3 × 2 = 6 electrons are shared."
+    },
+    {
+      "n": 3,
+      "type": "single",
+      "question": "An ionic bond is formed by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sharing of electron pairs between two non-metals"
+        },
+        {
+          "key": "B",
+          "text": "Complete transfer of electrons from a metal to a non-metal"
+        },
+        {
+          "key": "C",
+          "text": "Overlap of p orbitals only"
+        },
+        {
+          "key": "D",
+          "text": "Attraction between two nuclei"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Ionic bonding involves transfer of one or more electrons from a metal (which becomes a cation) to a non-metal (which becomes an anion). The ions are then held by electrostatic attraction."
+    },
+    {
+      "n": 4,
+      "type": "single",
+      "question": "Which molecule has a trigonal planar shape?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CH₄"
+        },
+        {
+          "key": "B",
+          "text": "NH₃"
+        },
+        {
+          "key": "C",
+          "text": "BF₃"
+        },
+        {
+          "key": "D",
+          "text": "H₂O"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "BF₃ has three bonding pairs and no lone pair on boron, giving 120° bond angles and a trigonal planar shape. CH₄ is tetrahedral, NH₃ is pyramidal and H₂O is bent."
+    },
+    {
+      "n": 5,
+      "type": "single",
+      "question": "The strongest intermolecular force present in water is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "London dispersion forces"
+        },
+        {
+          "key": "B",
+          "text": "Dipole–dipole forces"
+        },
+        {
+          "key": "C",
+          "text": "Hydrogen bonding"
+        },
+        {
+          "key": "D",
+          "text": "Ionic attraction"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Water has O–H bonds, so each molecule can donate and accept hydrogen bonds. These are much stronger than ordinary dipole–dipole or dispersion forces, which explains water’s high boiling point."
+    },
+    {
+      "n": 6,
+      "type": "single",
+      "question": "In a covalent bond, the bond length decreases when:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bond order increases"
+        },
+        {
+          "key": "B",
+          "text": "Bond order decreases"
+        },
+        {
+          "key": "C",
+          "text": "Atomic radius of the atoms increases"
+        },
+        {
+          "key": "D",
+          "text": "Electronegativity difference decreases"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A higher bond order means more shared electron pairs and a stronger pull between the nuclei, so the atoms sit closer: C≡C is shorter than C=C, which is shorter than C–C."
+    },
+    {
+      "n": 7,
+      "type": "single",
+      "question": "Which of the following is a non-polar molecule even though it contains polar bonds?",
+      "options": [
+        {
+          "key": "A",
+          "text": "HCl"
+        },
+        {
+          "key": "B",
+          "text": "CO₂"
+        },
+        {
+          "key": "C",
+          "text": "H₂O"
+        },
+        {
+          "key": "D",
+          "text": "NH₃"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "CO₂ is linear, so its two C=O dipoles point in opposite directions and cancel exactly. HCl, H₂O and NH₃ are asymmetric, so their bond dipoles do not cancel."
+    },
+    {
+      "n": 8,
+      "type": "single",
+      "question": "The lattice energy of an ionic compound increases with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Larger ionic radii and lower charges"
+        },
+        {
+          "key": "B",
+          "text": "Smaller ionic radii and higher charges"
+        },
+        {
+          "key": "C",
+          "text": "More covalent character"
+        },
+        {
+          "key": "D",
+          "text": "Higher temperature"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Lattice energy depends on charge product ÷ distance between ions. Higher charges and smaller ions both increase the electrostatic attraction, raising the lattice energy."
+    }
+  ]
+}

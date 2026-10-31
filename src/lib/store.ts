@@ -95,6 +95,7 @@ function seedTests(categories: Category[]): TestRecord[] {
 }
 
 let persistTimer: ReturnType<typeof setTimeout> | null = null
+let hydratePromise: Promise<void> | null = null
 
 export const useStore = create<Store>()((set, get) => {
   const persistNow = () => {
@@ -125,6 +126,9 @@ export const useStore = create<Store>()((set, get) => {
     toasts: [],
 
     hydrate: async () => {
+      if (get().hydrated) return
+      if (hydratePromise) return hydratePromise
+      hydratePromise = (async () => {
       const loaded = await loadState()
       if (loaded && Array.isArray(loaded.categories) && loaded.categories.length) {
         const categories = [...loaded.categories].sort((a, b) => a.order - b.order)
@@ -149,6 +153,8 @@ export const useStore = create<Store>()((set, get) => {
         })
         setTimeout(persistNow, 0)
       }
+      })()
+      await hydratePromise
     },
 
     setSetting: (key, value) => {

@@ -1,7 +1,7 @@
-import { useEffect, useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { applyTheme, useStore, type Route } from './lib/store'
-import { Toasts } from './components/ui'
+import { Toasts, sheetRegistry, CLOSE_SHEET_EVENT } from './components/ui'
 import { LogoMark } from './components/Logo'
 import { Home } from './screens/Home'
 import { ImportScreen } from './screens/Import'
@@ -82,14 +82,63 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        const state = useStore.getState()
-        if (state.routes.length > 1) state.pop()
+      if (e.key !== 'Escape') return
+      if (sheetRegistry.open > 0) {
+        window.dispatchEvent(new CustomEvent(CLOSE_SHEET_EVENT))
+        return
       }
+      const state = useStore.getState()
+      if (state.routes.length > 1) state.pop()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
+
+  // hardware / browser back: keep one history entry per screen so Android's
+  // back gesture behaves like a native app instead of leaving the app.
+  const depth = useRef(routes.length)
+  const skipPop = useRef(false)
+
+  useEffect(() => {
+    const onPop = () => {
+      if (skipPop.current) {
+        skipPop.current = false
+        return
+      }
+      if (sheetRegistry.open > 0) {
+        history.pushState({ depth: useStore.getState().routes.length }, '')
+        window.dispatchEvent(new CustomEvent(CLOSE_SHEET_EVENT))
+        return
+      }
+      const state = useStore.getState()
+      if (state.routes.length <= 1) return
+      const current = state.routes[state.routes.length - 1]
+      if (current.name === 'play') {
+        history.pushState({ depth: state.routes.length }, '')
+        window.dispatchEvent(new CustomEvent('quizz:exit-request'))
+        return
+      }
+      state.pop()
+    }
+    window.addEventListener('popstate', onPop)
+    if (!history.state || typeof history.state.depth !== 'number') {
+      history.replaceState({ depth: routes.length }, '')
+    }
+    return () => window.removeEventListener('popstate', onPop)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    if (routes.length > depth.current) {
+      history.pushState({ depth: routes.length }, '')
+    } else if (routes.length < depth.current) {
+      if ((history.state?.depth ?? 1) > 1) {
+        skipPop.current = true
+        history.back()
+      }
+    }
+    depth.current = routes.length
+  }, [routes.length])
 
   const route = routes[routes.length - 1]
   const key = useMemo(() => routeKey(route), [route])
@@ -127,7 +176,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
             transition={{ duration: reduce ? 0.001 : 0.24, ease: [0.05, 0.7, 0.1, 1] }}
-            style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: '100dvh' }}
+            style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, height: '100%', overflow: 'hidden' }}
             onAnimationComplete={() => {
               if (window.scrollY) window.scrollTo(0, 0)
             }}

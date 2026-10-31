@@ -1,0 +1,232 @@
+{
+  "format": "quizz-pack",
+  "formatVersion": 1,
+  "id": "pck_demo_eng01",
+  "title": "English Grammar & Usage",
+  "subject": "English",
+  "language": "en",
+  "createdAt": "2026-10-31T11:29:05.414Z",
+  "source": {
+    "fileName": "english-grammar-demo.pdf",
+    "pages": 2,
+    "generator": "Demo pack"
+  },
+  "questions": [
+    {
+      "n": 1,
+      "type": "single",
+      "question": "Choose the correct sentence.",
+      "options": [
+        {
+          "key": "A",
+          "text": "She don’t like coffee."
+        },
+        {
+          "key": "B",
+          "text": "She doesn’t likes coffee."
+        },
+        {
+          "key": "C",
+          "text": "She doesn’t like coffee."
+        },
+        {
+          "key": "D",
+          "text": "She not like coffee."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "With third-person singular subjects (she, he, it) we use “doesn’t” followed by the base verb: “She doesn’t like coffee.”"
+    },
+    {
+      "n": 2,
+      "type": "single",
+      "question": "Pick the correct past tense of “teach”.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Teached"
+        },
+        {
+          "key": "B",
+          "text": "Taught"
+        },
+        {
+          "key": "C",
+          "text": "Teach"
+        },
+        {
+          "key": "D",
+          "text": "Teaching"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "“Teach” is irregular: teach → taught → taught. “Teached” is a common error."
+    },
+    {
+      "n": 3,
+      "type": "single",
+      "question": "The word “quickly” is a(n):",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adjective"
+        },
+        {
+          "key": "B",
+          "text": "Adverb"
+        },
+        {
+          "key": "C",
+          "text": "Noun"
+        },
+        {
+          "key": "D",
+          "text": "Preposition"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "“Quickly” modifies a verb (“she ran quickly”), so it is an adverb. The adjective form is “quick”."
+    },
+    {
+      "n": 4,
+      "type": "single",
+      "question": "Choose the correct preposition: “He is good ___ mathematics.”",
+      "options": [
+        {
+          "key": "A",
+          "text": "in"
+        },
+        {
+          "key": "B",
+          "text": "at"
+        },
+        {
+          "key": "C",
+          "text": "on"
+        },
+        {
+          "key": "D",
+          "text": "for"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "The standard collocation is “good at” a skill or subject: “good at mathematics”."
+    },
+    {
+      "n": 5,
+      "type": "single",
+      "question": "Which sentence uses the apostrophe correctly?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Its raining outside."
+        },
+        {
+          "key": "B",
+          "text": "It’s raining outside."
+        },
+        {
+          "key": "C",
+          "text": "Its’ raining outside."
+        },
+        {
+          "key": "D",
+          "text": "It is’nt raining outside."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "“It’s” is the contraction of “it is”. “Its” without an apostrophe is the possessive form, as in “the dog wagged its tail”."
+    },
+    {
+      "n": 6,
+      "type": "single",
+      "question": "The synonym of “abundant” is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Scarce"
+        },
+        {
+          "key": "B",
+          "text": "Plentiful"
+        },
+        {
+          "key": "C",
+          "text": "Fragile"
+        },
+        {
+          "key": "D",
+          "text": "Hidden"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "“Abundant” means existing in large quantities, so “plentiful” is the closest synonym. “Scarce” is its antonym."
+    },
+    {
+      "n": 7,
+      "type": "single",
+      "question": "Choose the correct passive form: “The teacher explains the lesson.”",
+      "options": [
+        {
+          "key": "A",
+          "text": "The lesson is explained by the teacher."
+        },
+        {
+          "key": "B",
+          "text": "The lesson explained the teacher."
+        },
+        {
+          "key": "C",
+          "text": "The lesson is explaining by the teacher."
+        },
+        {
+          "key": "D",
+          "text": "The lesson was explain by the teacher."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Present simple passive = subject + is/are + past participle: “The lesson is explained by the teacher.” The object becomes the subject."
+    },
+    {
+      "n": 8,
+      "type": "single",
+      "question": "Identify the conjunction in: “I studied hard, but the paper was difficult.”",
+      "options": [
+        {
+          "key": "A",
+          "text": "studied"
+        },
+        {
+          "key": "B",
+          "text": "hard"
+        },
+        {
+          "key": "C",
+          "text": "but"
+        },
+        {
+          "key": "D",
+          "text": "difficult"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "“But” joins two independent clauses and shows contrast, so it is a coordinating conjunction."
+    }
+  ]
+}

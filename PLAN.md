@@ -625,6 +625,21 @@ Theme (System/Light/Dark), text size, haptics, sound, reduce motion, backup expo
 
 ---
 
+## 9b. Build status (updated 31 Oct 2026)
+
+| # | Milestone | Status |
+|---|---|---|
+| M0 | Plan + format contract | ✅ done (v2.0) |
+| M1 | Design system, logo, shell, home, navigation, motion | ✅ done |
+| M2 | Content pipeline | 🟡 converter + validator built and tested on synthetic PDFs; needs 2–3 real PDFs to calibrate |
+| M3 | Import + library | ✅ done |
+| M4 | Quiz core (timer, play, results, explanations, retry-wrong) | ✅ done |
+| M5 | History + settings + backup | ✅ done |
+| M6 | Polish + QA | 🟡 automated tests green (35); real-device pass pending |
+| M7 | APK | ⬜ waiting for "compile" |
+
+Implemented ahead of plan: per-question flagging, review search, share summary, Android-style back handling, offline service worker, PWA manifest, sample packs in `packs/`.
+
 ## 10. Milestones with exit criteria
 
 | # | Milestone | Deliverable | Exit criteria |

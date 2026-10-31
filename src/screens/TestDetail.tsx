@@ -21,7 +21,6 @@ export function TestDetail({ testId }: { testId: string }) {
 
   const actions = useTestActions(() => {
     pop()
-    push({ name: 'library' })
   })
 
   const [startOpen, setStartOpen] = useState(false)

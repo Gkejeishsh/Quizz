@@ -4,7 +4,7 @@ import { useStore } from '../lib/store'
 import { scoreQuestions, percent } from '../lib/scoring'
 import { formatDuration } from '../lib/dates'
 import { Page, ScoreRing, Confetti } from '../components/ui'
-import { BookOpen, CheckCircle, Clock, Refresh, Sparkles, Target, X, ChevronDown } from '../components/Icons'
+import { BookOpen, CheckCircle, Clock, Refresh, Share, Sparkles, Target, X, ChevronDown } from '../components/Icons'
 import { MathText } from '../components/MathText'
 import { cn } from '../lib/cn'
 
@@ -59,6 +59,26 @@ export function Results({ attemptId }: { attemptId: string }) {
   const mistakes = detail?.results.filter((r) => !r.correct) ?? []
   const explainedCount = test ? test.pack.questions.filter((q) => q.explanation).length : 0
   const shown = showAll ? mistakes : mistakes.slice(0, 3)
+
+  const shareSummary = async () => {
+    const lines = [
+      `Quizz · ${test?.name ?? attempt.testName}`,
+      `Score: ${attempt.score}/${attempt.total} (${pct}%)`,
+      detail ? `Correct ${detail.correct} · Wrong ${detail.wrong} · Skipped ${detail.unanswered}` : '',
+      `Time: ${formatDuration(attempt.durationMs)}`,
+    ].filter(Boolean)
+    const text = lines.join('\n')
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: 'Quizz result', text })
+      } else {
+        await navigator.clipboard.writeText(text)
+        useStore.getState().toast('Result copied', 'success')
+      }
+    } catch {
+      /* the user dismissed the share sheet */
+    }
+  }
 
   const retryWrong = () => {
     if (!test || !detail) return
@@ -157,15 +177,20 @@ export function Results({ attemptId }: { attemptId: string }) {
               <Refresh /> Retry {mistakes.length} wrong question{mistakes.length > 1 ? 's' : ''}
             </button>
           )}
-          <button
-            className="btn btn--ghost btn--block"
-            onClick={() => {
-              pop()
-              if (!test) push({ name: 'home' })
-            }}
-          >
-            Done
-          </button>
+          <div style={{ display: 'flex', gap: 10 }}>
+            <button className="btn btn--ghost grow" onClick={() => void shareSummary()}>
+              <Share style={{ width: 17, height: 17 }} /> Share
+            </button>
+            <button
+              className="btn btn--ghost grow"
+              onClick={() => {
+                pop()
+                if (!test) push({ name: 'home' })
+              }}
+            >
+              Done
+            </button>
+          </div>
         </div>
 
         {!test && (

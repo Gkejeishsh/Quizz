@@ -99,6 +99,13 @@ export function SettingsScreen() {
             </div>
             <div className="inset-row">
               <div>
+                <div style={{ fontSize: 14.5, fontWeight: 600 }}>Sound</div>
+                <div style={{ fontSize: 12.5, color: 'var(--ink-3)', marginTop: 2 }}>Quiet tick when you pick an answer</div>
+              </div>
+              <Switch on={settings.sound} onChange={(v) => setSetting('sound', v)} label="Sound" />
+            </div>
+            <div className="inset-row">
+              <div>
                 <div style={{ fontSize: 14.5, fontWeight: 600 }}>Reduce motion</div>
                 <div style={{ fontSize: 12.5, color: 'var(--ink-3)', marginTop: 2 }}>Fewer animations, no confetti</div>
               </div>
