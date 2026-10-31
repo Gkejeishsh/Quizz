@@ -1,96 +1,75 @@
+import { Capacitor } from '@capacitor/core'
+import { SplashScreen } from '@capacitor/splash-screen'
+import { StatusBar, Style } from '@capacitor/status-bar'
+import { Haptics, ImpactStyle, NotificationType } from '@capacitor/haptics'
+import { App as NativeApp } from '@capacitor/app'
 import { useStore, applyTheme } from './store'
 
-type SplashScreenPlugin = {
-  hide: (options?: { fadeOutDuration?: number }) => Promise<void>
-}
-
-type StatusBarPlugin = {
-  setStyle: (options: { style: 'DARK' | 'LIGHT' | 'DEFAULT'; backgroundColor?: string }) => Promise<void>
-  setOverlaysWebView: (options: { overlay: boolean }) => Promise<void>
-}
-
-type HapticsPlugin = {
-  impact: (options: { style: 'LIGHT' | 'MEDIUM' | 'HEAVY' }) => Promise<void>
-  notification: (options: { type: 'SUCCESS' | 'WARNING' | 'ERROR' }) => Promise<void>
-}
-
-type AppPlugin = {
-  addListener: (
-    event: 'backButton',
-    handler: (event: { canGoBack: boolean }) => void,
-  ) => { remove: () => Promise<void> } | void
-  minimizeApp: () => Promise<void>
-}
-
+/**
+ * Native shell integration (Capacitor).
+ *
+ * Every call is guarded by `Capacitor.isNativePlatform()`, so the exact same
+ * bundle runs in a browser untouched — the plugins are inert there.
+ */
 function isNative(): boolean {
-  const cap = (window as unknown as { Capacitor?: { isNativePlatform?: () => boolean } }).Capacitor
-  return !!cap?.isNativePlatform?.()
-}
-
-async function plugin<T>(name: string): Promise<T | null> {
   try {
-    const mod = await import(/* @vite-ignore */ `@capacitor/${name}`)
-    return (mod as { [key: string]: unknown })[
-      name === 'app' ? 'App' : name === 'status-bar' ? 'StatusBar' : name === 'splash-screen' ? 'SplashScreen' : 'Haptics'
-    ] as T
+    return Capacitor.isNativePlatform()
   } catch {
-    return null
+    return false
   }
 }
 
 let initialised = false
 
-/** Wire the Capacitor shell: splash, system bars, hardware back, haptics. */
 export async function initNative(): Promise<void> {
   if (initialised || !isNative()) return
   initialised = true
 
-  const splash = await plugin<SplashScreenPlugin>('splash-screen')
-  splash?.hide({ fadeOutDuration: 220 }).catch(() => undefined)
+  try {
+    await SplashScreen.hide({ fadeOutDuration: 220 })
+  } catch {
+    /* harmless: the splash auto-hides on its own */
+  }
 
-  const status = await plugin<StatusBarPlugin>('status-bar')
-  syncStatusBar(status)
+  await refreshStatusBar(applyTheme(useStore.getState().settings.theme))
 
-  const app = await plugin<AppPlugin>('app')
-  app?.addListener('backButton', () => {
-    // Route the hardware back gesture through the same path as the in-app
-    // back button: close an open sheet, leave the quiz via its exit sheet,
-    // otherwise go back one screen; at the root, minimise the app.
-    const event = new CustomEvent('quizz:hardware-back', { cancelable: true })
-    window.dispatchEvent(event)
-    if (event.defaultPrevented) return
-    const state = useStore.getState()
-    if (state.routes.length > 1) state.pop()
-    else void app.minimizeApp?.()
-  })
+  try {
+    await NativeApp.addListener('backButton', () => {
+      // Route the hardware back gesture through the same path as the in-app
+      // back button: close an open sheet, leave the quiz via its exit sheet,
+      // otherwise go back one screen; at the root, minimise the app.
+      const event = new CustomEvent('quizz:hardware-back', { cancelable: true })
+      window.dispatchEvent(event)
+      if (event.defaultPrevented) return
+      const state = useStore.getState()
+      if (state.routes.length > 1) state.pop()
+      else void NativeApp.minimizeApp?.().catch(() => undefined)
+    })
+  } catch {
+    /* older WebViews still get the history-based back handling */
+  }
 }
 
-async function syncStatusBar(status: StatusBarPlugin | null) {
-  if (!status) return
-  const theme = applyTheme(useStore.getState().settings.theme)
-  await status.setOverlaysWebView({ overlay: true }).catch(() => undefined)
-  await status
-    .setStyle({ style: theme === 'dark' ? 'DARK' : 'LIGHT' })
-    .catch(() => undefined)
-}
-
-/** Keep the status-bar icons readable after a theme change. */
 export async function refreshStatusBar(theme: 'light' | 'dark'): Promise<void> {
   if (!isNative()) return
-  const status = await plugin<StatusBarPlugin>('status-bar')
-  await status?.setStyle({ style: theme === 'dark' ? 'DARK' : 'LIGHT' }).catch(() => undefined)
+  try {
+    await StatusBar.setOverlaysWebView({ overlay: true })
+    await StatusBar.setStyle({ style: theme === 'dark' ? Style.Dark : Style.Light })
+  } catch {
+    /* system bars are cosmetic */
+  }
 }
 
-/** True haptics on Android (the web Vibration API is unreliable in WebView). */
+/** Real haptics on Android; returns false when the platform does it in JS. */
 export async function nativeHaptic(kind: 'light' | 'medium' | 'success' | 'warning'): Promise<boolean> {
   if (!isNative()) return false
-  const haptics = await plugin<HapticsPlugin>('haptics')
-  if (!haptics) return false
   try {
     if (kind === 'success' || kind === 'warning') {
-      await haptics.notification({ type: kind === 'success' ? 'SUCCESS' : 'WARNING' })
+      await Haptics.notification({
+        type: kind === 'success' ? NotificationType.Success : NotificationType.Warning,
+      })
     } else {
-      await haptics.impact({ style: kind === 'medium' ? 'MEDIUM' : 'LIGHT' })
+      await Haptics.impact({ style: kind === 'medium' ? ImpactStyle.Medium : ImpactStyle.Light })
     }
     return true
   } catch {

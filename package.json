@@ -1,9 +1,9 @@
 {
   "name": "quizz",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
-  "description": "Quizz — offline Android quiz player for AI-generated tests",
+  "description": "Quizz \u2014 offline Android quiz player for AI-generated tests",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "tsc --noEmit && vite build",

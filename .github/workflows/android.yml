@@ -95,6 +95,31 @@ jobs:
           fi
           unzip -l "$APK" 2>/dev/null | grep -E "assets/public/index.html|\.quizz" | head -6 || true
 
+      - name: Publish APK facts
+        run: |
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          BUILD_TOOLS="$(ls -d "${ANDROID_HOME:-$ANDROID_SDK_ROOT}"/build-tools/* 2>/dev/null | sort -V | tail -1)"
+          mkdir -p ci-logs
+          {
+            echo "size: $(du -h "$APK" | cut -f1)"
+            echo "sha256: $(sha256sum "$APK" | cut -d' ' -f1)"
+            echo "--- badging ---"
+            if [ -x "$BUILD_TOOLS/aapt2" ]; then "$BUILD_TOOLS/aapt2" dump badging "$APK" 2>/dev/null | grep -E "^package|sdkVersion|targetSdkVersion|application-label|launchable" || true; fi
+            echo "--- signature ---"
+            if [ -x "$BUILD_TOOLS/apksigner" ]; then "$BUILD_TOOLS/apksigner" verify --print-certs "$APK" 2>&1 | grep -E "Signer #1 certificate DN|SHA-256 digest" || true; fi
+            echo "--- bundled content ---"
+            unzip -l "$APK" | grep -E "assets/public/index.html|\.quizz|assets/public/assets/index" | awk '{print $1, $4}' || true
+            echo "--- permissions ---"
+            if [ -x "$BUILD_TOOLS/aapt2" ]; then "$BUILD_TOOLS/aapt2" dump permissions "$APK" 2>/dev/null || true; fi
+          } > ci-logs/apk-info.txt
+          cat ci-logs/apk-info.txt
+          git config user.name "Quizz Builder"
+          git config user.email "quizz-builder@users.noreply.github.com"
+          git add -f ci-logs/apk-info.txt
+          git commit -m "ci: apk facts for build $GITHUB_RUN_NUMBER" || true
+          git pull --rebase --autostash || true
+          git push || echo "::warning::could not publish apk facts"
+
       - name: Publish build log on failure
         if: failure()
         run: |
