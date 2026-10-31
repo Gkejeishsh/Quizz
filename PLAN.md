@@ -631,14 +631,16 @@ Theme (System/Light/Dark), text size, haptics, sound, reduce motion, backup expo
 |---|---|---|
 | M0 | Plan + format contract | ✅ done (v2.0) |
 | M1 | Design system, logo, shell, home, navigation, motion | ✅ done |
-| M2 | Content pipeline | 🟡 converter + validator built and tested on synthetic PDFs; needs 2–3 real PDFs to calibrate |
+| M2 | Content pipeline | 🟡 HEC Quantitative Test 2 converted (50/50 questions, keys, explanations); more PDFs welcome |
 | M3 | Import + library | ✅ done |
 | M4 | Quiz core (timer, play, results, explanations, retry-wrong) | ✅ done |
 | M5 | History + settings + backup | ✅ done |
-| M6 | Polish + QA | 🟡 automated tests green (35); real-device pass pending |
-| M7 | APK | ⬜ waiting for "compile" |
+| M6 | Polish + QA | 🟡 automated tests green (36); real-device pass pending |
+| M7 | APK | ✅ signed release APK built in CI and attached to GitHub Releases (Capacitor 8, targetSdk 36, minSdk 24) |
 
 Implemented ahead of plan: per-question flagging, review search, share summary, Android-style back handling, offline service worker, PWA manifest, sample packs in `packs/`.
+
+Native shell (M7): Capacitor 8 wrapper, adaptive launcher icon + monochrome layer, light/dark splash screens, portrait-only, edge-to-edge with measured safe-area fallback, real haptics, hardware back routed through the in-app back stack, no network permissions, stable signing key committed so updates install over the old build.
 
 ## 10. Milestones with exit criteria
 
