@@ -15,3 +15,4 @@ android/local.properties
 *.jks
 # ...except the project's personal signing key, so app updates keep working
 !android/quizz-release.jks
+ci-logs/
