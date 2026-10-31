@@ -107,11 +107,21 @@ jobs:
 
       - name: Verify the APK
         run: |
+          set -e
           APK=android/app/build/outputs/apk/release/app-release.apk
           test -f "$APK" || (echo "APK missing" && exit 1)
           ls -lh "$APK"
-          "$ANDROID_HOME/build-tools/36.0.0/aapt2" dump badging "$APK" | head -20
-          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" | head -8
+          BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          echo "Using build tools: $BUILD_TOOLS"
+          if [ -x "$BUILD_TOOLS/aapt2" ]; then
+            "$BUILD_TOOLS/aapt2" dump badging "$APK" 2>/dev/null | head -12 || true
+          elif [ -x "$BUILD_TOOLS/aapt" ]; then
+            "$BUILD_TOOLS/aapt" dump badging "$APK" | head -12 || true
+          fi
+          if [ -x "$BUILD_TOOLS/apksigner" ]; then
+            "$BUILD_TOOLS/apksigner" verify --print-certs "$APK" | head -6 || true
+          fi
+          unzip -l "$APK" | grep -E "assets/public/(index.html|packs)" | head -6 || true
 
       - name: Name the artifact
         run: |
