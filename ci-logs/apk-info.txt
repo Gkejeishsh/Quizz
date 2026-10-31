@@ -1,5 +1,5 @@
 size: 5.1M
-sha256: 47205150ed258b907ac35b8714dd780d0db8977548def506f9b0fcdf238eaa03
+sha256: 170121b4efc35796e03be16569a974fc27b188be92938fa6deafd019b9b176d8
 --- badging ---
 package: name='com.quizz.app' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
 targetSdkVersion:'36'
@@ -96,7 +96,7 @@ V2 Signer: certificate SHA-256 digest: feedd0d28716a082aff729d9bdb0244b0f30992f5
 6050 assets/public/assets/chemistry-bonding-demo-CQ7n1ha2.quizz
 5446 assets/public/assets/english-grammar-demo-DsnkIsmb.quizz
 60179 assets/public/assets/hec-quant-test-2-DSKdp3-W.quizz
-537055 assets/public/assets/index-CHJ8ghBC.js
+537619 assets/public/assets/index-B-Qs_JgJ.js
 4916 assets/public/assets/maths-algebra-demo-DAvAKsIL.quizz
 1515 assets/public/index.html
 --- permissions ---
