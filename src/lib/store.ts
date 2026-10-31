@@ -75,8 +75,8 @@ function seedTests(categories: Category[]): TestRecord[] {
   const chem = categories.find((c) => c.name === 'Chemistry')
   const maths = categories.find((c) => c.name === 'Maths')
   const picks: [Pack, string | undefined][] = [
-    [DEMO_PACKS[0], chem?.id],
-    [DEMO_PACKS[1], maths?.id],
+    [DEMO_PACKS[0], maths?.id], // HEC Quantitative Practice Test 2
+    [DEMO_PACKS[1], chem?.id], // Chemical Bonding — Practice Test
   ]
   const now = Date.now()
   return picks.map(([pack, categoryId], i) => ({
