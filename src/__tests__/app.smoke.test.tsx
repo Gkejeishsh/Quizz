@@ -42,7 +42,7 @@ it('navigates from home into saved tests and back', async () => {
   await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
   fireEvent.click(screen.getByText('Saved tests'))
   await waitFor(() => expect(document.body.textContent).toContain('newest first'), { timeout: 4000 })
-  expect(document.body.textContent).toContain('Algebra & Geometry')
+  expect(document.body.textContent).toContain('HEC Quantitative Practice Test 2')
   fireEvent.click(screen.getByLabelText('Back'))
   await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
 }, 15000)

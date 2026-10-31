@@ -1,0 +1,1520 @@
+{
+  "format": "quizz-pack",
+  "formatVersion": 1,
+  "id": "pck_88becd87f33a",
+  "revision": 1,
+  "supersedes": null,
+  "title": "HEC Quantitative Practice Test 2",
+  "subject": "Maths",
+  "language": "en",
+  "createdAt": "2026-10-31T11:49:44Z",
+  "source": {
+    "fileName": "HEC_Quant_50_Test_2.pdf",
+    "pages": 15,
+    "checksum": "sha256:45e0cc71dd0d0616f634e8005ba5ac7bdfa3c0d60877d82927ff0dc0f6b38781"
+  },
+  "questions": [
+    {
+      "n": 1,
+      "type": "single",
+      "question": "1 ÷ (1/2 + 1/3) =",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6/5"
+        },
+        {
+          "key": "C",
+          "text": "5/6"
+        },
+        {
+          "key": "D",
+          "text": "1/5"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Do the bracket first: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Then 1 ÷ 5/6 = 6/5. Why the others tempt: 5 takes the reciprocal of each fraction separately (2 + 3). 5/6 stops after the bracket. 1/5 inverts the wrong number.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 2,
+      "type": "single",
+      "question": "If A is 25% more than B, then B is what percent less than A?",
+      "options": [
+        {
+          "key": "A",
+          "text": "25%"
+        },
+        {
+          "key": "B",
+          "text": "20%"
+        },
+        {
+          "key": "C",
+          "text": "80%"
+        },
+        {
+          "key": "D",
+          "text": "125%"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Let B = 100, so A = 125. B is less than A by 25 out of 125, which is 20%. The percent is now taken of A, a bigger base. Why the others tempt: 25% reuses the old base. 80% is B as a percent of A, not how much less. 125% is A as a percent of B.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 3,
+      "type": "single",
+      "question": "A shopkeeper marks goods 25% above cost price and then allows a 10% discount. His profit percent is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "12.5%"
+        },
+        {
+          "key": "B",
+          "text": "10%"
+        },
+        {
+          "key": "C",
+          "text": "15%"
+        },
+        {
+          "key": "D",
+          "text": "35%"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Let cost = 100. Marked price = 125. Selling price = 125 × 0.90 = 112.5. Profit = 12.5, so 12.5%. Why the others tempt: 15% subtracts 10 from 25, but the discount applies to the marked price. 35% adds them. 10% ignores the mark-up.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 4,
+      "type": "single",
+      "question": "The ratio of two numbers is 3: 4 and their LCM is 48. The sum of the two numbers is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "7"
+        },
+        {
+          "key": "B",
+          "text": "14"
+        },
+        {
+          "key": "C",
+          "text": "48"
+        },
+        {
+          "key": "D",
+          "text": "28"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "The numbers are 3k and 4k. Since 3 and 4 share no factor, their LCM is 12k. 12k = 48 gives k = 4, so the numbers are 12 and 16. Sum = 28. Why the others tempt: 7 is only 3 + 4. 14 halves the sum. 48 is the LCM itself.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 5,
+      "type": "single",
+      "question": "12 men working 8 hours a day complete a job in 10 days. How many days will 15 men working 6 hours a day need?",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 days"
+        },
+        {
+          "key": "B",
+          "text": "12 days"
+        },
+        {
+          "key": "C",
+          "text": "13 1/3 days"
+        },
+        {
+          "key": "D",
+          "text": "10 2/3 days"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Total work = men × hours × days = 12 × 8 × 10 = 960 man-hours. Now 15 × 6 = 90 man-hours per day, so days = 960 ÷ 90 = 10 2/3. Why the others tempt: 8 days ignores the change in hours. 13 1/3 days ignores the change in the number of men. 12 is a guess.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 6,
+      "type": "single",
+      "question": "Two trains 100 m and 150 m long run in opposite directions at 40 km/h and 60 km/h. The time they take to cross each other is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.5 seconds"
+        },
+        {
+          "key": "B",
+          "text": "9 seconds"
+        },
+        {
+          "key": "C",
+          "text": "25 seconds"
+        },
+        {
+          "key": "D",
+          "text": "45 seconds"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Opposite directions: add the speeds, 100 km/h = 100 × 5/18 = 250/9 m/s. Distance = sum of lengths = 250 m. Time = 250 ÷ (250/9) = 9 s. Why the others tempt: 45 s uses the difference of speeds (same direction). 2.5 s divides metres by km/h with no conversion. 25 s uses a wrong conversion.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 7,
+      "type": "single",
+      "question": "Rs. 10,000 is invested at 10% compound interest per annum. The compound interest earned in 2 years is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rs. 2,000"
+        },
+        {
+          "key": "B",
+          "text": "Rs. 2,200"
+        },
+        {
+          "key": "C",
+          "text": "Rs. 2,100"
+        },
+        {
+          "key": "D",
+          "text": "Rs. 12,100"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Year 1: 10% of 10,000 = 1,000, so the amount is 11,000. Year 2: 10% of 11,000 = 1,100. Interest = 1,000 + 1,100 = 2,100. (The amount is 12,100.) Why the others tempt: 2,000 is simple interest. 12,100 is the amount, not the interest. 2,200 doubles the second year’s interest.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 8,
+      "type": "single",
+      "question": "A can do a job in 10 days and B in 15 days. They work together for 3 days, then A leaves. B finishes the rest in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6 days"
+        },
+        {
+          "key": "B",
+          "text": "9 days"
+        },
+        {
+          "key": "C",
+          "text": "12 days"
+        },
+        {
+          "key": "D",
+          "text": "7.5 days"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Together: 1/10 + 1/15 = 1/6 per day. In 3 days they do 3/6 = 1/2 of the job. The remaining 1/2 at B’s rate 1/15 per day takes 7.5 days. Why the others tempt: 12 subtracts 3 from B’s 15 days. 6 and 9 use the wrong fraction of work left.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 9,
+      "type": "single",
+      "question": "The average age of 20 students is 15 years. When the teacher’s age is included, the average becomes 16. The teacher’s age is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "16 years"
+        },
+        {
+          "key": "B",
+          "text": "36 years"
+        },
+        {
+          "key": "C",
+          "text": "31 years"
+        },
+        {
+          "key": "D",
+          "text": "21 years"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Total for 21 people = 21 × 16 = 336. Students’ total = 20 × 15 = 300. Teacher = 336 − 300 = 36. Why the others tempt: 16 is just the new average. 31 is 15 + 16. 21 is the number of people.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 10,
+      "type": "single",
+      "question": "√0.0081 =",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.9"
+        },
+        {
+          "key": "B",
+          "text": "0.009"
+        },
+        {
+          "key": "C",
+          "text": "0.0009"
+        },
+        {
+          "key": "D",
+          "text": "0.09"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "0.0081 = 81/10,000, so its square root is 9/100 = 0.09. Check: 0.09 × 0.09 = 0.0081. Why the others tempt: A square root halves the number of decimal places (4 becomes 2). 0.9 would be the root of 0.81.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 11,
+      "type": "single",
+      "question": "The smallest number greater than 10 that leaves remainder 3 when divided by 4, 5 and 6 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "63"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "60"
+        },
+        {
+          "key": "D",
+          "text": "123"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Such numbers are LCM(4, 5, 6) × k + 3. The LCM is 60, so the numbers are 3, 63, 123, … The smallest above 10 is 63. Why the others tempt: 3 leaves remainder 3 but is not greater than 10. 60 leaves remainder 0. 123 works but is not the smallest.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 12,
+      "type": "single",
+      "question": "The best estimate of 4.98 × 19.9 ÷ 0.495 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "100"
+        },
+        {
+          "key": "C",
+          "text": "200"
+        },
+        {
+          "key": "D",
+          "text": "2,000 Algebra (Q13–Q21)"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Round each number: 5 × 20 ÷ 0.5 = 100 ÷ 0.5 = 200. Dividing by 0.5 doubles the result. Why the others tempt: 100 forgets to divide by 0.5. 20 and 2,000 are decimal-place slips.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 13,
+      "type": "single",
+      "question": "If a + b = 7 and a² + b² = 29, then ab =",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "5"
+        },
+        {
+          "key": "C",
+          "text": "20"
+        },
+        {
+          "key": "D",
+          "text": "78"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "(a + b)² = a² + 2ab + b², so 49 = 29 + 2ab. Then 2ab = 20 and ab = 10. Why the others tempt: 20 is 2ab. 5 halves ab again. 78 adds 49 and 29.",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 14,
+      "type": "single",
+      "question": "If x − y = 3 and xy = 10, then x³ − y³ =",
+      "options": [
+        {
+          "key": "A",
+          "text": "117"
+        },
+        {
+          "key": "B",
+          "text": "−63"
+        },
+        {
+          "key": "C",
+          "text": "27"
+        },
+        {
+          "key": "D",
+          "text": "90"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Use x³ − y³ = (x − y)³ + 3xy(x − y) = 27 + 3 × 10 × 3 = 27 + 90 = 117. (Check: x = 5, y = 2 gives 125 − 8 = 117.) Why the others tempt: 27 stops after cubing. 90 is only the second term. −63 subtracts the second term (27 − 90).",
+      "sourceRef": {
+        "page": 2
+      }
+    },
+    {
+      "n": 15,
+      "type": "single",
+      "question": "Which of the following is a factor of x² − x − 12?",
+      "options": [
+        {
+          "key": "A",
+          "text": "x + 4"
+        },
+        {
+          "key": "B",
+          "text": "x − 3"
+        },
+        {
+          "key": "C",
+          "text": "x + 12"
+        },
+        {
+          "key": "D",
+          "text": "x − 4"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Find two numbers with product −12 and sum −1: they are −4 and +3. So x² − x − 12 = (x − 4)(x + 3). Only x − 4 is offered. Why the others tempt: x + 4 and x − 3 use the right numbers with the wrong signs. x + 12 borrows the constant term.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 16,
+      "type": "single",
+      "question": "√50 + √18 − √8 =",
+      "options": [
+        {
+          "key": "A",
+          "text": "6√2"
+        },
+        {
+          "key": "B",
+          "text": "5√2"
+        },
+        {
+          "key": "C",
+          "text": "7√2"
+        },
+        {
+          "key": "D",
+          "text": "√60"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Simplify each surd: √50 = 5√2, √18 = 3√2, √8 = 2√2. Then 5√2 + 3√2 − 2√2 = 6√2. Why the others tempt: √60 adds and subtracts the numbers under the roots. Surds combine only after each is simplified to like surds.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 17,
+      "type": "single",
+      "question": "1/(x − 1) − 1/(x + 1) =",
+      "options": [
+        {
+          "key": "A",
+          "text": "2/(x² − 1)"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "2x/(x² − 1)"
+        },
+        {
+          "key": "D",
+          "text": "−2/(x² − 1)"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Common denominator (x − 1)(x + 1) = x² − 1. Numerator: (x + 1) − (x − 1) = 2. Result: 2/(x² − 1). Why the others tempt: 0 assumes the two terms cancel. −2 flips the subtraction. 2x/(x² − 1) invents an x in the numerator.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 18,
+      "type": "single",
+      "question": "For x ≠ 2, (x − 2)/(2 − x) =",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "x − 2"
+        },
+        {
+          "key": "D",
+          "text": "−1"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "2 − x = −(x − 2), so the fraction is (x − 2)/[−(x − 2)] = −1. Why the others tempt: 1 ignores that the denominator is the negative of the numerator. 0 treats the cancelled factor as zero.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 19,
+      "type": "single",
+      "question": "(x³y²)² ÷ (x²y) =",
+      "options": [
+        {
+          "key": "A",
+          "text": "x⁴y⁴"
+        },
+        {
+          "key": "B",
+          "text": "x⁵y³"
+        },
+        {
+          "key": "C",
+          "text": "x⁴y³"
+        },
+        {
+          "key": "D",
+          "text": "x⁶y³"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "(x³y²)² = x⁶y⁴. Divide by x²y: x⁶⁻² × y⁴⁻¹ = x⁴y³. Why the others tempt: x⁶y³ forgets to divide by x². x⁴y⁴ forgets to divide by y. x⁵y³ subtracts only 1 from the exponent of x.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 20,
+      "type": "single",
+      "question": "If x + 1/x = 3, then x² + 1/x² =",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "9"
+        },
+        {
+          "key": "C",
+          "text": "11"
+        },
+        {
+          "key": "D",
+          "text": "7"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Square both sides: x² + 2 + 1/x² = 9. So x² + 1/x² = 9 − 2 = 7. Why the others tempt: 9 forgets the middle term 2. 11 adds 2 instead of subtracting. 5 subtracts 4.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 21,
+      "type": "single",
+      "question": "If (x + 2) is a factor of x² + 3x + k, then k =",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "−2"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "6 Equations (Q22–Q28)"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "x + 2 is a factor, so x = −2 makes the expression zero: 4 − 6 + k = 0, so k = 2. Check: x² + 3x + 2 = (x + 1)(x + 2). Why the others tempt: −2 is the root, not k. 4 forgets the 3x term. 6 uses x = +2.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 22,
+      "type": "single",
+      "question": "If 3^(x + 1) = 81, then x =",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "27"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "81 = 3⁴, so x + 1 = 4 and x = 3. Why the others tempt: 4 forgets the +1. 27 is 81 ÷ 3. 2 slips the other way.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 23,
+      "type": "single",
+      "question": "The sum of three consecutive even numbers is 78. The largest of them is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "28"
+        },
+        {
+          "key": "B",
+          "text": "24"
+        },
+        {
+          "key": "C",
+          "text": "26"
+        },
+        {
+          "key": "D",
+          "text": "30"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Let the numbers be x, x + 2, x + 4. Then 3x + 6 = 78 and x = 24. The numbers are 24, 26, 28, so the largest is 28. Why the others tempt: 26 is the middle number (also the average). 24 is the smallest. 30 overshoots.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 24,
+      "type": "single",
+      "question": "If 3x − 2y = 7 and x + 2y = 5, then x + y =",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "12"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Add the equations: 4x = 12, so x = 3. Then 3 + 2y = 5 gives y = 1. So x + y = 4. Why the others tempt: 3 and 1 are x and y alone. 12 is 4x.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 25,
+      "type": "single",
+      "question": "The solutions of x² − 3x = 10 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "x = 10 or x = 13"
+        },
+        {
+          "key": "B",
+          "text": "x = 2 or x = −5"
+        },
+        {
+          "key": "C",
+          "text": "x = 5 only"
+        },
+        {
+          "key": "D",
+          "text": "x = 5 or x = −2"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Move everything to one side so the other side is zero: x² − 3x − 10 = 0, so (x − 5)(x + 2) = 0 and x = 5 or x = −2. Factors can only be set equal to a number when their product is zero. Why the others tempt: x = 10 or 13 comes from x(x − 3) = 10, setting each factor equal to 10. x = 2 or −5 flips the signs. “5 only” drops a root.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 26,
+      "type": "single",
+      "question": "The roots of 2x² − 4x + 5 = 0 are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "real and equal"
+        },
+        {
+          "key": "B",
+          "text": "non-real (complex)"
+        },
+        {
+          "key": "C",
+          "text": "real and distinct"
+        },
+        {
+          "key": "D",
+          "text": "rational and distinct"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Discriminant = b² − 4ac = 16 − 40 = −24, which is negative, so there are no real roots. Why the others tempt: Real and equal needs a discriminant of 0. Real and distinct (or rational) needs a positive discriminant.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 27,
+      "type": "single",
+      "question": "How many positive integers satisfy 2x − 5 < 7?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "2x < 12, so x < 6 (strictly). The positive integers are 1, 2, 3, 4, 5, which is 5 of them. Why the others tempt: 6 includes x = 6, which fails (7 is not less than 7). 7 also counts 0. 4 stops one short.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 28,
+      "type": "single",
+      "question": "log₁₀ 4 + log₁₀ 25 =",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "100"
+        },
+        {
+          "key": "D",
+          "text": "log₁₀ 29 Geometry (Q29–Q34)"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "log a + log b = log(ab). So log 4 + log 25 = log 100 = 2. Why the others tempt: log 29 adds inside the log. 100 forgets to take the log. 1 halves the answer.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 29,
+      "type": "single",
+      "question": "The angles of a triangle are in the ratio 2: 3: 4. The largest angle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "80°"
+        },
+        {
+          "key": "B",
+          "text": "60°"
+        },
+        {
+          "key": "C",
+          "text": "90°"
+        },
+        {
+          "key": "D",
+          "text": "100°"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "The angles sum to 180°. Parts: 2 + 3 + 4 = 9, so one part = 20°. Largest = 4 × 20° = 80°. Why the others tempt: 60° is the middle angle. 90° and 100° do not fit the ratio.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 30,
+      "type": "single",
+      "question": "The perimeter of a rectangle is 36 cm and its length is twice its width. Its area is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "36 cm²"
+        },
+        {
+          "key": "B",
+          "text": "72 cm²"
+        },
+        {
+          "key": "C",
+          "text": "108 cm²"
+        },
+        {
+          "key": "D",
+          "text": "144 cm²"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Let width = w and length = 2w. Perimeter = 2(2w + w) = 6w = 36, so w = 6 and length = 12. Area = 12 × 6 = 72 cm². Why the others tempt: 36 repeats the perimeter. 108 and 144 come from mis-solved dimensions.",
+      "sourceRef": {
+        "page": 3
+      }
+    },
+    {
+      "n": 31,
+      "type": "single",
+      "question": "The area of a circle is 154 cm² (π = 22/7). Its circumference is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "22 cm"
+        },
+        {
+          "key": "B",
+          "text": "88 cm"
+        },
+        {
+          "key": "C",
+          "text": "44 cm"
+        },
+        {
+          "key": "D",
+          "text": "154 cm"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "πr² = 154, so r² = 154 × 7/22 = 49 and r = 7. Circumference = 2πr = 2 × 22/7 × 7 = 44 cm. Why the others tempt: 22 is πr (no 2). 88 uses 14 (the diameter) as the radius. 154 is the area.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 32,
+      "type": "single",
+      "question": "A right triangle has hypotenuse 17 cm and one leg 8 cm. Its area is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "68 cm²"
+        },
+        {
+          "key": "B",
+          "text": "60 cm²"
+        },
+        {
+          "key": "C",
+          "text": "120 cm²"
+        },
+        {
+          "key": "D",
+          "text": "136 cm²"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Other leg = √(17² − 8²) = √(289 − 64) = √225 = 15. Area = ½ × 8 × 15 = 60 cm². Why the others tempt: 120 forgets the ½. 68 and 136 use the hypotenuse as if it were a leg.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 33,
+      "type": "single",
+      "question": "An exterior angle of a triangle is 110°, and one of the interior opposite angles is 45°. The other interior opposite angle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "65°"
+        },
+        {
+          "key": "B",
+          "text": "25°"
+        },
+        {
+          "key": "C",
+          "text": "70°"
+        },
+        {
+          "key": "D",
+          "text": "135°"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "An exterior angle equals the sum of the two interior opposite angles: 110° = 45° + x, so x = 65°. Why the others tempt: 25° treats 110° as an interior angle. 70° is the supplement of 110°. 135° is 180° − 45°.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 34,
+      "type": "single",
+      "question": "A cube has a total surface area of 150 cm². Its volume is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "25 cm³"
+        },
+        {
+          "key": "B",
+          "text": "125 cm³"
+        },
+        {
+          "key": "C",
+          "text": "150 cm³"
+        },
+        {
+          "key": "D",
+          "text": "625 cm³ Statistics (mean, median, mode, range) (Q35–Q40)"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "A cube has 6 equal faces: 6a² = 150, so a² = 25 and a = 5. Volume = a³ = 125 cm³. Why the others tempt: 25 is the area of one face. 625 squares the face area. 150 repeats the given number.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 35,
+      "type": "single",
+      "question": "The marks 2, 3 and 4 occur with frequencies 3, 5 and 2 respectively. The mean mark is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "2.9"
+        },
+        {
+          "key": "C",
+          "text": "3.5"
+        },
+        {
+          "key": "D",
+          "text": "9.67"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Σfx = 2×3 + 3×5 + 4×2 = 6 + 15 + 8 = 29. Σf = 10. Mean = 29 ÷ 10 = 2.9. Why the others tempt: 3 is the plain mean of 2, 3, 4, ignoring frequencies. 9.67 divides by 3 instead of by Σf.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 36,
+      "type": "single",
+      "question": "The median of 4, 8, 12, 16 is 10. A fifth value, 20, is added. The new median is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "14"
+        },
+        {
+          "key": "C",
+          "text": "12"
+        },
+        {
+          "key": "D",
+          "text": "15"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The new data 4, 8, 12, 16, 20 has five values, so the median is the 3rd value: 12. Why the others tempt: 10 forgets that the position changes. 14 and 15 average the wrong pairs.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 37,
+      "type": "single",
+      "question": "The data 2, 3, 3, 4, x has 3 as its only mode. Which value of x is NOT possible?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "6"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "3 already appears twice. If x = 4, then 4 also appears twice and there would be two modes. Any of the other options leaves 3 as the only mode (x = 3 makes it appear three times). x = 2 would also fail, but it is not offered. Why the others tempt: x = 3 only strengthens the mode. 5 and 6 appear once.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 38,
+      "type": "single",
+      "question": "The mean of five numbers is 20. If each number is increased by 4 and then multiplied by 2, the new mean is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "24"
+        },
+        {
+          "key": "B",
+          "text": "40"
+        },
+        {
+          "key": "C",
+          "text": "48"
+        },
+        {
+          "key": "D",
+          "text": "44"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The mean follows the same operations in the same order: (20 + 4) × 2 = 48. Why the others tempt: 24 skips the doubling. 40 skips the +4. 44 applies the operations in the wrong order (20 × 2 + 4).",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 39,
+      "type": "single",
+      "question": "The mean of 10 numbers is 12 and the mean of 20 other numbers is 15. The mean of all 30 numbers is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "14"
+        },
+        {
+          "key": "B",
+          "text": "13.5"
+        },
+        {
+          "key": "C",
+          "text": "14.5"
+        },
+        {
+          "key": "D",
+          "text": "27"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Total of the first group = 120. Total of the second = 300. Together 420 over 30 numbers = 14. Why the others tempt: 13.5 is the simple average of 12 and 15. 27 adds the means. 14.5 leans toward the larger group too far.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 40,
+      "type": "single",
+      "question": "The mean of five numbers is 10. Four of them are 4, 6, 10 and 12. The range of all five numbers is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8"
+        },
+        {
+          "key": "B",
+          "text": "12"
+        },
+        {
+          "key": "C",
+          "text": "18"
+        },
+        {
+          "key": "D",
+          "text": "14 Scenario and mental maths (Q41–Q50)"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Sum = 50. The known four add to 32, so the fifth number is 18. The data run from 4 to 18, so the range = 18 − 4 = 14. Why the others tempt: 18 is the missing number, not the range. 8 is the range of the four known values (12 − 4). 12 is the largest known value.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 41,
+      "type": "single",
+      "question": "If 5th March is a Monday, then 25th March is a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Saturday"
+        },
+        {
+          "key": "B",
+          "text": "Sunday"
+        },
+        {
+          "key": "C",
+          "text": "Monday"
+        },
+        {
+          "key": "D",
+          "text": "Tuesday"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "25 − 5 = 20 days later. 20 = 2 × 7 + 6, so move 6 days ahead of Monday: Sunday. Why the others tempt: Monday would be exactly 14 or 21 days later. Saturday counts only 5 extra days.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 42,
+      "type": "single",
+      "question": "How many degrees does the hour hand of a clock move in 40 minutes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20°"
+        },
+        {
+          "key": "B",
+          "text": "12°"
+        },
+        {
+          "key": "C",
+          "text": "40°"
+        },
+        {
+          "key": "D",
+          "text": "240°"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "The hour hand moves 360° in 12 hours, so 30° per hour or 0.5° per minute. In 40 minutes: 40 × 0.5 = 20°. Why the others tempt: 240° is what the minute hand moves (6° per minute). 40° and 12° mix up the units.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 43,
+      "type": "single",
+      "question": "The next term in 2, 3, 5, 8, 12, … is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "16"
+        },
+        {
+          "key": "B",
+          "text": "18"
+        },
+        {
+          "key": "C",
+          "text": "17"
+        },
+        {
+          "key": "D",
+          "text": "19"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Differences: 1, 2, 3, 4, rising by 1 each step. The next difference is 5, so 12 + 5 = 17. Why the others tempt: 16 and 18 add a constant gap, but the gap grows each time.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 44,
+      "type": "single",
+      "question": "How many different two-digit numbers can be formed from the digits 1, 2 and 3 if no digit may be repeated?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "9"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "12"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Tens digit: 3 choices. Units digit: 2 choices left. So 3 × 2 = 6 (12, 13, 21, 23, 31, 32). Why the others tempt: 9 allows repetition (11, 22, 33 included). 3 counts only the tens digit. 12 doubles the count.",
+      "sourceRef": {
+        "page": 4
+      }
+    },
+    {
+      "n": 45,
+      "type": "single",
+      "question": "The ratio of the ages of a mother and her daughter is 7: 2. The mother is 30 years older. The daughter’s age is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "6 years"
+        },
+        {
+          "key": "B",
+          "text": "12 years"
+        },
+        {
+          "key": "C",
+          "text": "18 years"
+        },
+        {
+          "key": "D",
+          "text": "42 years"
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Ages are 7k and 2k. The difference 5k = 30 gives k = 6. Daughter = 2k = 12 (mother = 42). Why the others tempt: 6 is k itself. 42 is the mother’s age. 18 is 3k.",
+      "sourceRef": {
+        "page": 5
+      }
+    },
+    {
+      "n": 46,
+      "type": "single",
+      "question": "A man spends 1/3 of his money on food and 1/4 of the remainder on rent. He is left with Rs. 1,500. His money at the start was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rs. 3,000"
+        },
+        {
+          "key": "B",
+          "text": "Rs. 2,250"
+        },
+        {
+          "key": "C",
+          "text": "Rs. 3,600"
+        },
+        {
+          "key": "D",
+          "text": "Rs. 4,500"
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "After food, 2/3 remains. Rent is 1/4 of that, so 3/4 of 2/3 = 1/2 of the original remains. 1/2 of the original = 1,500, so he started with 3,000. Why the others tempt: 3,600 takes rent as 1/4 of the original money (leaving 5/12). The other options come from other wrong fractions.",
+      "sourceRef": {
+        "page": 5
+      }
+    },
+    {
+      "n": 47,
+      "type": "single",
+      "question": "Walking at 3 km/h a man reaches 12 minutes late. Walking at 4 km/h he reaches 8 minutes early. The distance is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 km"
+        },
+        {
+          "key": "B",
+          "text": "3.5 km"
+        },
+        {
+          "key": "C",
+          "text": "5 km"
+        },
+        {
+          "key": "D",
+          "text": "4 km"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "The two journey times differ by 12 + 8 = 20 minutes = 1/3 hour. d/3 − d/4 = 1/3, so d/12 = 1/3 and d = 4 km. Why the others tempt: The late and early minutes add because he goes from being late to being early. The other distances do not fit this gap.",
+      "sourceRef": {
+        "page": 5
+      }
+    },
+    {
+      "n": 48,
+      "type": "single",
+      "question": "A town’s population grows by 10% every year and is now 12,100. Two years ago it was:",
+      "options": [
+        {
+          "key": "A",
+          "text": "9,680"
+        },
+        {
+          "key": "B",
+          "text": "9,900"
+        },
+        {
+          "key": "C",
+          "text": "11,000"
+        },
+        {
+          "key": "D",
+          "text": "10,000"
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Each year multiplies by 1.1, so now = earlier × 1.21. Earlier = 12,100 ÷ 1.21 = 10,000. Why the others tempt: 9,680 subtracts 20% of 12,100. 9,900 takes 10% off 11,000, but growth is undone by dividing, not subtracting. 11,000 stops after one year.",
+      "sourceRef": {
+        "page": 5
+      }
+    },
+    {
+      "n": 49,
+      "type": "single",
+      "question": "What is the unit digit of 3²⁰?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "7"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "9"
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The unit digits of powers of 3 repeat every 4 steps: 3, 9, 7, 1. Since 20 is a multiple of 4, 3²⁰ ends in 1. Why the others tempt: The other digits belong to remainders 1, 3 and 2 when the exponent is divided by 4.",
+      "sourceRef": {
+        "page": 5
+      }
+    },
+    {
+      "n": 50,
+      "type": "single",
+      "question": "Rs. 8,000 becomes Rs. 9,600 in 4 years at simple interest. The rate per annum is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4%"
+        },
+        {
+          "key": "B",
+          "text": "6%"
+        },
+        {
+          "key": "C",
+          "text": "5%"
+        },
+        {
+          "key": "D",
+          "text": "20% ANSWER KEY (answers only) Stop here until you have finished the test. Q Ans Q Ans Q Ans Q Ans Q Ans 1 B 11 A 21 A 31 C 41 B 2 B 12 C 22 C 32 B 42 A 3 A 13 A 23 A 33 A 43 C 4 D 14 A 24 C 34 B 44 C 5 D 15 D 25 D 35 B 45 B 6 B 16 A 26 B 36 C 46 A 7 C 17 A 27 D 37 B 47 D 8 D 18 D 28 B 38 C 48 D 9 B 19 C 29 A 39 A 49 C 10 D 20 D 30 B 40 D 50 C Your score: ________ / 50 WORKED SOLUTIONS (every question solved) Score tracker (fill in after marking) Arithmetic 12 Algebra 9 Equations 7 Geometry 6 Statistics (mean, median, mode, range) 6 Scenario and mental maths 10 Total 50 How to use the solutions. For each miss or “?”, read three things: the Solution, the type in the header, and Why the others tempt. Then write one line in your notebook: “I chose ___ because I ___; the rule is ___.” Redo the question after three days without looking. Arithmetic (Q1–Q12) Q1 · Fractions: bracket first Trap | Answer: B Question 1 ÷ (1/2 + 1/3) = A) 5 B) 6/5 C) 5/6 D) 1/5 Solution Do the bracket first: 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Then 1 ÷ 5/6 = 6/5. Correct: B) 6/5 Why the 5 takes the reciprocal of each fraction separately (2 + 3). 5/6 stops after the bracket. 1/5 others tempt inverts the wrong number. Q2 · Percent: the base changes Trap | Answer: B Question If A is 25% more than B, then B is what percent less than A? A) 25% B) 20% C) 80% D) 125% Solution Let B = 100, so A = 125. B is less than A by 25 out of 125, which is 20%. The percent is now taken of A, a bigger base. Correct: B) 20% Why the 25% reuses the old base. 80% is B as a percent of A, not how much less. 125% is A as a others tempt percent of B. Q3 · Mark-up then discount Multi-step | Answer: A Question A shopkeeper marks goods 25% above cost price and then allows a 10% discount. His profit percent is: A) 12.5% B) 10% C) 15% D) 35% Solution Let cost = 100. Marked price = 125. Selling price = 125 × 0.90 = 112.5. Profit = 12.5, so 12.5%. Correct: A) 12.5% Why the 15% subtracts 10 from 25, but the discount applies to the marked price. 35% adds them. 10% others tempt ignores the mark-up. Q4 · Ratio with LCM Reverse | Answer: D Question The ratio of two numbers is 3: 4 and their LCM is 48. The sum of the two numbers is: A) 7 B) 14 C) 48 D) 28 Solution The numbers are 3k and 4k. Since 3 and 4 share no factor, their LCM is 12k. 12k = 48 gives k = 4, so the numbers are 12 and 16. Sum = 28. Correct: D) 28 Why the 7 is only 3 + 4. 14 halves the sum. 48 is the LCM itself. Q5 · Man-hours (joint proportion) Multi-step | Answer: D Question 12 men working 8 hours a day complete a job in 10 days. How many days will 15 men working 6 hours a day need? A) 8 days B) 12 days C) 13 1/3 days D) 10 2/3 days Solution Total work = men × hours × days = 12 × 8 × 10 = 960 man-hours. Now 15 × 6 = 90 man-hours per day, so days = 960 ÷ 90 = 10 2/3. Correct: D) 10 2/3 days Why the 8 days ignores the change in hours. 13 1/3 days ignores the change in the number of men. 12 others tempt is a guess. Q6 · Relative speed and units Trap | Answer: B Question Two trains 100 m and 150 m long run in opposite directions at 40 km/h and 60 km/h. The time they take to cross each other is: A) 2.5 seconds B) 9 seconds C) 25 seconds D) 45 seconds Solution Opposite directions: add the speeds, 100 km/h = 100 × 5/18 = 250/9 m/s. Distance = sum of lengths = 250 m. Time = 250 ÷ (250/9) = 9 s. Correct: B) 9 seconds Why the 45 s uses the difference of speeds (same direction). 2.5 s divides metres by km/h with no others tempt conversion. 25 s uses a wrong conversion. Q7 · Compound interest earned Trap | Answer: C Question Rs. 10,000 is invested at 10% compound interest per annum. The compound interest earned in 2 years is: A) Rs. 2,000 B) Rs. 2,200 C) Rs. 2,100 D) Rs. 12,100 Solution Year 1: 10% of 10,000 = 1,000, so the amount is 11,000. Year 2: 10% of 11,000 = 1,100. Interest = 1,000 + 1,100 = 2,100. (The amount is 12,100.) Correct: C) Rs. 2,100 Why the 2,000 is simple interest. 12,100 is the amount, not the interest. 2,200 doubles the second others tempt year’s interest. Q8 · Work done, then a worker leaves Multi-step | Answer: D Question A can do a job in 10 days and B in 15 days. They work together for 3 days, then A leaves. B finishes the rest in: A) 6 days B) 9 days C) 12 days D) 7.5 days Solution Together: 1/10 + 1/15 = 1/6 per day. In 3 days they do 3/6 = 1/2 of the job. The remaining 1/2 at B’s rate 1/15 per day takes 7.5 days. Correct: D) 7.5 days Why the 12 subtracts 3 from B’s 15 days. 6 and 9 use the wrong fraction of work left. Q9 · Averages: adding a person Reverse | Answer: B Question The average age of 20 students is 15 years. When the teacher’s age is included, the average becomes 16. The teacher’s age is: A) 16 years B) 36 years C) 31 years D) 21 years Solution Total for 21 people = 21 × 16 = 336. Students’ total = 20 × 15 = 300. Teacher = 336 − 300 = 36. Correct: B) 36 years Why the 16 is just the new average. 31 is 15 + 16. 21 is the number of people. Q10 · Roots of decimals Conceptual | Answer: D Question √0.0081 = A) 0.9 B) 0.009 C) 0.0009 D) 0.09 Solution 0.0081 = 81/10,000, so its square root is 9/100 = 0.09. Check: 0.09 × 0.09 = 0.0081. Correct: D) 0.09 Why the A square root halves the number of decimal places (4 becomes 2). 0.9 would be the root of others tempt 0.81. Q11 · Remainders and LCM Case analysis | Answer: A Question The smallest number greater than 10 that leaves remainder 3 when divided by 4, 5 and 6 is: A) 63 B) 3 C) 60 D) 123 Solution Such numbers are LCM(4, 5, 6) × k + 3. The LCM is 60, so the numbers are 3, 63, 123, … The smallest above 10 is 63. Correct: A) 63 Why the 3 leaves remainder 3 but is not greater than 10. 60 leaves remainder 0. 123 works but is not others tempt the smallest. Q12 · Estimation Conceptual | Answer: C Question The best estimate of 4.98 × 19.9 ÷ 0.495 is: A) 20 B) 100 C) 200 D) 2,000 Solution Round each number: 5 × 20 ÷ 0.5 = 100 ÷ 0.5 = 200. Dividing by 0.5 doubles the result. Correct: C) 200 Why the 100 forgets to divide by 0.5. 20 and 2,000 are decimal-place slips. Algebra (Q13–Q21) Q13 · Identities: finding ab Reverse | Answer: A Question If a + b = 7 and a² + b² = 29, then ab = A) 10 B) 5 C) 20 D) 78 Solution (a + b)² = a² + 2ab + b², so 49 = 29 + 2ab. Then 2ab = 20 and ab = 10. Correct: A) 10 Why the 20 is 2ab. 5 halves ab again. 78 adds 49 and 29. Q14 · Identities: difference of cubes Trap | Answer: A Question If x − y = 3 and xy = 10, then x³ − y³ = A) 117 B) −63 C) 27 D) 90 Solution Use x³ − y³ = (x − y)³ + 3xy(x − y) = 27 + 3 × 10 × 3 = 27 + 90 = 117. (Check: x = 5, y = 2 gives 125 − 8 = 117.) Correct: A) 117 Why the 27 stops after cubing. 90 is only the second term. −63 subtracts the second term (27 − 90). Q15 · Factors of a quadratic Case analysis | Answer: D Question Which of the following is a factor of x² − x − 12? A) x + 4 B) x − 3 C) x + 12 D) x − 4 Solution Find two numbers with product −12 and sum −1: they are −4 and +3. So x² − x − 12 = (x − 4)(x + 3). Only x − 4 is offered. Correct: D) x − 4 Why the x + 4 and x − 3 use the right numbers with the wrong signs. x + 12 borrows the constant others tempt term. Q16 · Simplifying surds Trap | Answer: A Question √50 + √18 − √8 = A) 6√2 B) 5√2 C) 7√2 D) √60 Solution Simplify each surd: √50 = 5√2, √18 = 3√2, √8 = 2√2. Then 5√2 + 3√2 − 2√2 = 6√2. Correct: A) 6√2 Why the √60 adds and subtracts the numbers under the roots. Surds combine only after each is others tempt simplified to like surds. Q17 · Algebraic fractions Direct | Answer: A Question 1/(x − 1) − 1/(x + 1) = A) 2/(x² − 1) B) 0 C) 2x/(x² − 1) D) −2/(x² − 1) Solution Common denominator (x − 1)(x + 1) = x² − 1. Numerator: (x + 1) − (x − 1) = 2. Result: 2/(x² − 1). Correct: A) 2/(x² − 1) Why the 0 assumes the two terms cancel. −2 flips the subtraction. 2x/(x² − 1) invents an x in the others tempt numerator. Q18 · Opposite factors Conceptual | Answer: D Question For x ≠ 2, (x − 2)/(2 − x) = A) 1 B) 0 C) x − 2 D) −1 Solution 2 − x = −(x − 2), so the fraction is (x − 2)/[−(x − 2)] = −1. Correct: D) −1 Why the 1 ignores that the denominator is the negative of the numerator. 0 treats the cancelled factor others tempt as zero. Q19 · Laws of exponents with letters Direct | Answer: C Question (x³y²)² ÷ (x²y) = A) x⁴y⁴ B) x⁵y³ C) x⁴y³ D) x⁶y³ Solution (x³y²)² = x⁶y⁴. Divide by x²y: x⁶⁻² × y⁴⁻¹ = x⁴y³. Correct: C) x⁴y³ Why the x⁶y³ forgets to divide by x². x⁴y⁴ forgets to divide by y. x⁵y³ subtracts only 1 from the exponent others tempt of x. Q20 · Reciprocal squares Trap | Answer: D Question If x + 1/x = 3, then x² + 1/x² = A) 5 B) 9 C) 11 D) 7 Solution Square both sides: x² + 2 + 1/x² = 9. So x² + 1/x² = 9 − 2 = 7. Correct: D) 7 Why the 9 forgets the middle term 2. 11 adds 2 instead of subtracting. 5 subtracts 4. Q21 · Factor theorem (as algebra) Reverse | Answer: A Question If (x + 2) is a factor of x² + 3x + k, then k = A) 2 B) −2 C) 4 D) 6 Solution x + 2 is a factor, so x = −2 makes the expression zero: 4 − 6 + k = 0, so k = 2. Check: x² + 3x + 2 = (x + 1)(x + 2). Correct: A) 2 Why the −2 is the root, not k. 4 forgets the 3x term. 6 uses x = +2. Equations (Q22–Q28) Q22 · Exponential equations Trap | Answer: C Question If 3^(x + 1) = 81, then x = A) 2 B) 4 C) 3 D) 27 Solution 81 = 3⁴, so x + 1 = 4 and x = 3. Correct: C) 3 Why the 4 forgets the +1. 27 is 81 ÷ 3. 2 slips the other way. Q23 · Consecutive numbers: what is asked Multi-step | Answer: A Question The sum of three consecutive even numbers is 78. The largest of them is: A) 28 B) 24 C) 26 D) 30 Solution Let the numbers be x, x + 2, x + 4. Then 3x + 6 = 78 and x = 24. The numbers are 24, 26, 28, so the largest is 28. Correct: A) 28 Why the 26 is the middle number (also the average). 24 is the smallest. 30 overshoots. Q24 · Simultaneous equations: final ask Trap | Answer: C Question If 3x − 2y = 7 and x + 2y = 5, then x + y = A) 1 B) 3 C) 4 D) 12 Solution Add the equations: 4x = 12, so x = 3. Then 3 + 2y = 5 gives y = 1. So x + y = 4. Correct: C) 4 Why the 3 and 1 are x and y alone. 12 is 4x. Q25 · Quadratic: the zero-product rule Case analysis | Answer: D Question The solutions of x² − 3x = 10 are: A) x = 10 or x = 13 B) x = 2 or x = −5 C) x = 5 only D) x = 5 or x = −2 Solution Move everything to one side so the other side is zero: x² − 3x − 10 = 0, so (x − 5)(x + 2) = 0 and x = 5 or x = −2. Factors can only be set equal to a number when their product is zero. Correct: D) x = 5 or x = −2 Why the x = 10 or 13 comes from x(x − 3) = 10, setting each factor equal to 10. x = 2 or −5 flips the others tempt signs. “5 only” drops a root. Q26 · Nature of roots Conceptual | Answer: B Question The roots of 2x² − 4x + 5 = 0 are: A) real and equal B) non-real (complex) C) real and distinct D) rational and distinct Solution Discriminant = b² − 4ac = 16 − 40 = −24, which is negative, so there are no real roots. Correct: B) non-real (complex) Why the Real and equal needs a discriminant of 0. Real and distinct (or rational) needs a positive others tempt discriminant. Q27 · Inequalities: counting integers Case analysis | Answer: D Question How many positive integers satisfy 2x − 5 < 7? A) 4 B) 6 C) 7 D) 5 Solution 2x < 12, so x < 6 (strictly). The positive integers are 1, 2, 3, 4, 5, which is 5 of them. Correct: D) 5 Why the 6 includes x = 6, which fails (7 is not less than 7). 7 also counts 0. 4 stops one short. Q28 · Laws of logarithms Trap | Answer: B Question log₁₀ 4 + log₁₀ 25 = A) 1 B) 2 C) 100 D) log₁₀ 29 Solution log a + log b = log(ab). So log 4 + log 25 = log 100 = 2. Correct: B) 2 Why the log 29 adds inside the log. 100 forgets to take the log. 1 halves the answer. Geometry (Q29–Q34) Q29 · Angles in a ratio Multi-step | Answer: A Question The angles of a triangle are in the ratio 2: 3: 4. The largest angle is: A) 80° B) 60° C) 90° D) 100° Solution The angles sum to 180°. Parts: 2 + 3 + 4 = 9, so one part = 20°. Largest = 4 × 20° = 80°. Correct: A) 80° Why the 60° is the middle angle. 90° and 100° do not fit the ratio. Q30 · Rectangle: perimeter to area Multi-step | Answer: B Question The perimeter of a rectangle is 36 cm and its length is twice its width. Its area is: A) 36 cm² B) 72 cm² C) 108 cm² D) 144 cm² Solution Let width = w and length = 2w. Perimeter = 2(2w + w) = 6w = 36, so w = 6 and length = 12. Area = 12 × 6 = 72 cm². Correct: B) 72 cm² Why the 36 repeats the perimeter. 108 and 144 come from mis-solved dimensions. Q31 · Circle: area to circumference Trap | Answer: C Question The area of a circle is 154 cm² (π = 22/7). Its circumference is: A) 22 cm B) 88 cm C) 44 cm D) 154 cm Solution πr² = 154, so r² = 154 × 7/22 = 49 and r = 7. Circumference = 2πr = 2 × 22/7 × 7 = 44 cm. Correct: C) 44 cm Why the 22 is πr (no 2). 88 uses 14 (the diameter) as the radius. 154 is the area. Q32 · Right triangle area Trap | Answer: B Question A right triangle has hypotenuse 17 cm and one leg 8 cm. Its area is: A) 68 cm² B) 60 cm² C) 120 cm² D) 136 cm² Solution Other leg = √(17² − 8²) = √(289 − 64) = √225 = 15. Area = ½ × 8 × 15 = 60 cm². Correct: B) 60 cm² Why the 120 forgets the ½. 68 and 136 use the hypotenuse as if it were a leg. Q33 · Exterior angle theorem Direct | Answer: A Question An exterior angle of a triangle is 110°, and one of the interior opposite angles is 45°. The other interior opposite angle is: A) 65° B) 25° C) 70° D) 135° Solution An exterior angle equals the sum of the two interior opposite angles: 110° = 45° + x, so x = 65°. Correct: A) 65° Why the 25° treats 110° as an interior angle. 70° is the supplement of 110°. 135° is 180° − 45°. Q34 · Cube: surface area to volume Reverse | Answer: B Question A cube has a total surface area of 150 cm². Its volume is: A) 25 cm³ B) 125 cm³ C) 150 cm³ D) 625 cm³ Solution A cube has 6 equal faces: 6a² = 150, so a² = 25 and a = 5. Volume = a³ = 125 cm³. Correct: B) 125 cm³ Why the 25 is the area of one face. 625 squares the face area. 150 repeats the given number. Statistics (mean, median, mode, range) (Q35–Q40) Q35 · Mean from a frequency table Trap | Answer: B Question The marks 2, 3 and 4 occur with frequencies 3, 5 and 2 respectively. The mean mark is: A) 3 B) 2.9 C) 3.5 D) 9.67 Solution Σfx = 2×3 + 3×5 + 4×2 = 6 + 15 + 8 = 29. Σf = 10. Mean = 29 ÷ 10 = 2.9. Correct: B) 2.9 Why the 3 is the plain mean of 2, 3, 4, ignoring frequencies. 9.67 divides by 3 instead of by Σf. Q36 · Median: position shifts Conceptual | Answer: C Question The median of 4, 8, 12, 16 is 10. A fifth value, 20, is added. The new median is: A) 10 B) 14 C) 12 D) 15 Solution The new data 4, 8, 12, 16, 20 has five values, so the median is the 3rd value: 12. Correct: C) 12 Why the 10 forgets that the position changes. 14 and 15 average the wrong pairs. Q37 · Mode: ties and counts Case analysis | Answer: B Question The data 2, 3, 3, 4, x has 3 as its only mode. Which value of x is NOT possible? A) 3 B) 4 C) 5 D) 6 Solution 3 already appears twice. If x = 4, then 4 also appears twice and there would be two modes. Any of the other options leaves 3 as the only mode (x = 3 makes it appear three times). x = 2 would also fail, but it is not offered. Correct: B) 4 Why the x = 3 only strengthens the mode. 5 and 6 appear once. Q38 · Mean under transformation Conceptual | Answer: C Question The mean of five numbers is 20. If each number is increased by 4 and then multiplied by 2, the new mean is: A) 24 B) 40 C) 48 D) 44 Solution The mean follows the same operations in the same order: (20 + 4) × 2 = 48. Correct: C) 48 Why the 24 skips the doubling. 40 skips the +4. 44 applies the operations in the wrong order (20 × 2 + others tempt 4). Q39 · Combined mean Trap | Answer: A Question The mean of 10 numbers is 12 and the mean of 20 other numbers is 15. The mean of all 30 numbers is: A) 14 B) 13.5 C) 14.5 D) 27 Solution Total of the first group = 120. Total of the second = 300. Together 420 over 30 numbers = 14. Correct: A) 14 Why the 13.5 is the simple average of 12 and 15. 27 adds the means. 14.5 leans toward the larger others tempt group too far. Q40 · Missing value, then range Multi-step | Answer: D Question The mean of five numbers is 10. Four of them are 4, 6, 10 and 12. The range of all five numbers is: A) 8 B) 12 C) 18 D) 14 Solution Sum = 50. The known four add to 32, so the fifth number is 18. The data run from 4 to 18, so the range = 18 − 4 = 14. Correct: D) 14 Why the 18 is the missing number, not the range. 8 is the range of the four known values (12 − 4). 12 others tempt is the largest known value. Scenario and mental maths (Q41–Q50) Q41 · Calendar days Direct | Answer: B Question If 5th March is a Monday, then 25th March is a: A) Saturday B) Sunday C) Monday D) Tuesday Solution 25 − 5 = 20 days later. 20 = 2 × 7 + 6, so move 6 days ahead of Monday: Sunday. Correct: B) Sunday Why the Monday would be exactly 14 or 21 days later. Saturday counts only 5 extra days. Q42 · Clock: hour hand speed Conceptual | Answer: A Question How many degrees does the hour hand of a clock move in 40 minutes? A) 20° B) 12° C) 40° D) 240° Solution The hour hand moves 360° in 12 hours, so 30° per hour or 0.5° per minute. In 40 minutes: 40 × 0.5 = 20°. Correct: A) 20° Why the 240° is what the minute hand moves (6° per minute). 40° and 12° mix up the units. Q43 · Number patterns: growing gaps Direct | Answer: C Question The next term in 2, 3, 5, 8, 12, … is: A) 16 B) 18 C) 17 D) 19 Solution Differences: 1, 2, 3, 4, rising by 1 each step. The next difference is 5, so 12 + 5 = 17. Correct: C) 17 Why the 16 and 18 add a constant gap, but the gap grows each time. Q44 · Counting with a restriction Case analysis | Answer: C Question How many different two-digit numbers can be formed from the digits 1, 2 and 3 if no digit may be repeated? A) 3 B) 9 C) 6 D) 12 Solution Tens digit: 3 choices. Units digit: 2 choices left. So 3 × 2 = 6 (12, 13, 21, 23, 31, 32). Correct: C) 6 Why the 9 allows repetition (11, 22, 33 included). 3 counts only the tens digit. 12 doubles the count. Q45 · Ratio and difference Reverse | Answer: B Question The ratio of the ages of a mother and her daughter is 7: 2. The mother is 30 years older. The daughter’s age is: A) 6 years B) 12 years C) 18 years D) 42 years Solution Ages are 7k and 2k. The difference 5k = 30 gives k = 6. Daughter = 2k = 12 (mother = 42). Correct: B) 12 years Why the 6 is k itself. 42 is the mother’s age. 18 is 3k. Q46 · Fraction of a remainder Multi-step | Answer: A Question A man spends 1/3 of his money on food and 1/4 of the remainder on rent. He is left with Rs. 1,500. His money at the start was: A) Rs. 3,000 B) Rs. 2,250 C) Rs. 3,600 D) Rs. 4,500 Solution After food, 2/3 remains. Rent is 1/4 of that, so 3/4 of 2/3 = 1/2 of the original remains. 1/2 of the original = 1,500, so he started with 3,000. Correct: A) Rs. 3,000 Why the 3,600 takes rent as 1/4 of the original money (leaving 5/12). The other options come from others tempt other wrong fractions. Q47 · Early and late arrival Multi-step | Answer: D Question Walking at 3 km/h a man reaches 12 minutes late. Walking at 4 km/h he reaches 8 minutes early. The distance is: A) 2 km B) 3.5 km C) 5 km D) 4 km Solution The two journey times differ by 12 + 8 = 20 minutes = 1/3 hour. d/3 − d/4 = 1/3, so d/12 = 1/3 and d = 4 km. Correct: D) 4 km Why the The late and early minutes add because he goes from being late to being early. The other others tempt distances do not fit this gap. Q48 · Undoing growth Reverse | Answer: D Question A town’s population grows by 10% every year and is now 12,100. Two years ago it was: A) 9,680 B) 9,900 C) 11,000 D) 10,000 Solution Each year multiplies by 1.1, so now = earlier × 1.21. Earlier = 12,100 ÷ 1.21 = 10,000. Correct: D) 10,000 Why the 9,680 subtracts 20% of 12,100. 9,900 takes 10% off 11,000, but growth is undone by dividing, others tempt not subtracting. 11,000 stops after one year. Q49 · Unit digit cycles Direct | Answer: C Question What is the unit digit of 3²⁰? A) 3 B) 7 C) 1 D) 9 Solution The unit digits of powers of 3 repeat every 4 steps: 3, 9, 7, 1. Since 20 is a multiple of 4, 3²⁰ ends in 1. Correct: C) 1 Why the The other digits belong to remainders 1, 3 and 2 when the exponent is divided by 4. Q50 · Simple interest: finding the rate Reverse | Answer: C Question Rs. 8,000 becomes Rs. 9,600 in 4 years at simple interest. The rate per annum is: A) 4% B) 6% C) 5% D) 20% Solution Interest = 9,600 − 8,000 = 1,600. Rate = 1,600 ÷ (8,000 × 4) = 0.05 = 5%. Correct: C) 5% Why the 20% is the total interest over 4 years (1,600 ÷ 8,000), not per year. 4% and 6% do not fit."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Interest = 9,600 − 8,000 = 1,600. Rate = 1,600 ÷ (8,000 × 4) = 0.05 = 5%. Why the others tempt: 20% is the total interest over 4 years (1,600 ÷ 8,000), not per year. 4% and 6% do not fit.",
+      "sourceRef": {
+        "page": 5
+      }
+    }
+  ],
+  "groups": [],
+  "assets": {}
+}

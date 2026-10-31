@@ -30,6 +30,7 @@ import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 # --------------------------------------------------------------------------- #
 # extraction
@@ -98,6 +99,7 @@ HEADING_NOISE = re.compile(
 
 QUESTION_START = re.compile(r"^\s*(?:Q(?:uestion)?\s*)?(\d{1,4})\s*[.)\]]\s*(.+)$", re.I)
 OPTION_START = re.compile(r"^\s*\(?([A-Fa-f])\)?\s*[.):\-]\s+(.+)$")
+OPTION_MARKER = re.compile(r"(?:^|\s)\(?([A-F])\)?\s*[.):\-]\s+")
 INLINE_ANSWER = re.compile(
     r"^\s*(?:correct\s+)?answer\s*(?:is)?\s*[:\-]?\s*\(?([A-Fa-f](?:\s*[,&/]\s*[A-Fa-f])*)\)?\s*\.?\s*(.*)$",
     re.I,
@@ -107,7 +109,8 @@ INLINE_EXPLAIN = re.compile(r"^\s*(?:explanation|reason|why)\s*[:\-]\s*(.+)$", r
 KEY_LINE = re.compile(
     r"^\s*(?:Q(?:uestion)?\s*)?(\d{1,4})\s*[.):\-=>]*\s*\(?([A-Fa-f](?:\s*[,&/]\s*[A-Fa-f])*)\)?\s*\.?\s*(.*)$"
 )
-KEY_PAIRS = re.compile(r"(\d{1,4})\s*[.):\-=>]*\s*\(?([A-Fa-f])\)?")
+KEY_PAIRS = re.compile(r"(\d{1,4})\s*[.):\-=>]*\s*\(?([A-Fa-f])\)?(?![\w])")
+KEY_GRID_PAIR = re.compile(r"(?<![\w.])(\d{1,4})\s+([A-Fa-f])(?![\w])")
 EXPLAIN_LINE = re.compile(r"^\s*(?:Q(?:uestion)?\s*)?(\d{1,4})\s*[.):\-=>]\s*(.+)$")
 
 
@@ -167,6 +170,32 @@ def build_title(parts: list[str]) -> str:
     return joined[:160]
 
 
+def split_inline_options(line: str) -> list[tuple[str, str]] | None:
+    """Split a one-line option row such as "A) 5 B) 6/5 C) 5/6 D) 1/5".
+
+    Only returns a result when the markers are a clean run starting at A, so
+    ordinary text that happens to contain "B)" is left alone.
+    """
+    markers = [(m.start(), m.group(1), m.end()) for m in OPTION_MARKER.finditer(line)]
+    if len(markers) < 2:
+        return None
+    letters = [key for _, key, _ in markers]
+    if letters == [chr(ord("A") + i) for i in range(len(letters))]:
+        pass  # starts at A (the usual case)
+    elif all(ord(b) - ord(a) == 1 for a, b in zip(letters, letters[1:])):
+        pass  # a wrapped continuation row, e.g. "C) … D) …"
+    else:
+        return None
+    options: list[tuple[str, str]] = []
+    for index, (_, key, end) in enumerate(markers):
+        stop = markers[index + 1][0] if index + 1 < len(markers) else len(line)
+        text = line[end:stop].strip(" .;,")
+        if not text:
+            return None
+        options.append((key, text))
+    return options
+
+
 def parse_questions(lines: list[tuple[int, str]]) -> list[Question]:
     questions: list[Question] = []
     current: Question | None = None
@@ -193,8 +222,18 @@ def parse_questions(lines: list[tuple[int, str]]) -> list[Question]:
         if current is None:
             continue
 
-        omatch = OPTION_START.match(line)
         expected_key = chr(ord("A") + len(current.options))
+
+        # options laid out on one line, possibly wrapped over two lines:
+        #   "A) x = 1 B) x = 2"
+        #   "C) x = 3 D) x = 4"
+        inline = split_inline_options(line)
+        if inline and inline[0][0] == expected_key:
+            current.options.extend(inline)
+            target_option = inline[-1][0]
+            continue
+
+        omatch = OPTION_START.match(line)
         if omatch and omatch.group(1).upper() == expected_key:
             current.options.append((expected_key, omatch.group(2).strip()))
             target_option = expected_key
@@ -252,6 +291,12 @@ def parse_answers(lines: list[tuple[int, str]]) -> dict[int, list[str]]:
             if len(pairs) >= 2:
                 for number_s, key in pairs:
                     answers.setdefault(int(number_s), [key.upper()])
+                continue
+            # grid rows: "1 B 11 A 21 A 31 C 41 B"
+            grid = KEY_GRID_PAIR.findall(line)
+            if len(grid) >= 2:
+                for number_s, key in grid:
+                    answers.setdefault(int(number_s), [key.upper()])
     return answers
 
 
@@ -267,6 +312,100 @@ def parse_explanations(lines: list[tuple[int, str]]) -> dict[int, str]:
         elif current is not None:
             out[current] = f"{out[current]} {line}".strip()
     return {k: tidy(v) for k, v in out.items()}
+
+
+SOLUTION_HEADER = re.compile(r"^Q(\d{1,4})\s*[·•.]")
+CORRECT_LINE = re.compile(r"^Correct\s*:\s*(.+)$", re.I)
+ANSWER_IN_TEXT = re.compile(r"Answer\s*:\s*\(?([A-Fa-f](?:\s*[,&/]\s*[A-Fa-f])*)\)?", re.I)
+SECTION_LABEL = re.compile(
+    r"^(Arithmetic|Algebra|Equations|Geometry|Statistics|Scenario|Reasoning|English|Physics|Chemistry|Biology)\b",
+    re.I,
+)
+
+
+def parse_solutions_layout(layout_lines: list[Any]) -> dict[int, dict[str, str]]:
+    """Read the "worked solutions" section using the label/body columns.
+
+    Handles the common AI layout:
+
+        Q12 · Percent Reverse | Answer: C
+        Question  <restated question>
+        A) … B) … C) … D) …
+        Solution  <worked steps>
+        Correct: C) 42
+        Why the others tempt <why the distractors look right>
+    """
+    blocks: dict[int, dict[str, str]] = {}
+    current: dict[str, str] | None = None
+    field: str | None = None
+
+    for line in layout_lines:
+        label = (line.label or "").strip()
+        body = (line.body or "").strip()
+
+        header = SOLUTION_HEADER.match(label)
+        if header:
+            number = int(header.group(1))
+            current = {"header": body, "question": "", "solution": "", "why": "", "correct": ""}
+            blocks[number] = current
+            field = "header"
+            continue
+
+        if current is None:
+            continue
+
+        if label == "Question":
+            field = "question"
+        elif label == "Solution":
+            field = "solution"
+        elif label.lower().startswith("why"):
+            field = "why"
+        elif label and label.lower().startswith("others"):
+            pass  # the wrapped second half of "Why the others tempt"
+        elif label and (SECTION_LABEL.match(label) or label.isupper()):
+            current = None
+            field = None
+            continue
+        elif label:
+            # an unknown label ends the current text field but keeps the block
+            field = None
+
+        if not body:
+            continue
+
+        correct = CORRECT_LINE.match(body)
+        if correct:
+            current["correct"] = correct.group(1).strip()
+            field = None
+            continue
+
+        if field == "header":
+            current["header"] = f"{current['header']} {body}".strip()
+        elif field in {"question", "solution", "why"}:
+            current[field] = f"{current[field]} {body}".strip()
+
+    return blocks
+
+
+def solutions_to_text(blocks: dict[int, dict[str, str]]) -> dict[int, tuple[str, list[str]]]:
+    """Turn parsed blocks into (explanation, answer keys) per question."""
+    out: dict[int, tuple[str, list[str]]] = {}
+    for number, block in blocks.items():
+        answer_match = ANSWER_IN_TEXT.search(block.get("header", ""))
+        keys = [k.upper() for k in re.findall(r"[A-Fa-f]", answer_match.group(1))] if answer_match else []
+        if not keys and block.get("correct"):
+            letter = re.match(r"\(?([A-Fa-f])\)?", block["correct"])
+            if letter:
+                keys = [letter.group(1).upper()]
+        parts = []
+        solution = tidy(block.get("solution", ""))
+        why = tidy(block.get("why", ""))
+        if solution:
+            parts.append(solution)
+        if why:
+            parts.append(f"Why the others tempt: {why}")
+        out[number] = (" ".join(parts), keys)
+    return out
 
 
 def guess_subject(title: str, questions: list[Question]) -> str:
@@ -360,6 +499,18 @@ def main(argv: list[str] | None = None) -> int:
 
     pages = read_pages(args.input)
     lines = page_lines(pages)
+    layout: list[Any] | None = None
+    if args.input.suffix.lower() == ".pdf":
+        try:
+            from pdf_layout import read_layout, strip_running_lines  # type: ignore
+
+            layout = strip_running_lines(read_layout(args.input))
+            layout_lines = [(line.page, line.text) for line in layout]
+            if layout_lines:
+                # richer than extract_text: keeps superscripts and drops footers
+                lines = [(page, text) for page, text in layout_lines if text.strip()]
+        except Exception as exc:  # noqa: BLE001
+            print(f"  note            layout extraction skipped ({exc})")
     if not lines:
         raise SystemExit(
             "No text layer found. This PDF looks scanned — export a text-based PDF "
@@ -371,11 +522,39 @@ def main(argv: list[str] | None = None) -> int:
     answers = parse_answers(a_lines)
     explanations = parse_explanations(e_lines)
 
+    # Worked solutions written in two columns (label | body) need layout-aware
+    # reading; fall back silently to the plain-text explanations above.
+    columns: dict[int, tuple[str, list[str]]] = {}
+    if layout:
+        try:
+            start = 0
+            for index, line in enumerate(layout):
+                upper = f"{line.label} {line.body}".upper()
+                if re.search(r"WORKED SOLUTIONS|EXPLANATIONS|SOLUTIONS\b", upper):
+                    start = index
+                    break
+            if start:
+                columns = solutions_to_text(parse_solutions_layout(layout[start:]))
+        except Exception as exc:  # noqa: BLE001
+            print(f"  note            layout parsing skipped ({exc})")
+
+    conflicts: list[str] = []
     for q in questions:
         if not q.answer and q.n in answers:
             q.answer = answers[q.n]
         if not q.explanation and q.n in explanations:
             q.explanation = explanations[q.n]
+        if q.n in columns:
+            column_explanation, column_keys = columns[q.n]
+            if column_explanation and len(column_explanation) > len(q.explanation):
+                q.explanation = column_explanation
+            if column_keys:
+                if q.answer and column_keys != q.answer:
+                    conflicts.append(
+                        f"Q{q.n}: answer key says {q.answer}, worked solutions say {column_keys}"
+                    )
+                elif not q.answer:
+                    q.answer = column_keys
         # an explanation section line like "1. B — because ..." can also carry the key
         if not q.answer and q.n in explanations:
             m = re.match(r"^\(?([A-F])\b", explanations[q.n])
@@ -402,6 +581,10 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  explanations    {explained}/{len(questions)}")
     if unused_keys:
         print(f"  note            answer keys for missing questions: {unused_keys}")
+    for conflict in conflicts[:6]:
+        print(f"  warning         {conflict}")
+    if len(conflicts) > 6:
+        print(f"  warning         …and {len(conflicts) - 6} more key/solution conflicts")
     for error in errors:
         print(f"  ERROR           {error}")
     for warning in warnings[:12]:
