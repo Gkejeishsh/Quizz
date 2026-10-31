@@ -16,6 +16,27 @@ every later build installs straight over the previous one — your saved tests, 
 and history survive updates. Everything runs offline: the app requests no internet,
 storage, camera or location permission.
 
+## Get a test pack (.quizz)
+
+Every pack in `packs/` is published as a release asset, so the link downloads the
+file instead of opening it as text:
+
+**https://github.com/Gkejeishsh/Quizz/releases/tag/packs**
+
+| Test | Download |
+|---|---|
+| HEC Quantitative Practice Test 2 (50 Q) | [`hec-quant-test-2.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/hec-quant-test-2.quizz) |
+| Algebra & Geometry — Quick Check (8 Q) | [`maths-algebra-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/maths-algebra-demo.quizz) |
+| Chemical Bonding — Practice Test (8 Q) | [`chemistry-bonding-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/chemistry-bonding-demo.quizz) |
+| English Grammar & Usage (8 Q) | [`english-grammar-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/english-grammar-demo.quizz) |
+
+Open Quizz → **Add new test** → pick the file from Downloads. The pack is copied
+into the app's own database, so the downloaded file can be deleted afterwards.
+
+New packs are published automatically: pushing to `packs/` runs
+`.github/workflows/packs.yml`, which re-uploads every `.quizz` to that release.
+Pack-only changes do **not** rebuild the APK.
+
 ## Try it in a browser
 
 ```bash

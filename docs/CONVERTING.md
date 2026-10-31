@@ -71,3 +71,15 @@ The test is copied into the app's own storage. Deleting the original PDF or the 
 - Math: plain Unicode (², √, π) is kept as-is; `$…$` becomes rendered LaTeX in the app.
 - Files are capped at 12 MB and 500 questions.
 - If you edit a test, send the new PDF and I ship a revision — the app recognises the same test and offers to replace it.
+
+## Sharing a pack
+
+Commit the `.quizz` file to `packs/`. CI (`.github/workflows/packs.yml`) uploads it to
+the **packs** release, so it becomes a direct download link:
+
+```
+https://github.com/Gkejeishsh/Quizz/releases/download/packs/<file>.quizz
+```
+
+Release assets are served as `application/octet-stream`, so phones download the file
+instead of rendering the JSON as a web page (GitHub's raw links do render it).
