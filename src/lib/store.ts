@@ -129,30 +129,38 @@ export const useStore = create<Store>()((set, get) => {
       if (get().hydrated) return
       if (hydratePromise) return hydratePromise
       hydratePromise = (async () => {
-      const loaded = await loadState()
-      if (loaded && Array.isArray(loaded.categories) && loaded.categories.length) {
-        const categories = [...loaded.categories].sort((a, b) => a.order - b.order)
-        const hasUncategorized = categories.some((c) => c.id === UNCATEGORIZED_ID)
-        set({
-          hydrated: true,
-          settings: { ...DEFAULT_SETTINGS, ...(loaded.settings ?? {}) },
-          categories: hasUncategorized ? categories : [...categories, DEFAULT_CATEGORIES.at(-1)!],
-          tests: (loaded.tests ?? []).slice().sort((a, b) => b.savedDate - a.savedDate),
-          attempts: (loaded.attempts ?? []).slice().sort((a, b) => b.finishedAt - a.finishedAt),
-          drafts: loaded.drafts ?? [],
-        })
-      } else {
-        const tests = seedTests(DEFAULT_CATEGORIES)
-        set({
-          hydrated: true,
-          settings: DEFAULT_SETTINGS,
-          categories: DEFAULT_CATEGORIES,
-          tests,
-          attempts: [],
-          drafts: [],
-        })
-        setTimeout(persistNow, 0)
-      }
+        const loaded = await loadState()
+        if (loaded && Array.isArray(loaded.categories) && loaded.categories.length) {
+          const version = typeof loaded.schemaVersion === 'number' ? loaded.schemaVersion : 1
+          if (version > SCHEMA_VERSION) {
+            console.warn(
+              `Quizz: this data was written by a newer app version (schema ${version}).`,
+              'It will be loaded as-is; update the app to be sure everything works.',
+            )
+          }
+          const categories = [...loaded.categories].sort((a, b) => a.order - b.order)
+          const hasUncategorized = categories.some((c) => c.id === UNCATEGORIZED_ID)
+          set({
+            hydrated: true,
+            settings: { ...DEFAULT_SETTINGS, ...(loaded.settings ?? {}) },
+            categories: hasUncategorized ? categories : [...categories, DEFAULT_CATEGORIES.at(-1)!],
+            tests: (loaded.tests ?? []).slice().sort((a, b) => b.savedDate - a.savedDate),
+            attempts: (loaded.attempts ?? []).slice().sort((a, b) => b.finishedAt - a.finishedAt),
+            drafts: loaded.drafts ?? [],
+          })
+        } else {
+          // first launch: seed the bundled demo tests so every screen has content
+          const tests = seedTests(DEFAULT_CATEGORIES)
+          set({
+            hydrated: true,
+            settings: DEFAULT_SETTINGS,
+            categories: DEFAULT_CATEGORIES,
+            tests,
+            attempts: [],
+            drafts: [],
+          })
+          setTimeout(persistNow, 0)
+        }
       })()
       await hydratePromise
     },

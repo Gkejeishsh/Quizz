@@ -26,6 +26,7 @@ export function Play({ testId }: { testId: string }) {
   const [index, setIndex] = useState(() => Math.min(draft?.index ?? 0, Math.max(0, (draft?.questionNs.length ?? 1) - 1)))
   const [dir, setDir] = useState(1)
   const [exitOpen, setExitOpen] = useState(false)
+  const [finishOpen, setFinishOpen] = useState(false)
   const [now, setNow] = useState(() => Date.now())
   const [finished, setFinished] = useState(false)
   const finishedRef = useRef(false)
@@ -167,11 +168,23 @@ export function Play({ testId }: { testId: string }) {
     lock.current = false
   }
 
+  const unansweredCount = () => questionNs.filter((n) => (answersRef.current[String(n)] ?? []).length === 0).length
+
+  const requestFinish = () => {
+    if (finishedRef.current) return
+    clearAdvance()
+    if (unansweredCount() > 0) {
+      setFinishOpen(true)
+      return
+    }
+    finish(false)
+  }
+
   const goNext = () => {
     if (finishedRef.current) return
     clearAdvance()
     if (index >= total - 1) {
-      finish(false)
+      requestFinish()
       return
     }
     setDir(1)
@@ -223,7 +236,7 @@ export function Play({ testId }: { testId: string }) {
           <X />
         </button>
         <div className="grow">
-          <div className="quiz-counter">
+          <div className="quiz-counter" aria-live="polite">
             <b>{String(index + 1).padStart(2, '0')}</b> / {total}
           </div>
         </div>
@@ -288,7 +301,7 @@ export function Play({ testId }: { testId: string }) {
               <MathText text={q.question} />
             </h2>
 
-            <div className="options">
+            <div className="options" role="group" aria-label={`Question ${q.n} options`}>
               {q.options.map((o) => {
                 const isPicked = picked.includes(o.key)
                 return (
@@ -327,6 +340,26 @@ export function Play({ testId }: { testId: string }) {
           </button>
         </div>
       </div>
+
+      <Sheet
+        open={finishOpen}
+        onClose={() => setFinishOpen(false)}
+        title="Finish the test?"
+        desc={`${unansweredCount()} question${unansweredCount() === 1 ? '' : 's'} still unanswered. They will be marked wrong, and you can still read the explanations afterwards.`}
+      >
+        <button
+          className="btn btn--primary btn--block"
+          onClick={() => {
+            setFinishOpen(false)
+            finish(false)
+          }}
+        >
+          Finish and see my score
+        </button>
+        <button className="btn btn--soft btn--block" onClick={() => setFinishOpen(false)}>
+          Keep going
+        </button>
+      </Sheet>
 
       <Sheet open={exitOpen} onClose={() => setExitOpen(false)} title="Leave the test?">
         <p className="sheet__desc" style={{ marginTop: 0 }}>

@@ -5,7 +5,7 @@ import { Download, Upload, Trash, Info, ShieldCheck } from '../components/Icons'
 import type { PersistedState } from '../lib/types'
 import { clearState } from '../lib/storage'
 
-const APP_VERSION = '0.1.0 · M1'
+const APP_VERSION = '0.5.0'
 
 export function SettingsScreen() {
   const settings = useStore((s) => s.settings)
