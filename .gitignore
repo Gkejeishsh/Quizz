@@ -13,3 +13,5 @@ android/build/
 android/local.properties
 *.keystore
 *.jks
+# ...except the project's personal signing key, so app updates keep working
+!android/quizz-release.jks

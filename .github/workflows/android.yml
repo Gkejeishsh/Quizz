@@ -54,17 +54,23 @@ jobs:
 
       - name: Ensure a stable signing key
         run: |
-          if [ ! -f android/quizz-release.jks ]; then
-            echo "Generating the Quizz signing key (first run)…"
-            keytool -genkeypair -v -keystore android/quizz-release.jks -alias quizz \
-              -keyalg RSA -keysize 2048 -validity 10000 \
-              -storepass quizz-personal-key -keypass quizz-personal-key \
-              -dname "CN=Quizz, OU=Personal, O=Quizz, L=Bannu, S=KPK, C=PK"
-            git config user.name "Quizz Builder"
-            git config user.email "quizz-builder@users.noreply.github.com"
-            git add android/quizz-release.jks
-            git commit -m "chore(android): add stable release signing key"
-            git push
+          set -e
+          if [ -f android/quizz-release.jks ]; then
+            echo "Reusing the committed signing key — app updates will keep working."
+            exit 0
+          fi
+          echo "Generating the Quizz signing key (first run)…"
+          keytool -genkeypair -v -keystore android/quizz-release.jks -alias quizz \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass quizz-personal-key -keypass quizz-personal-key \
+            -dname "CN=Quizz, OU=Personal, O=Quizz, L=Bannu, S=KPK, C=PK"
+
+          # Keep the key in the repo so every future build signs with it.
+          git config user.name "Quizz Builder"
+          git config user.email "quizz-builder@users.noreply.github.com"
+          git add -f android/quizz-release.jks
+          if git commit -m "chore(android): add stable release signing key"; then
+            git push || echo "::warning::Could not push the signing key; this build is still signed, but keep the key safe for future updates."
           fi
 
       - name: Build release APK
