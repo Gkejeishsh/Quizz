@@ -1,4 +1,5 @@
 import { useStore } from './store'
+import { nativeHaptic } from './native'
 
 type Kind = 'light' | 'medium' | 'success' | 'warning'
 
@@ -44,11 +45,14 @@ function beep(kind: Kind) {
 export function haptic(kind: Kind = 'light') {
   const settings = useStore.getState().settings
   if (settings.haptics) {
-    try {
-      if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(patterns[kind])
-    } catch {
-      /* ignore */
-    }
+    void nativeHaptic(kind).then((handled) => {
+      if (handled) return
+      try {
+        if (typeof navigator !== 'undefined' && 'vibrate' in navigator) navigator.vibrate(patterns[kind])
+      } catch {
+        /* ignore */
+      }
+    })
   }
   if (settings.sound) beep(kind)
 }

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- light UI: dark icons in the system bars -->
+    <bool name="quizz_light_bars">true</bool>
+</resources>

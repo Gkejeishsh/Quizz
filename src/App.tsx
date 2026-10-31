@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { applyTheme, useStore, type Route } from './lib/store'
+import { initNative, refreshStatusBar } from './lib/native'
 import { Toasts, sheetRegistry, CLOSE_SHEET_EVENT } from './components/ui'
 import { LogoMark } from './components/Logo'
 import { Home } from './screens/Home'
@@ -62,11 +63,12 @@ export default function App() {
   const reduce = useReducedMotion()
 
   useEffect(() => {
-    void hydrate()
+    void hydrate().then(() => initNative())
   }, [hydrate])
 
   useEffect(() => {
-    applyTheme(settings.theme)
+    const resolved = applyTheme(settings.theme)
+    void refreshStatusBar(resolved)
     const mq = window.matchMedia('(prefers-color-scheme: dark)')
     const onChange = () => {
       if (useStore.getState().settings.theme === 'system') applyTheme('system')
@@ -100,6 +102,23 @@ export default function App() {
   const skipPop = useRef(false)
 
   useEffect(() => {
+    const onHardwareBack = (event: Event) => {
+      const state = useStore.getState()
+      const route = state.routes[state.routes.length - 1]
+      if (sheetRegistry.open > 0) {
+        event.preventDefault()
+        window.dispatchEvent(new CustomEvent(CLOSE_SHEET_EVENT))
+        return
+      }
+      if (route.name === 'play') {
+        event.preventDefault()
+        window.dispatchEvent(new CustomEvent('quizz:exit-request'))
+        return
+      }
+      if (state.routes.length > 1) event.preventDefault()
+    }
+    window.addEventListener('quizz:hardware-back', onHardwareBack)
+
     const onPop = () => {
       if (skipPop.current) {
         skipPop.current = false
@@ -124,7 +143,10 @@ export default function App() {
     if (!history.state || typeof history.state.depth !== 'number') {
       history.replaceState({ depth: routes.length }, '')
     }
-    return () => window.removeEventListener('popstate', onPop)
+    return () => {
+      window.removeEventListener('popstate', onPop)
+      window.removeEventListener('quizz:hardware-back', onHardwareBack)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

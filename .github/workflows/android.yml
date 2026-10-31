@@ -1,0 +1,110 @@
+name: android
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'arena/**']
+    paths:
+      - 'src/**'
+      - 'packs/**'
+      - 'android/**'
+      - 'package.json'
+      - 'capacitor.config.ts'
+      - '.github/workflows/android.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platforms;android-36 build-tools;36.0.0 platform-tools'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck, test, build web
+        run: |
+          npx tsc --noEmit
+          npx vitest run
+          npx vite build
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Ensure a stable signing key
+        run: |
+          if [ ! -f android/quizz-release.jks ]; then
+            echo "Generating the Quizz signing key (first run)…"
+            keytool -genkeypair -v -keystore android/quizz-release.jks -alias quizz \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass quizz-personal-key -keypass quizz-personal-key \
+              -dname "CN=Quizz, OU=Personal, O=Quizz, L=Bannu, S=KPK, C=PK"
+            git config user.name "Quizz Builder"
+            git config user.email "quizz-builder@users.noreply.github.com"
+            git add android/quizz-release.jks
+            git commit -m "chore(android): add stable release signing key"
+            git push
+          fi
+
+      - name: Build release APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Verify the APK
+        run: |
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          test -f "$APK" || (echo "APK missing" && exit 1)
+          ls -lh "$APK"
+          "$ANDROID_HOME/build-tools/36.0.0/aapt2" dump badging "$APK" | head -20
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --print-certs "$APK" | head -8
+
+      - name: Name the artifact
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          cp android/app/build/outputs/apk/release/app-release.apk "Quizz-${VERSION}.apk"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: quizz-apk
+          path: Quizz-*.apk
+          retention-days: 90
+
+      - name: Attach APK to a release
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/arena/')
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Quizz build ${{ github.run_number }}
+          body: |
+            Installable Android build of Quizz, signed with the project key.
+
+            **Install:** download the `.apk` below, tap it, allow "Install unknown apps"
+            for your browser or file manager, then open Quizz.
+
+            Everything runs offline; tests you save stay on the device across updates.
+          files: Quizz-*.apk
+          prerelease: false
