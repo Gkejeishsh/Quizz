@@ -168,9 +168,17 @@ LIGHT_BG = (244, 245, 250)
 
 def write_splash() -> None:
     """Light splash in drawable-*, dark splash in drawable-night-*."""
+    def night_name(folder: str) -> str:
+        """Android needs qualifiers in a fixed order: …-<orientation>-night-<density>."""
+        parts = folder.split("-")
+        if parts and parts[-1] in DENSITIES:
+            return "-".join(parts[:-1] + ["night", parts[-1]])
+        return f"{folder}-night"
+
     for folder_name, (w, h) in SPLASH_SIZES.items():
-        for suffix, background in (("", LIGHT_BG), ("-night", DARK_BG)):
-            folder = RES / f"{folder_name}{suffix}"
+        for suffix, background in (("", LIGHT_BG), ("", DARK_BG)):
+            name = folder_name if background == LIGHT_BG else night_name(folder_name)
+            folder = RES / name
             folder.mkdir(parents=True, exist_ok=True)
             img = Image.new("RGB", (w, h), background)
             mark_size = int(min(w, h) * 0.24)
