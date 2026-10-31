@@ -17,7 +17,7 @@ function Sparkline({ values }: { values: number[] }) {
   const points = values.map((v, i) => `${(i * step).toFixed(1)},${(h - (v / max) * (h - 4) - 2).toFixed(1)}`).join(' ')
   const last = values[values.length - 1]
   return (
-    <svg width={w} height={h} aria-hidden="true" style={{ overflow: 'visible' }}>
+    <svg width={w} height={h} aria-hidden="true" style={{ width: w, height: h, overflow: 'visible' }}>
       <polyline points={points} fill="none" stroke="var(--primary)" strokeWidth={1.8} strokeLinejoin="round" strokeLinecap="round" opacity={0.85} />
       <circle cx={w} cy={h - (last / max) * (h - 4) - 2} r={2.6} fill="var(--accent)" />
     </svg>

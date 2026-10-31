@@ -3,7 +3,7 @@ import { useStore, categoryById, bestAttempts, latestAttempt } from '../lib/stor
 import { percent } from '../lib/scoring'
 import { formatDate } from '../lib/dates'
 import { Page, Sheet, ScoreRing, IconText } from '../components/ui'
-import { BookOpen, Clock, Dots, FileText, Lightning, Play, Refresh } from '../components/Icons'
+import { BookOpen, ChevronRight, Clock, Dots, FileText, Lightning, Play, Refresh } from '../components/Icons'
 import { useTestActions } from '../components/TestActions'
 import { haptic } from '../lib/haptics'
 import { motion } from 'motion/react'
@@ -140,7 +140,7 @@ export function TestDetail({ testId }: { testId: string }) {
                     push({ name: 'play', testId: test.id })
                   }}
                 >
-                  <Play style={{ width: 14, height: 14 }} /> Resume
+                  <Play /> Resume
                 </button>
               </div>
             </div>
@@ -156,7 +156,11 @@ export function TestDetail({ testId }: { testId: string }) {
                 setStartOpen(true)
               }}
             >
-              <Play /> Start test
+              <span className="btn__glyph">
+                <Play />
+              </span>
+              <span>Start test</span>
+              <ChevronRight className="btn__trail" />
             </button>
             <button
               className="btn btn--secondary btn--lg btn--block"
@@ -164,7 +168,10 @@ export function TestDetail({ testId }: { testId: string }) {
               onClick={() => push({ name: 'review', testId: test.id })}
               title={explained === 0 ? 'This test has no explanations' : undefined}
             >
-              <BookOpen /> Show explanation
+              <span className="btn__glyph">
+                <BookOpen />
+              </span>
+              <span>Show explanation</span>
             </button>
             {explained === 0 && (
               <p className="subtitle" style={{ fontSize: 12.5, textAlign: 'center', marginTop: -4 }}>

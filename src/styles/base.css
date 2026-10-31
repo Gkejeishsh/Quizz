@@ -274,6 +274,26 @@ a {
   color: transparent;
 }
 
+/* ---------------- icons ---------------- */
+
+/*
+ * Inline SVGs carry no intrinsic size, so a bare <svg> falls back to 300x150 and
+ * escapes its container (that is what happened to the book icon in "Show
+ * explanation"). Icons now start at the text size; components that want a
+ * bigger one set it on their own class.
+ */
+svg {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  vertical-align: -0.125em;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
 /* ---------------- buttons ---------------- */
 
 .btn {
@@ -282,58 +302,100 @@ a {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  height: 52px;
+  min-height: 52px;
   padding: 0 20px;
-  border-radius: var(--r-md);
+  border-radius: 17px;
   font-size: 15.5px;
   font-weight: 650;
   letter-spacing: -0.01em;
+  line-height: 1.25;
+  text-align: center;
   border: 1px solid transparent;
-  transition: background var(--dur-fast) var(--ease-standard),
-    border-color var(--dur-fast) var(--ease-standard),
-    transform var(--dur-instant) var(--ease-standard),
-    box-shadow var(--dur-fast) var(--ease-standard);
-  will-change: transform;
+  isolation: isolate;
   user-select: none;
+  transition:
+    background var(--dur-fast) var(--ease-standard),
+    border-color var(--dur-fast) var(--ease-standard),
+    box-shadow var(--dur-base) var(--ease-standard),
+    transform var(--dur-instant) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard);
+  will-change: transform;
 }
-.btn:active { transform: scale(0.975); }
+.btn:active { transform: scale(0.972); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .btn:disabled:active { transform: none; }
+
+/* icons inside buttons */
+.btn > svg { width: 19px; height: 19px; }
+.btn--lg > svg { width: 21px; height: 21px; }
+.btn--sm > svg { width: 16px; height: 16px; }
+
+/* optional leading tile — gives a CTA a designed feel instead of a bare glyph */
+.btn__glyph {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 10px;
+  margin-left: -6px;
+  background: color-mix(in srgb, currentColor 12%, transparent);
+  transition: background var(--dur-fast) var(--ease-standard);
+}
+.btn__glyph svg { width: 17px; height: 17px; }
+.btn__trail { margin-left: auto; opacity: 0.55; transition: transform var(--dur-base) var(--ease-standard), opacity var(--dur-fast); }
+.btn:active .btn__trail { transform: translateX(2px); opacity: 0.85; }
 
 .btn--primary {
   background: var(--grad-brand);
   color: var(--on-primary);
-  box-shadow: var(--shadow-primary);
+  box-shadow: var(--shadow-primary), inset 0 1px 0 rgba(255, 255, 255, 0.28);
   overflow: hidden;
 }
 .btn--primary::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 55%);
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 58%);
+  opacity: 0.9;
   pointer-events: none;
+  z-index: -1;
 }
+.btn--primary .btn__glyph {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+.btn--primary:active { box-shadow: var(--shadow-primary), inset 0 1px 0 rgba(255, 255, 255, 0.18); }
 
 .btn--secondary {
   background: var(--surface);
   color: var(--ink);
   border-color: var(--line);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card), inset 0 1px 0 color-mix(in srgb, var(--ink) 6%, transparent);
 }
 .btn--secondary:hover { border-color: var(--line-strong); }
+.btn--secondary .btn__glyph {
+  background: var(--surface-2);
+  color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
 
 .btn--soft {
   background: var(--surface-2);
   color: var(--ink);
   border-color: transparent;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ink) 5%, transparent);
 }
+.btn--soft:active { background: color-mix(in srgb, var(--surface-2) 82%, var(--ink)); }
 
 .btn--ghost {
   background: transparent;
   color: var(--ink-2);
   border-color: transparent;
-  height: 44px;
+  min-height: 44px;
   padding: 0 12px;
+  box-shadow: none;
 }
 .btn--ghost:hover { background: var(--surface-2); color: var(--ink); }
 
@@ -342,10 +404,32 @@ a {
   color: var(--danger);
   border-color: color-mix(in srgb, var(--danger) 28%, transparent);
 }
+.btn--danger .btn__glyph { background: color-mix(in srgb, var(--danger) 14%, transparent); }
 
 .btn--block { width: 100%; }
-.btn--lg { height: 58px; font-size: 16.5px; border-radius: var(--r-md); }
-.btn--sm { height: 40px; font-size: 14px; padding: 0 14px; border-radius: var(--r-sm); }
+.btn--lg {
+  min-height: 58px;
+  padding: 0 22px;
+  font-size: 16.5px;
+  border-radius: 19px;
+}
+.btn--sm {
+  min-height: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 13px;
+  gap: 8px;
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.chip:focus-visible,
+.pill-btn:focus-visible,
+.option:focus-visible,
+.list-row:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
 
 .icon-btn {
   width: 42px;

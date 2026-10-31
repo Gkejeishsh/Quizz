@@ -4,6 +4,7 @@ import { StatusBar, Style } from '@capacitor/status-bar'
 import { Haptics, ImpactStyle, NotificationType } from '@capacitor/haptics'
 import { App as NativeApp } from '@capacitor/app'
 import { useStore, applyTheme } from './store'
+import { sheetRegistry, CLOSE_SHEET_EVENT, EXIT_REQUEST_EVENT } from './sheets'
 
 /**
  * Native shell integration (Capacitor).
@@ -35,20 +36,36 @@ export async function initNative(): Promise<void> {
   await refreshStatusBar(applyTheme(useStore.getState().settings.theme))
 
   try {
+    // The system back gesture must do exactly what the in-app back arrow does.
     await NativeApp.addListener('backButton', () => {
-      // Route the hardware back gesture through the same path as the in-app
-      // back button: close an open sheet, leave the quiz via its exit sheet,
-      // otherwise go back one screen; at the root, minimise the app.
-      const event = new CustomEvent('quizz:hardware-back', { cancelable: true })
-      window.dispatchEvent(event)
-      if (event.defaultPrevented) return
-      const state = useStore.getState()
-      if (state.routes.length > 1) state.pop()
-      else void NativeApp.minimizeApp?.().catch(() => undefined)
+      if (!handleHardwareBack()) void NativeApp.minimizeApp?.().catch(() => undefined)
     })
   } catch {
     /* older WebViews still get the history-based back handling */
   }
+}
+
+/**
+ * The one place that decides what "back" means: close an open sheet first, then
+ * leave the quiz through its exit sheet, then go one screen back. Returns false
+ * at the root so the caller can minimise the app instead of doing nothing.
+ */
+export function handleHardwareBack(): boolean {
+  const state = useStore.getState()
+  if (sheetRegistry.open > 0) {
+    window.dispatchEvent(new CustomEvent(CLOSE_SHEET_EVENT))
+    return true
+  }
+  const route = state.routes[state.routes.length - 1]
+  if (route?.name === 'play') {
+    window.dispatchEvent(new CustomEvent(EXIT_REQUEST_EVENT))
+    return true
+  }
+  if (state.routes.length > 1) {
+    state.pop()
+    return true
+  }
+  return false
 }
 
 /**

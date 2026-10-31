@@ -4,7 +4,7 @@ import { useStore } from '../lib/store'
 import { scoreQuestions, percent } from '../lib/scoring'
 import { formatDuration } from '../lib/dates'
 import { Page, ScoreRing, Confetti } from '../components/ui'
-import { BookOpen, CheckCircle, Clock, Refresh, Share, Sparkles, Target, X, ChevronDown } from '../components/Icons'
+import { BookOpen, CheckCircle, ChevronDown, ChevronRight, Clock, Refresh, Share, Sparkles, Target, X } from '../components/Icons'
 import { MathText } from '../components/MathText'
 import { cn } from '../lib/cn'
 
@@ -169,12 +169,19 @@ export function Results({ attemptId }: { attemptId: string }) {
               className="btn btn--primary btn--lg btn--block"
               onClick={() => push({ name: 'review', testId: test.id, attemptId: attempt.id })}
             >
-              <BookOpen /> Show explanation
+              <span className="btn__glyph">
+                <BookOpen />
+              </span>
+              <span>Show explanation</span>
+              <ChevronRight className="btn__trail" />
             </button>
           )}
           {mistakes.length > 0 && test && (
             <button className="btn btn--secondary btn--block" onClick={retryWrong}>
-              <Refresh /> Retry {mistakes.length} wrong question{mistakes.length > 1 ? 's' : ''}
+              <span className="btn__glyph">
+                <Refresh />
+              </span>
+              <span>Retry {mistakes.length} wrong question{mistakes.length > 1 ? 's' : ''}</span>
             </button>
           )}
           <div style={{ display: 'flex', gap: 10 }}>

@@ -5,7 +5,7 @@ import { scoreQuestions } from '../lib/scoring'
 import { formatClock } from '../lib/dates'
 import { MathText } from '../components/MathText'
 import { Sheet } from '../components/ui'
-import { ArrowLeft, Check, Clock, Flag, X } from '../components/Icons'
+import { ArrowLeft, ArrowRight, Check, Clock, Flag, X } from '../components/Icons'
 import { haptic } from '../lib/haptics'
 import { cn } from '../lib/cn'
 import { SPRING_SETTLE } from '../components/ui'
@@ -330,11 +330,18 @@ export function Play({ testId }: { testId: string }) {
 
       <div className="quiz-footer">
         <div className="row gap-2">
-          <button className="btn btn--soft" style={{ width: 92 }} onClick={goPrev} disabled={index === 0} aria-label="Previous question">
-            <ArrowLeft style={{ width: 18, height: 18 }} />
+          <button
+            className="btn btn--soft"
+            style={{ paddingInline: 18 }}
+            onClick={goPrev}
+            disabled={index === 0}
+            aria-label="Previous question"
+          >
+            <ArrowLeft />
           </button>
-          <button className="btn btn--secondary grow" onClick={goNext}>
-            {index === total - 1 ? 'Finish test' : picked.length ? 'Next' : 'Skip'}
+          <button className="btn btn--primary grow" onClick={goNext}>
+            <span>{index === total - 1 ? 'Finish test' : picked.length ? 'Next' : 'Skip'}</span>
+            <ArrowRight className="btn__trail" />
           </button>
         </div>
       </div>

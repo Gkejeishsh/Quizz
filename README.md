@@ -7,7 +7,7 @@ An offline Android quiz player for AI-generated PDF tests. You give me a test PD
 
 ## Install on Android
 
-1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.0.0.apk`.
+1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.1.0.apk`.
 2. Tap the file → allow *Install unknown apps* for your browser or file manager → **Install**.
 3. Open **Quizz**. It ships with four tests already loaded (the HEC Quantitative Test 2 pack included).
 

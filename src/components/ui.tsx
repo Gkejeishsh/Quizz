@@ -4,10 +4,10 @@ import { useStore } from '../lib/store'
 import { cn } from '../lib/cn'
 import { haptic } from '../lib/haptics'
 import { ArrowLeft, Check, CheckCircle, Info, AlertCircle } from './Icons'
+import { sheetRegistry, CLOSE_SHEET_EVENT } from '../lib/sheets'
 
 /** Tracks how many sheets/dialogs are open so hardware back closes them first. */
-export const sheetRegistry = { open: 0 }
-export const CLOSE_SHEET_EVENT = 'quizz:close-sheet'
+export { sheetRegistry, CLOSE_SHEET_EVENT }
 
 export const SPRING_SNAPPY = { type: 'spring' as const, stiffness: 900, damping: 42, mass: 0.7 }
 export const SPRING_SETTLE = { type: 'spring' as const, stiffness: 520, damping: 34, mass: 0.9 }

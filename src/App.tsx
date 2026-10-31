@@ -102,23 +102,6 @@ export default function App() {
   const skipPop = useRef(false)
 
   useEffect(() => {
-    const onHardwareBack = (event: Event) => {
-      const state = useStore.getState()
-      const route = state.routes[state.routes.length - 1]
-      if (sheetRegistry.open > 0) {
-        event.preventDefault()
-        window.dispatchEvent(new CustomEvent(CLOSE_SHEET_EVENT))
-        return
-      }
-      if (route.name === 'play') {
-        event.preventDefault()
-        window.dispatchEvent(new CustomEvent('quizz:exit-request'))
-        return
-      }
-      if (state.routes.length > 1) event.preventDefault()
-    }
-    window.addEventListener('quizz:hardware-back', onHardwareBack)
-
     const onPop = () => {
       if (skipPop.current) {
         skipPop.current = false
@@ -145,7 +128,6 @@ export default function App() {
     }
     return () => {
       window.removeEventListener('popstate', onPop)
-      window.removeEventListener('quizz:hardware-back', onHardwareBack)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

@@ -169,11 +169,13 @@ export function ImportScreen() {
               <FileText /> Browse files
             </span>
           </div>
-          <input
-            ref={inputRef}
-            type="file"
-            accept=".quizz,.json,application/json,application/octet-stream,text/plain"
-            hidden
+          {/*
+            Deliberately no `accept` filter: Android reports .quizz files with an
+            unknown MIME type, and any accept list greys them out (unselectable)
+            in the system picker. The pack is validated by its contents instead,
+            so the file imports whatever its name or extension.
+          */}
+          <input ref={inputRef} type="file" hidden
             onChange={(e) => {
               const f = e.target.files?.[0]
               if (f) void handleFile(f)
