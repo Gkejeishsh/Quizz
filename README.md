@@ -5,16 +5,27 @@ An offline Android quiz player for AI-generated PDF tests. You give me a test PD
 - **No AI in the app, no accounts, no internet required.**
 - **Full plan:** [`PLAN.md`](PLAN.md) · **File format:** [`docs/quizz-pack.schema.json`](docs/quizz-pack.schema.json) · **Example:** [`docs/sample-pack.quizz`](docs/sample-pack.quizz)
 
-## Try it
+## Install on Android
+
+1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.0.0.apk`.
+2. Tap the file → allow *Install unknown apps* for your browser or file manager → **Install**.
+3. Open **Quizz**. It ships with four tests already loaded (the HEC Quantitative Test 2 pack included).
+
+The APK is signed with the project key committed in `android/quizz-release.jks`, so
+every later build installs straight over the previous one — your saved tests, scores
+and history survive updates. Everything runs offline: the app requests no internet,
+storage, camera or location permission.
+
+## Try it in a browser
 
 ```bash
 npm install
 npm run dev        # http://localhost:5173  (mobile-sized preview)
-npm run check      # typecheck + 35 unit & end-to-end tests
+npm run check      # typecheck + 36 unit & end-to-end tests
 npm run build
 ```
 
-The first launch seeds three demo tests (packs/*.quizz) so every screen has real content.
+The first launch seeds four demo tests (packs/*.quizz) so every screen has real content.
 
 ## Converting your own tests
 
@@ -38,11 +49,24 @@ See [`docs/CONVERTING.md`](docs/CONVERTING.md) — including the prompt that mak
 - **Categories & settings** — add / rename / delete (tests move to Uncategorized), backup export/import, text size, haptics, sound, reduce motion, storage usage.
 - **Behaviour** — Android-style back handling (one history entry per screen, hardware back opens the quiz exit sheet), offline PWA shell, installable from the browser.
 
+## Building the APK yourself
+
+```bash
+npm ci && npx vite build
+npx cap sync android          # copy the web bundle into the Android project
+cd android && ./gradlew assembleRelease
+# → android/app/build/outputs/apk/release/app-release.apk
+```
+
+CI does exactly this on every push (`.github/workflows/android.yml`): it builds,
+verifies and signs the release APK, uploads it as an artifact and attaches it to a
+new GitHub Release. Needs JDK 21 + Android SDK 36 (`compileSdk`/`targetSdk` 36,
+`minSdk` 24 — Android 7.0 and newer).
+
 ## Next
 
-- **M2 (in progress):** converter + validator are built and tested on synthetic PDFs — send 2–3 real ones to calibrate the parsing rules.
-- **M6:** accessibility and performance pass on a real device.
-- **M7:** Capacitor Android project + signed APK (say “compile”).
+- **M2 (in progress):** converter + validator are built and calibrated on one real PDF (HEC Quantitative Test 2 — 50/50 questions, keys and explanations) — send more to keep widening coverage.
+- **M6:** real-device QA: install the APK, check insets, haptics, back gesture, resume after force-close.
 
 ## Repo layout
 
@@ -57,4 +81,7 @@ src/__tests__            end-to-end smoke tests (jsdom)
 src/lib/__tests__        unit tests
 public/                  logo, manifest, service worker
 .github/workflows/ci.yml typecheck + tests + build
+.github/workflows/android.yml  APK build, signing, GitHub Release
+android/                 Capacitor Android project (icons, splash, manifest, key)
+capacitor.config.ts      app id, splash and system-bar configuration
 ```

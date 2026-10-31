@@ -31,6 +31,7 @@ export async function initNative(): Promise<void> {
     /* harmless: the splash auto-hides on its own */
   }
 
+  applyInsets()
   await refreshStatusBar(applyTheme(useStore.getState().settings.theme))
 
   try {
@@ -48,6 +49,33 @@ export async function initNative(): Promise<void> {
   } catch {
     /* older WebViews still get the history-based back handling */
   }
+}
+
+/**
+ * Android draws the app edge-to-edge (targetSdk 36 forces it), and some
+ * WebViews report zero safe-area insets. Measure env(); if it comes back
+ * empty, fall back to sensible status-bar / gesture-bar heights so nothing
+ * hides under the system UI.
+ */
+function applyInsets(): void {
+  const root = document.documentElement
+  const platform = Capacitor.getPlatform()
+  root.classList.add('cap-native', `cap-${platform}`)
+  if (platform !== 'android') return
+
+  const measure = (property: string) => {
+    const probe = document.createElement('div')
+    probe.style.cssText =
+      'position:fixed;top:0;left:0;width:0;height:0;visibility:hidden;pointer-events:none;' +
+      `padding-top:env(${property},0px)`
+    document.body.appendChild(probe)
+    const value = parseFloat(getComputedStyle(probe).paddingTop) || 0
+    probe.remove()
+    return value
+  }
+
+  if (measure('safe-area-inset-top') < 12) root.style.setProperty('--inset-top', '26px')
+  if (measure('safe-area-inset-bottom') < 6) root.style.setProperty('--inset-bottom', '12px')
 }
 
 export async function refreshStatusBar(theme: 'light' | 'dark'): Promise<void> {
