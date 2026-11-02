@@ -1,6 +1,6 @@
 /* Quizz service worker — offline shell for the PWA build. */
 const VERSION = 'quizz-v1'
-const PRECACHE = ['/', '/index.html', '/manifest.webmanifest', '/logo.svg']
+const PRECACHE = ['/', '/index.html', '/manifest.webmanifest', '/logo.svg', '/icon-192.png', '/icon-512.png']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

@@ -39,7 +39,7 @@ export function Home() {
   return (
     <div className="screen">
       <div style={{ padding: '10px 20px 0' }}>
-        <div className="row-between" style={{ marginBottom: 26 }}>
+        <div className="row-between" style={{ marginBottom: 4 }}>
           <Logo />
           <div className="row gap-2">
             <button className="icon-btn" onClick={toggleTheme} aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}>
@@ -52,25 +52,9 @@ export function Home() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.05, 0.7, 0.1, 1] }}
-        >
-          <div className="label" style={{ marginBottom: 10 }}>
-            {tests.length ? `${tests.length} test${tests.length === 1 ? '' : 's'} in your library` : 'Your study desk'}
-          </div>
-          <h1 className="display">
-            Ready when <br />
-            <span className="grad-text">you are.</span>
-          </h1>
-          <p className="subtitle" style={{ marginTop: 10, maxWidth: 320 }}>
-            Turn a test PDF into a real quiz. No paper, no manual marking — just answers and explanations.
-          </p>
-        </motion.div>
       </div>
 
-      <div className="screen-body" style={{ paddingTop: 24 }}>
+      <div className="screen-body" style={{ paddingTop: 18 }}>
         <div className="stack gap-3">
           <motion.button
             className="action-card action-card--primary"

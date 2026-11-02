@@ -16,3 +16,7 @@ android/local.properties
 # ...except the project's personal signing key, so app updates keep working
 !android/quizz-release.jks
 ci-logs/
+
+# python caches
+__pycache__/
+*.pyc

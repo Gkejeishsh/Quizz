@@ -1,29 +1,41 @@
 #!/usr/bin/env python3
 """
-Generate the Android launcher icons and splash screens from the Quizz mark.
+Generate the Android launcher icons, splash screens and PWA icons from the
+Quizz mark.
 
     python3 tools/make_assets.py
 
-Draws the brand mark (gradient plate, Q ring, check, spark) with Pillow so the
-assets stay in sync with public/logo.svg without needing an SVG rasteriser.
+The mark is drawn with Pillow on the same 48-unit grid as the SVG
+(src/components/Logo.tsx, public/logo.svg) so every surface shows the identical
+art: a magnifier whose lens is the bowl of a Q and whose tick is the answer.
 """
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "android" / "app" / "src" / "main" / "res"
 
 DARK_BG = (8, 10, 17)
-BRAND_A = (123, 107, 255)
-BRAND_B = (90, 91, 240)
-BRAND_C = (15, 181, 201)
-CYAN = (56, 225, 240)
-PALE = (201, 255, 255)
-WHITE = (237, 239, 248)
+LIGHT_BG = (244, 245, 250)
+
+# plate gradient stops (violet → indigo → cyan), matching public/logo.svg
+PLATE_STOPS = [
+    (0.00, (155, 134, 255)),
+    (0.42, (108, 92, 255)),
+    (0.78, (75, 99, 245)),
+    (1.00, (22, 199, 217)),
+]
+WHITE = (255, 255, 255)
+GLYPH_A = (255, 255, 255)
+GLYPH_B = (207, 224, 255)
+CHECK_A = (125, 249, 255)
+CHECK_B = (34, 211, 238)
+SPARK_B = (125, 249, 255)
 
 DENSITIES = {
     "mdpi": 1.0,
@@ -34,93 +46,160 @@ DENSITIES = {
 }
 
 
+def _lerp(a: tuple[int, int, int], b: tuple[int, int, int], t: float) -> tuple[int, int, int]:
+    return tuple(int(round(a[i] + (b[i] - a[i]) * t)) for i in range(3))
+
+
+def _stop_color(t: float) -> tuple[int, int, int]:
+    t = min(max(t, 0.0), 1.0)
+    for i in range(len(PLATE_STOPS) - 1):
+        t0, c0 = PLATE_STOPS[i]
+        t1, c1 = PLATE_STOPS[i + 1]
+        if t <= t1:
+            return _lerp(c0, c1, (t - t0) / (t1 - t0) if t1 > t0 else 0.0)
+    return PLATE_STOPS[-1][1]
+
+
 def gradient(size: int) -> Image.Image:
-    """Diagonal brand gradient."""
+    """Diagonal brand gradient over a square."""
     img = Image.new("RGB", (size, size))
-    pixels = img.load()
+    px = img.load()
     for y in range(size):
         for x in range(size):
-            t = (x + y) / (2 * size - 2)
-            if t < 0.55:
-                u = t / 0.55
-                color = tuple(int(BRAND_A[i] + (BRAND_B[i] - BRAND_A[i]) * u) for i in range(3))
-            else:
-                u = (t - 0.55) / 0.45
-                color = tuple(int(BRAND_B[i] + (BRAND_C[i] - BRAND_B[i]) * u) for i in range(3))
-            pixels[x, y] = color
+            px[x, y] = _stop_color((x + y) / (2 * size - 2))
     return img
 
 
-def draw_mark(size: int, *, plate: bool = True, glyph_scale: float = 0.62) -> Image.Image:
-    """The Q + check + spark glyph on an optional gradient plate."""
-    ss = 4  # supersample for smooth edges
+def glow_overlay(size: int) -> Image.Image:
+    """Soft white highlight in the top-left corner, so the plate reads as glass."""
+    small = 64
+    img = Image.new("L", (small, small), 0)
+    px = img.load()
+    cx, cy = 0.26 * small, 0.16 * small
+    reach = 0.78 * small
+    for y in range(small):
+        for x in range(small):
+            d = math.hypot(x - cx, y - cy) / reach
+            if d >= 1:
+                continue
+            # smooth quadratic falloff — no visible banding after upscaling
+            px[x, y] = int(64 * (1 - d) ** 2)
+    img = img.resize((size, size), Image.BICUBIC)
+    overlay = Image.new("RGBA", (size, size), WHITE + (255,))
+    overlay.putalpha(img)
+    return overlay
+
+
+def rounded_mask(size: int, radius_ratio: float) -> Image.Image:
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).rounded_rectangle([0, 0, size - 1, size - 1], radius=int(size * radius_ratio), fill=255)
+    return mask
+
+
+def plate(size: int, radius_ratio: float = 0.30) -> Image.Image:
+    """The app-icon plate: gradient + glow + inner rim."""
+    ss = 3
+    s = size * ss
+    base = gradient(s).convert("RGBA")
+    base.alpha_composite(glow_overlay(s))
+    canvas = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    canvas.paste(base, (0, 0), rounded_mask(s, radius_ratio))
+    # inner rim
+    draw = ImageDraw.Draw(canvas)
+    rim = max(2, int(s * 0.006))
+    draw.rounded_rectangle(
+        [rim, rim, s - rim - 1, s - rim - 1],
+        radius=int(s * radius_ratio) - rim,
+        outline=(255, 255, 255, 56),
+        width=rim,
+    )
+    # bottom inner shadow for depth
+    shade = Image.new("RGBA", (s, s), (0, 0, 0, 0))
+    ImageDraw.Draw(shade).rounded_rectangle(
+        [0, int(s * 0.55), s - 1, s - 1], radius=int(s * radius_ratio), fill=(6, 10, 34, 46)
+    )
+    shade = shade.filter(ImageFilter.GaussianBlur(radius=s * 0.05))
+    shade.putalpha(Image.composite(shade.split()[-1], Image.new("L", (s, s), 0), rounded_mask(s, radius_ratio)))
+    canvas.alpha_composite(shade)
+    return canvas.resize((size, size), Image.LANCZOS)
+
+
+def _astroid(cx: float, cy: float, reach: float, steps: int = 96) -> list[tuple[float, float]]:
+    """4-point sparkle with concave sides."""
+    pts = []
+    for i in range(steps):
+        t = i * 2 * math.pi / steps
+        pts.append((cx + reach * math.cos(t) ** 3, cy + reach * math.sin(t) ** 3))
+    return pts
+
+
+def draw_mark(size: int, *, with_plate: bool = False, glyph_scale: float = 0.86) -> Image.Image:
+    """
+    The mark. `glyph_scale` is the fraction of the canvas the 48-unit grid spans.
+    """
+    ss = 4
     s = size * ss
     canvas = Image.new("RGBA", (s, s), (0, 0, 0, 0))
 
-    if plate:
-        plate_img = gradient(s).convert("RGBA")
-        mask = Image.new("L", (s, s), 0)
-        ImageDraw.Draw(mask).rounded_rectangle([0, 0, s - 1, s - 1], radius=int(s * 0.30), fill=255)
-        canvas.paste(plate_img, (0, 0), mask)
+    if with_plate:
+        canvas.alpha_composite(plate(s))
 
-    draw = ImageDraw.Draw(canvas)
-    unit = s / 48 * glyph_scale / 0.62  # glyph coordinates are on a 48 grid
-    ox = (s - 48 * unit) / 2
-    oy = (s - 48 * unit) / 2
+    grid = s * glyph_scale
+    unit = grid / 48
+    ox = (s - grid) / 2
+    oy = (s - grid) / 2
 
     def pt(x: float, y: float) -> tuple[float, float]:
         return (ox + x * unit, oy + y * unit)
 
-    stroke = max(1, int(3.6 * unit))
-    # Q ring
-    cx, cy, r = 21.5, 23.5, 12.0
-    draw.ellipse(
-        [ox + (cx - r) * unit, oy + (cy - r) * unit, ox + (cx + r) * unit, oy + (cy + r) * unit],
-        outline=WHITE,
-        width=stroke,
-    )
-    # tail
-    draw.line([pt(28.2, 30.2), pt(35.6, 37.8)], fill=WHITE, width=stroke)
-    # check
-    draw.line([pt(15.8, 23.6), pt(19.4, 27.2), pt(26.8, 19.2)], fill=CYAN, width=stroke, joint="curve")
-    # spark
-    spark = [pt(38.4, 9.4), pt(39.5, 12.7), pt(42.8, 13.8), pt(39.5, 14.9), pt(38.4, 18.2), pt(37.3, 14.9), pt(34, 13.8), pt(37.3, 12.7)]
-    draw.polygon(spark, fill=PALE)
+    draw = ImageDraw.Draw(canvas)
+
+    def ring() -> None:
+        cx, cy, r = 21.6, 23.4, 11.6
+        width = max(2, int(4.0 * unit))
+        box = [ox + (cx - r) * unit, oy + (cy - r) * unit, ox + (cx + r) * unit, oy + (cy + r) * unit]
+        draw.ellipse(box, outline=GLYPH_A + (255,), width=width)
+
+    def tail() -> None:
+        width = max(2, int(4.4 * unit))
+        a, b = pt(28.7, 30.5), pt(35.6, 37.6)
+        draw.line([a, b], fill=GLYPH_A + (255,), width=width)
+        # rounded caps
+        for x, y in (a, b):
+            r = width / 2
+            draw.ellipse([x - r, y - r, x + r, y + r], fill=GLYPH_A + (255,))
+
+    def tick() -> None:
+        width = max(2, int(3.8 * unit))
+        pts = [pt(15.4, 23.3), pt(19.3, 27.2), pt(27.0, 18.7)]
+        draw.line(pts, fill=CHECK_B + (255,), width=width, joint="curve")
+        for x, y in (pts[0], pts[-1]):
+            r = width / 2
+            draw.ellipse([x - r, y - r, x + r, y + r], fill=CHECK_B + (255,))
+
+    ring()
+    tail()
+    tick()
+    spark = [pt(x, y) for x, y in _astroid(39.0, 10.4, 4.6)]
+    draw.polygon(spark, fill=SPARK_B + (255,))
 
     return canvas.resize((size, size), Image.LANCZOS)
 
 
-def rounded_tile(size: int) -> Image.Image:
-    """Square app icon: dark tile with a gradient plate inside."""
-    ss = 4
+def app_icon(size: int) -> Image.Image:
+    """Legacy icon: the plate itself (the launcher applies its own mask)."""
+    ss = 3
     s = size * ss
-    canvas = Image.new("RGBA", (s, s), DARK_BG + (255,))
-    plate = gradient(s).convert("RGBA")
-    mask = Image.new("L", (s, s), 0)
-    pad = int(s * 0.06)
-    ImageDraw.Draw(mask).rounded_rectangle([pad, pad, s - pad, s - pad], radius=int(s * 0.22), fill=255)
-    # soften the plate
-    plate.putalpha(200)
-    canvas.paste(plate, (0, 0), mask)
-    glyph = draw_mark(s, plate=False, glyph_scale=0.70)
-    canvas.alpha_composite(glyph)
+    canvas = plate(s, radius_ratio=0.27)
+    canvas.alpha_composite(draw_mark(s, glyph_scale=0.72))
     return canvas.resize((size, size), Image.LANCZOS)
 
 
-def circular_tile(size: int) -> Image.Image:
-    ss = 4
+def round_icon(size: int) -> Image.Image:
+    ss = 3
     s = size * ss
-    canvas = Image.new("RGBA", (s, s), (0, 0, 0, 0))
-    base = Image.new("RGBA", (s, s), DARK_BG + (255,))
-    mask = Image.new("L", (s, s), 0)
-    ImageDraw.Draw(mask).ellipse([0, 0, s - 1, s - 1], fill=255)
-    canvas.paste(base, (0, 0), mask)
-    plate = gradient(s).convert("RGBA")
-    plate.putalpha(200)
-    plate_mask = Image.new("L", (s, s), 0)
-    ImageDraw.Draw(plate_mask).ellipse([int(s * 0.07)] * 2 + [s - int(s * 0.07)] * 2, fill=255)
-    canvas.paste(plate, (0, 0), plate_mask)
-    canvas.alpha_composite(draw_mark(s, plate=False, glyph_scale=0.70))
+    canvas = plate(s, radius_ratio=0.5)
+    canvas.alpha_composite(draw_mark(s, glyph_scale=0.72))
     return canvas.resize((size, size), Image.LANCZOS)
 
 
@@ -130,21 +209,20 @@ def write_icons() -> None:
         folder.mkdir(parents=True, exist_ok=True)
 
         legacy = int(48 * scale)
-        rounded_tile(legacy).save(folder / "ic_launcher.png")
-        circular_tile(legacy).save(folder / "ic_launcher_round.png")
+        app_icon(legacy).save(folder / "ic_launcher.png")
+        round_icon(legacy).save(folder / "ic_launcher_round.png")
 
-        # adaptive foreground: 108dp canvas, glyph inside the 72dp safe zone
+        # adaptive foreground: 108dp canvas, art kept inside the 72dp safe zone
         fg_size = int(108 * scale)
         fg = Image.new("RGBA", (fg_size, fg_size), (0, 0, 0, 0))
-        glyph = draw_mark(int(fg_size * 0.62), plate=False, glyph_scale=1.0)
-        fg.alpha_composite(glyph, ((fg_size - glyph.width) // 2, (fg_size - glyph.height) // 2))
+        glyph = draw_mark(fg_size, glyph_scale=0.80)
+        fg.alpha_composite(glyph)
         fg.save(folder / "ic_launcher_foreground.png")
 
         # monochrome layer (themed icons, Android 13+)
         mono = Image.new("RGBA", (fg_size, fg_size), (0, 0, 0, 0))
-        mono_glyph = draw_mark(int(fg_size * 0.62), plate=False, glyph_scale=1.0)
-        alpha = mono_glyph.split()[-1]
-        mono.paste(Image.new("RGBA", mono_glyph.size, (255, 255, 255, 255)), ((fg_size - mono_glyph.width) // 2, (fg_size - mono_glyph.height) // 2), alpha)
+        alpha = draw_mark(fg_size, glyph_scale=0.80).split()[-1]
+        mono.paste(Image.new("RGBA", (fg_size, fg_size), WHITE + (255,)), (0, 0), alpha)
         mono.save(folder / "ic_launcher_monochrome.png")
 
 
@@ -163,36 +241,57 @@ SPLASH_SIZES = {
 }
 
 
-LIGHT_BG = (244, 245, 250)
+def _night_name(folder: str) -> str:
+    """Android needs qualifiers in a fixed order: …-<orientation>-night-<density>."""
+    parts = folder.split("-")
+    if parts and parts[-1] in DENSITIES:
+        return "-".join(parts[:-1] + ["night", parts[-1]])
+    return f"{folder}-night"
+
+
+def splash_image(w: int, h: int, background: tuple[int, int, int], glow_rgb: tuple[int, int, int]) -> Image.Image:
+    """Plate on a soft radial brand glow, centred like the native splash."""
+    small_w, small_h = 64, max(64, int(64 * h / w))
+    halo = Image.new("L", (small_w, small_h), 0)
+    px = halo.load()
+    cx, cy = small_w / 2, small_h / 2
+    reach = min(small_w, small_h) * 0.62
+    for y in range(small_h):
+        for x in range(small_w):
+            d = math.hypot(x - cx, y - cy) / reach
+            if d < 1:
+                px[x, y] = int(60 * (1 - d) ** 1.8)
+    halo = halo.resize((w, h), Image.BICUBIC)
+
+    img = Image.new("RGBA", (w, h), background + (255,))
+    glow = Image.new("RGBA", (w, h), glow_rgb + (255,))
+    glow.putalpha(halo)
+    img.alpha_composite(glow)
+
+    mark_size = int(min(w, h) * 0.31)
+    mark = draw_mark(mark_size, with_plate=True, glyph_scale=0.82)
+    img.alpha_composite(mark, ((w - mark_size) // 2, (h - mark_size) // 2))
+    return img.convert("RGB")
 
 
 def write_splash() -> None:
-    """Light splash in drawable-*, dark splash in drawable-night-*."""
-    def night_name(folder: str) -> str:
-        """Android needs qualifiers in a fixed order: …-<orientation>-night-<density>."""
-        parts = folder.split("-")
-        if parts and parts[-1] in DENSITIES:
-            return "-".join(parts[:-1] + ["night", parts[-1]])
-        return f"{folder}-night"
-
+    """Light splash in drawable-*, dark splash in *-night-*."""
     for folder_name, (w, h) in SPLASH_SIZES.items():
-        for suffix, background in (("", LIGHT_BG), ("", DARK_BG)):
-            name = folder_name if background == LIGHT_BG else night_name(folder_name)
-            folder = RES / name
+        for night in (False, True):
+            folder = RES / (_night_name(folder_name) if night else folder_name)
             folder.mkdir(parents=True, exist_ok=True)
-            img = Image.new("RGB", (w, h), background)
-            mark_size = int(min(w, h) * 0.24)
-            mark = draw_mark(mark_size, plate=True)
-            img.paste(mark, ((w - mark_size) // 2, (h - mark_size) // 2 - int(h * 0.03)), mark)
-            img.save(folder / "splash.png")
+            if night:
+                splash_image(w, h, DARK_BG, (108, 92, 255)).save(folder / "splash.png")
+            else:
+                splash_image(w, h, LIGHT_BG, (108, 92, 255)).save(folder / "splash.png")
 
 
 def write_pwa_icons() -> None:
     out = ROOT / "public"
     out.mkdir(parents=True, exist_ok=True)
-    rounded_tile(512).save(out / "icon-512.png")
-    rounded_tile(192).save(out / "icon-192.png")
-    circular_tile(180).save(out / "apple-touch-icon.png")
+    app_icon(512).save(out / "icon-512.png")
+    app_icon(192).save(out / "icon-192.png")
+    round_icon(180).save(out / "apple-touch-icon.png")
 
 
 def main() -> int:

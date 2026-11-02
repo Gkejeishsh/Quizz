@@ -7,8 +7,8 @@ def keystoreFile = rootProject.file('quizz-release.jks')
 def hasKeystore = keystoreFile.exists()
 
 // Version can be overridden by CI: -PquizzVersionCode=12 -PquizzVersionName=1.2.0
-def quizzVersionCode = (project.hasProperty('quizzVersionCode') ? project.property('quizzVersionCode') : '2').toString().toInteger()
-def quizzVersionName = (project.hasProperty('quizzVersionName') ? project.property('quizzVersionName') : '1.1.0').toString()
+def quizzVersionCode = (project.hasProperty('quizzVersionCode') ? project.property('quizzVersionCode') : '3').toString().toInteger()
+def quizzVersionName = (project.hasProperty('quizzVersionName') ? project.property('quizzVersionName') : '1.2.0').toString()
 
 android {
     namespace = "com.quizz.app"

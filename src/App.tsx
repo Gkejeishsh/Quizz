@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useRef } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { applyTheme, useStore, type Route } from './lib/store'
-import { initNative, refreshStatusBar } from './lib/native'
+import { hideNativeSplash, initNative, refreshStatusBar } from './lib/native'
 import { Toasts, sheetRegistry, CLOSE_SHEET_EVENT } from './components/ui'
-import { LogoMark } from './components/Logo'
+import { SplashOverlay } from './components/SplashOverlay'
 import { Home } from './screens/Home'
 import { ImportScreen } from './screens/Import'
 import { Library } from './screens/Library'
@@ -61,8 +61,10 @@ export default function App() {
   const routes = useStore((s) => s.routes)
   const settings = useStore((s) => s.settings)
   const reduce = useReducedMotion()
+  const [splashDone, setSplashDone] = useState(false)
 
   useEffect(() => {
+    void hideNativeSplash()
     void hydrate().then(() => initNative())
   }, [hydrate])
 
@@ -147,49 +149,33 @@ export default function App() {
   const route = routes[routes.length - 1]
   const key = useMemo(() => routeKey(route), [route])
 
-  if (!hydrated) {
-    return (
+  return (
+    <>
       <div className="app">
         <div className="app-glow" />
-        <div className="app-frame" style={{ display: 'grid', placeItems: 'center' }}>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: [0.05, 0.7, 0.1, 1] }}
-            style={{ display: 'grid', gap: 14, justifyItems: 'center' }}
-          >
-            <LogoMark size={64} />
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 26, fontWeight: 800, letterSpacing: '-0.04em' }}>
-              Quiz<span className="grad-text">z</span>
-            </div>
-            <div className="skeleton" style={{ width: 120, height: 5, borderRadius: 9 }} />
-          </motion.div>
+        <div className="app-frame">
+          {hydrated && (
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={key}
+                initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
+                transition={{ duration: reduce ? 0.001 : 0.24, ease: [0.05, 0.7, 0.1, 1] }}
+                style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, height: '100%', overflow: 'hidden' }}
+                onAnimationComplete={() => {
+                  if (window.scrollY) window.scrollTo(0, 0)
+                }}
+              >
+                {screenFor(route)}
+              </motion.div>
+            </AnimatePresence>
+          )}
         </div>
+        <Toasts />
       </div>
-    )
-  }
 
-  return (
-    <div className="app">
-      <div className="app-glow" />
-      <div className="app-frame">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={key}
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8 }}
-            transition={{ duration: reduce ? 0.001 : 0.24, ease: [0.05, 0.7, 0.1, 1] }}
-            style={{ display: 'flex', flexDirection: 'column', flex: 1, minHeight: 0, height: '100%', overflow: 'hidden' }}
-            onAnimationComplete={() => {
-              if (window.scrollY) window.scrollTo(0, 0)
-            }}
-          >
-            {screenFor(route)}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-      <Toasts />
-    </div>
+      {!splashDone && <SplashOverlay ready={hydrated} onDone={() => setSplashDone(true)} />}
+    </>
   )
 }

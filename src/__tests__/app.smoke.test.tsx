@@ -30,26 +30,36 @@ afterEach(cleanup)
 
 it('boots, seeds the demo library and shows the home actions', async () => {
   render(<App />)
-  await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
   expect(document.body.textContent).toContain('Add new test')
   expect(document.body.textContent).toContain('Saved tests')
   // seeded demo tests show up in the recent list
   expect(document.body.textContent).toContain('Chemical Bonding')
 })
 
+it('plays the launch animation, then hands over to the app', async () => {
+  render(<App />)
+  // the animated splash is up immediately…
+  expect(document.querySelector('.splash')).not.toBeNull()
+  expect(document.body.textContent).toContain('Practice, marked instantly.')
+  // …and it always gets out of the way (a stuck splash would brick the app)
+  await waitFor(() => expect(document.querySelector('.splash')).toBeNull(), { timeout: 5000 })
+  expect(document.body.textContent).toContain('Add new test')
+}, 15000)
+
 it('navigates from home into saved tests and back', async () => {
   render(<App />)
-  await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
   fireEvent.click(screen.getByText('Saved tests'))
   await waitFor(() => expect(document.body.textContent).toContain('newest first'), { timeout: 4000 })
   expect(document.body.textContent).toContain('HEC Quantitative Practice Test 2')
   fireEvent.click(screen.getByLabelText('Back'))
-  await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
 }, 15000)
 
 it('plays a test end to end and records the attempt in history', async () => {
   render(<App />)
-  await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 4000 })
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
 
   fireEvent.click(screen.getByText('Saved tests'))
   await waitFor(() => expect(document.body.textContent).toContain('Chemical Bonding'), { timeout: 4000 })
@@ -84,7 +94,7 @@ it('plays a test end to end and records the attempt in history', async () => {
   fireEvent.click(screen.getByLabelText('Back'))
   await waitFor(() => expect(document.body.textContent).toContain('newest first'), { timeout: 3000 })
   fireEvent.click(screen.getByLabelText('Back'))
-  await waitFor(() => expect(document.body.textContent).toContain('Ready when'), { timeout: 3000 })
+  await waitFor(() => expect(document.body.textContent).toContain('Recently saved'), { timeout: 3000 })
   fireEvent.click(screen.getByText('History'))
   await waitFor(() => expect(document.body.textContent).toContain('Attempts'), { timeout: 3000 })
   expect(document.body.textContent).toContain('Chemical Bonding — Practice Test')

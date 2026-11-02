@@ -22,16 +22,24 @@ function isNative(): boolean {
 
 let initialised = false
 
+/**
+ * Drop the static native splash as soon as React has painted, so the animated
+ * web splash (components/SplashOverlay.tsx) is what the user actually sees.
+ */
+export async function hideNativeSplash(): Promise<void> {
+  if (!isNative()) return
+  try {
+    await SplashScreen.hide({ fadeOutDuration: 180 })
+  } catch {
+    /* the launch screen auto-hides anyway */
+  }
+}
+
 export async function initNative(): Promise<void> {
   if (initialised || !isNative()) return
   initialised = true
 
-  try {
-    await SplashScreen.hide({ fadeOutDuration: 220 })
-  } catch {
-    /* harmless: the splash auto-hides on its own */
-  }
-
+  await hideNativeSplash()
   applyInsets()
   await refreshStatusBar(applyTheme(useStore.getState().settings.theme))
 

@@ -6,6 +6,8 @@ on:
     branches: [main, 'arena/**']
     paths:
       - 'src/**'
+      - 'public/**'
+      - 'index.html'
       - 'android/**'
       - 'package.json'
       - 'capacitor.config.ts'
