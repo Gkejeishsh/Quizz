@@ -7,9 +7,9 @@ An offline Android quiz player for AI-generated PDF tests. You give me a test PD
 
 ## Install on Android
 
-1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.2.0.apk`.
+1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.3.0.apk`.
 2. Tap the file → allow *Install unknown apps* for your browser or file manager → **Install**.
-3. Open **Quizz**. It ships with four tests already loaded (the HEC Quantitative Test 2 pack included).
+3. Open **Quizz**. It ships with five tests already loaded — including **HEC Quantitative Practice Test 2** (50 Q) and **HEC Vocabulary, 50 Words (English & Urdu)**.
 
 The APK is signed with the project key committed in `android/quizz-release.jks`, so
 every later build installs straight over the previous one — your saved tests, scores
@@ -42,11 +42,11 @@ Pack-only changes do **not** rebuild the APK.
 ```bash
 npm install
 npm run dev        # http://localhost:5173  (mobile-sized preview)
-npm run check      # typecheck + 36 unit & end-to-end tests
+npm run check      # typecheck + 44 unit & end-to-end tests
 npm run build
 ```
 
-The first launch seeds four demo tests (packs/*.quizz) so every screen has real content.
+The first launch seeds real tests (packs/*.quizz) so every screen has real content.
 
 ## Converting your own tests
 

@@ -1,0 +1,1602 @@
+{
+ "format": "quizz-pack",
+ "formatVersion": 1,
+ "id": "pck_hecvocab_urdu_1",
+ "revision": 1,
+ "supersedes": null,
+ "title": "HEC Vocabulary — 50 Words (English & Urdu)",
+ "subject": "English",
+ "language": "en-ur",
+ "createdAt": "2026-11-03T04:43:06Z",
+ "instructions": "50 questions in five parts: English meaning (1–10), Urdu meaning (11–20), synonym (21–30), antonym (31–40) and HEC-style sentences (41–50). Q1–Q25 are from past papers, Q26–Q50 are new words at the same level. No negative marking.",
+ "source": {
+  "fileName": "HEC_Vocabulary_50_Words_Urdu_Test-1.pdf",
+  "pages": 10,
+  "checksum": "sha256:0129555d6628fb0e0f40607ea0eebf04352949633b1a2b849a240098917d3fc2"
+ },
+ "groups": [
+  {
+   "id": "part-a",
+   "type": "section",
+   "title": "Part A — Meaning in English",
+   "text": "Choose the correct meaning of the word in capital letters. (Q1–Q10)"
+  },
+  {
+   "id": "part-b",
+   "type": "section",
+   "title": "Part B — Meaning in Urdu",
+   "text": "Choose the correct word or the correct Urdu meaning. (Q11–Q20)"
+  },
+  {
+   "id": "part-c",
+   "type": "section",
+   "title": "Part C — Synonym",
+   "text": "Choose the word MOST NEARLY SIMILAR in meaning to the word in capital letters. (Q21–Q30)"
+  },
+  {
+   "id": "part-d",
+   "type": "section",
+   "title": "Part D — Antonym",
+   "text": "Choose the word MOST NEARLY OPPOSITE in meaning to the word in capital letters. (Q31–Q40)"
+  },
+  {
+   "id": "part-e",
+   "type": "section",
+   "title": "Part E — HEC-style sentences",
+   "text": "Q41–Q45: most nearly similar. Q46–Q50: most nearly opposite."
+  }
+ ],
+ "questions": [
+  {
+   "n": 1,
+   "type": "single",
+   "question": "CAJOLE means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "force someone with threats"
+    },
+    {
+     "key": "B",
+     "text": "scold harshly"
+    },
+    {
+     "key": "C",
+     "text": "persuade by flattery"
+    },
+    {
+     "key": "D",
+     "text": "ignore completely"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Cajole = persuade by flattery. The word's Latin root is caveola, a small cage — you trap someone sweetly rather than by force. Why the others tempt: “force someone with threats” and “scold harshly” are its opposite (coerce, berate); “ignore completely” drops the influence entirely.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 2,
+   "type": "single",
+   "question": "IMMINENT means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "about to happen"
+    },
+    {
+     "key": "B",
+     "text": "very old"
+    },
+    {
+     "key": "C",
+     "text": "hard to believe"
+    },
+    {
+     "key": "D",
+     "text": "impossible to find"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Imminent = about to happen. Note the -minent root (as in “imminent danger”): it hangs over you now. Why the others tempt: “very old” confuses it with eminent or ancient, “hard to believe” with incredible, “impossible to find” with inscrutable.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 3,
+   "type": "single",
+   "question": "SIEGE means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "a celebration"
+    },
+    {
+     "key": "B",
+     "text": "a peace treaty"
+    },
+    {
+     "key": "C",
+     "text": "a sudden retreat"
+    },
+    {
+     "key": "D",
+     "text": "a blockade of a place by an army"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Siege = a blockade of a place by an army, from sedere, “to sit” — the army sits outside until the town gives in. Why the others tempt: the -iege spelling resembles “siege of celebration” parties, and a siege is the opposite of both a peace treaty and a retreat.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 4,
+   "type": "single",
+   "question": "CURTAIL means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "to lengthen"
+    },
+    {
+     "key": "B",
+     "text": "to cut short"
+    },
+    {
+     "key": "C",
+     "text": "to hide"
+    },
+    {
+     "key": "D",
+     "text": "to praise"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Curtail = to cut short (curt- “short”). Why the others tempt: “to lengthen” is the direct antonym (extend); “to hide” borrows the disguise sense of cover; “to praise” is the meaning of extol, a different verb.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 5,
+   "type": "single",
+   "question": "CANDID means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "frank and honest"
+    },
+    {
+     "key": "B",
+     "text": "secretive"
+    },
+    {
+     "key": "C",
+     "text": "shy"
+    },
+    {
+     "key": "D",
+     "text": "angry"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Candid = frank and honest. In Latin candidus meant “white, bright”, hence a plain, open answer. Why the others tempt: “secretive” is the exact opposite, and it is easy to blend with “candid camera” trickiness (deceptive) rather than openness.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 6,
+   "type": "single",
+   "question": "FRUGAL means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "wasteful"
+    },
+    {
+     "key": "B",
+     "text": "generous"
+    },
+    {
+     "key": "C",
+     "text": "careful with money"
+    },
+    {
+     "key": "D",
+     "text": "very rich"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Frugal = careful with money, thrifty, from frux, “fruit/produce” — getting full value. Why the others tempt: “wasteful” is the antonym (extravagant); “generous” confuses thrift with meanness; “very rich” is about how much you have, not how you spend.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 7,
+   "type": "single",
+   "question": "DICHOTOMY means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "a union of similar things"
+    },
+    {
+     "key": "B",
+     "text": "a long journey"
+    },
+    {
+     "key": "C",
+     "text": "a polite request"
+    },
+    {
+     "key": "D",
+     "text": "a sharp division into two opposite parts"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Dichotomy = a sharp division into two opposites (di- “two” + tomia “cutting”). Why the others tempt: “a union of similar things” is the antonym; the “-tomy” ending is mistaken for “-nomy” (economy) or for a path/travel sense.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 8,
+   "type": "single",
+   "question": "VERBOSE means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "silent"
+    },
+    {
+     "key": "B",
+     "text": "using more words than needed"
+    },
+    {
+     "key": "C",
+     "text": "speaking very softly"
+    },
+    {
+     "key": "D",
+     "text": "speaking briefly"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Verbose = using more words than needed — verbose comes from verbum plus the -ose suffix meaning “full of”. Why the others tempt: “silent” and “speaking briefly” are opposites (terse, laconic); “speaking very softly” confuses wordiness with volume.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 9,
+   "type": "single",
+   "question": "LENIENT means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "not strict; merciful"
+    },
+    {
+     "key": "B",
+     "text": "cruel"
+    },
+    {
+     "key": "C",
+     "text": "very angry"
+    },
+    {
+     "key": "D",
+     "text": "careless"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Lenient = not strict, merciful (from lenire, “to soften”). Why the others tempt: “cruel” is the opposite (severe, harsh); “careless” confuses a deliberate leniency with negligence.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 10,
+   "type": "single",
+   "question": "METICULOUS means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "lazy"
+    },
+    {
+     "key": "B",
+     "text": "hurried"
+    },
+    {
+     "key": "C",
+     "text": "very careful about small details"
+    },
+    {
+     "key": "D",
+     "text": "forgetful"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Meticulous = very careful about small details. Why the others tempt: “hurried” and “lazy” both miss the painstaking sense; “forgetful” confuses care with memory, and meticulous attention is precisely the opposite of forgetting details.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 4
+   }
+  },
+  {
+   "n": 11,
+   "type": "single",
+   "question": "“خود مختار” means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "reciprocal"
+    },
+    {
+     "key": "B",
+     "text": "autonomous"
+    },
+    {
+     "key": "C",
+     "text": "obsolete"
+    },
+    {
+     "key": "D",
+     "text": "notorious"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "خود مختار = self-governing, i.e. autonomous (khud = self, mukhtar = in charge). Why the others tempt: reciprocal (with ہم آہنگ / باہمی) is the vocabulary word for mutual; obsolete (فرسودہ) and notorious (بدنام) are nearby list words but unrelated to self-rule.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 12,
+   "type": "single",
+   "question": "HUMILIATION means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "عزت افزائی"
+    },
+    {
+     "key": "B",
+     "text": "خوشی"
+    },
+    {
+     "key": "C",
+     "text": "حیرت"
+    },
+    {
+     "key": "D",
+     "text": "ذلت و رسوائی"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Humiliation = ذلت و رسوائی (disgrace). Why the others tempt: عزت افزائی means the opposite — increasing someone's honour; خوشی (joy) and حیرت (astonishment) pick up the emotion of the moment without the loss of dignity.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 13,
+   "type": "single",
+   "question": "“مبہم” means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "ambiguous"
+    },
+    {
+     "key": "B",
+     "text": "candid"
+    },
+    {
+     "key": "C",
+     "text": "abundant"
+    },
+    {
+     "key": "D",
+     "text": "diligent"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "مبہم = unclear, with two possible meanings → ambiguous. Why the others tempt: candid (صاف گو) is about being plain-spoken, the opposite of ambiguous; abundant (کثیر) and diligent (محنتی) are list words with no link to vagueness.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 14,
+   "type": "single",
+   "question": "BENEVOLENT means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "بدنیت"
+    },
+    {
+     "key": "B",
+     "text": "کنجوس"
+    },
+    {
+     "key": "C",
+     "text": "مہربان و نیک دل"
+    },
+    {
+     "key": "D",
+     "text": "جلد باز"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Benevolent = well-wishing: bene- “good” + volens “wishing” → مہربان و نیک دل. Why the others tempt: بدنیت (ill-intentioned) and کنجوس (miserly) are opposites; جلد باز (hasty) replaces the “well-wishing” root with a false “bold” reading.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 15,
+   "type": "single",
+   "question": "“بے سود” means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "vivid"
+    },
+    {
+     "key": "B",
+     "text": "futile"
+    },
+    {
+     "key": "C",
+     "text": "eloquent"
+    },
+    {
+     "key": "D",
+     "text": "zealous"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "بے سود = without profit/use → futile. Why the others tempt: vivid (روشن) and eloquent (فصیح) both sound positive, the reverse of futility; zealous (سرگرم) is enthusiasm, not uselessness.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 16,
+   "type": "single",
+   "question": "NOTORIOUS means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "نیک نام"
+    },
+    {
+     "key": "B",
+     "text": "گمنام"
+    },
+    {
+     "key": "C",
+     "text": "بہادر"
+    },
+    {
+     "key": "D",
+     "text": "بدنام"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Notorious = famous for something bad → بدنام. Why the others tempt: نیک نام (of good repute) is the opposite; گمنام (unknown) confuses fame with obscurity; بہادر (brave) is a virtue, not a bad reputation.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 17,
+   "type": "single",
+   "question": "“ناگزیر” means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "trivial"
+    },
+    {
+     "key": "B",
+     "text": "lenient"
+    },
+    {
+     "key": "C",
+     "text": "inevitable"
+    },
+    {
+     "key": "D",
+     "text": "prudent"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "ناگزیر = unavoidable → inevitable (from guzar, “to pass/escape”; what cannot be escaped). Why the others tempt: trivial (معمولی) and lenient (نرم) are unrelated list words; prudent (محتاط) sounds careful but means cautious, not certain to happen.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 18,
+   "type": "single",
+   "question": "HOSTILITY means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "دشمنی"
+    },
+    {
+     "key": "B",
+     "text": "دوستی"
+    },
+    {
+     "key": "C",
+     "text": "رحم"
+    },
+    {
+     "key": "D",
+     "text": "صبر"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Hostility = enmity → دشمنی (hostis = enemy). Why the others tempt: دوستی (friendship) is the antonym; رحم (mercy) and صبر (patience) are calm virtues, not active ill will.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 19,
+   "type": "single",
+   "question": "“فصیح” means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "verbose"
+    },
+    {
+     "key": "B",
+     "text": "obscure"
+    },
+    {
+     "key": "C",
+     "text": "meticulous"
+    },
+    {
+     "key": "D",
+     "text": "eloquent"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "فصیح = fluent and persuasive → eloquent. Why the others tempt: verbose (لفظوں کا زیادہ استعمال) is wordiness without force; obscure (مبہم) is the opposite of clear speech; meticulous (محقق) is about detail, not delivery.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 20,
+   "type": "single",
+   "question": "PRUDENT means:",
+   "options": [
+    {
+     "key": "A",
+     "text": "لاپرواہ"
+    },
+    {
+     "key": "B",
+     "text": "دانشمند و محتاط"
+    },
+    {
+     "key": "C",
+     "text": "غصہ ور"
+    },
+    {
+     "key": "D",
+     "text": "سست"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Prudent = wise and careful about the future → دانشمند و محتاط. Why the others tempt: لاپرواہ (careless) and غصہ ور (irritable) are opposites of prudence; سست (lazy) confuses caution with slowness.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 21,
+   "type": "single",
+   "question": "GENIALITY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "cordiality"
+    },
+    {
+     "key": "B",
+     "text": "hostility"
+    },
+    {
+     "key": "C",
+     "text": "rapidity"
+    },
+    {
+     "key": "D",
+     "text": "beauty"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Geniality = friendly warmth → cordiality. Why the others tempt: hostility is its antonym; rapidity and beauty are distractor words chosen only for their -ity ending.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 5
+   }
+  },
+  {
+   "n": 22,
+   "type": "single",
+   "question": "HEINOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "trivial"
+    },
+    {
+     "key": "B",
+     "text": "pleasant"
+    },
+    {
+     "key": "C",
+     "text": "atrocious"
+    },
+    {
+     "key": "D",
+     "text": "ordinary"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Heinous = shockingly wicked → atrocious. Why the others tempt: trivial and ordinary both mean “not serious”, the direct opposite of a heinous crime; pleasant is the opposite of wicked.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 23,
+   "type": "single",
+   "question": "PRAGMATIC:",
+   "options": [
+    {
+     "key": "A",
+     "text": "dreamy"
+    },
+    {
+     "key": "B",
+     "text": "practical"
+    },
+    {
+     "key": "C",
+     "text": "careless"
+    },
+    {
+     "key": "D",
+     "text": "emotional"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Pragmatic = practical, judging by results rather than theory. Why the others tempt: dreamy and emotional are the idealistic opposite; careless confuses “practical” with “sloppy”, but a pragmatic person is usually careful about what works.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 24,
+   "type": "single",
+   "question": "SANCTITY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "cruelty"
+    },
+    {
+     "key": "B",
+     "text": "wealth"
+    },
+    {
+     "key": "C",
+     "text": "speed"
+    },
+    {
+     "key": "D",
+     "text": "holiness"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Sanctity = holiness (sanctus = holy). Why the others tempt: cruelty is a moral opposite; wealth and speed are unrelated nouns with a similar rhythm.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 25,
+   "type": "single",
+   "question": "CONFRONT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "avoid"
+    },
+    {
+     "key": "B",
+     "text": "face"
+    },
+    {
+     "key": "C",
+     "text": "hide"
+    },
+    {
+     "key": "D",
+     "text": "forget"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Confront = face boldly (com- “together” + frons “forehead” — forehead to forehead). Why the others tempt: avoid and hide are the antonyms; forget removes the issue instead of meeting it.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 26,
+   "type": "single",
+   "question": "OBSTRUCTION:",
+   "options": [
+    {
+     "key": "A",
+     "text": "hindrance"
+    },
+    {
+     "key": "B",
+     "text": "support"
+    },
+    {
+     "key": "C",
+     "text": "gift"
+    },
+    {
+     "key": "D",
+     "text": "signal"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Obstruction = blockage → hindrance. Why the others tempt: support is the opposite (it clears the way); gift and signal are unrelated fillers.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 27,
+   "type": "single",
+   "question": "ABUNDANT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "scarce"
+    },
+    {
+     "key": "B",
+     "text": "tiny"
+    },
+    {
+     "key": "C",
+     "text": "plentiful"
+    },
+    {
+     "key": "D",
+     "text": "hidden"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Abundant = plentiful, more than enough. Why the others tempt: scarce is its antonym; tiny describes size, not quantity; hidden describes visibility.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 28,
+   "type": "single",
+   "question": "DILIGENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "lazy"
+    },
+    {
+     "key": "B",
+     "text": "angry"
+    },
+    {
+     "key": "C",
+     "text": "clever"
+    },
+    {
+     "key": "D",
+     "text": "industrious"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Diligent = hardworking → industrious. Why the others tempt: lazy is the antonym; clever is about intelligence, not effort; angry is a mood the word says nothing about.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 29,
+   "type": "single",
+   "question": "TRIVIAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "petty"
+    },
+    {
+     "key": "B",
+     "text": "serious"
+    },
+    {
+     "key": "C",
+     "text": "famous"
+    },
+    {
+     "key": "D",
+     "text": "heavy"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Trivial = unimportant → petty. Why the others tempt: serious is the opposite; famous is about renown; heavy describes weight, not significance.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 30,
+   "type": "single",
+   "question": "ZEALOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "apathetic"
+    },
+    {
+     "key": "B",
+     "text": "gloomy"
+    },
+    {
+     "key": "C",
+     "text": "enthusiastic"
+    },
+    {
+     "key": "D",
+     "text": "tired"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Zealous = very enthusiastic (Greek zelos, “ardour”). Why the others tempt: apathetic and tired are the opposites; gloomy is a mood, not a lack of zeal.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 31,
+   "type": "single",
+   "question": "IMPERIOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "domineering"
+    },
+    {
+     "key": "B",
+     "text": "clever"
+    },
+    {
+     "key": "C",
+     "text": "proud"
+    },
+    {
+     "key": "D",
+     "text": "humble"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Imperious = arrogantly commanding, so the opposite is humble. Why the others tempt: domineering is a synonym (the trap here); proud is close to imperious but not its opposite; clever is unrelated.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 32,
+   "type": "single",
+   "question": "AMATEUR:",
+   "options": [
+    {
+     "key": "A",
+     "text": "novice"
+    },
+    {
+     "key": "B",
+     "text": "professional"
+    },
+    {
+     "key": "C",
+     "text": "beginner"
+    },
+    {
+     "key": "D",
+     "text": "learner"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Amateur = non-professional, so the opposite is professional. Why the others tempt: novice, beginner and learner are all synonyms — three of the four options sit on the same side of the line, which is the hint.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 33,
+   "type": "single",
+   "question": "REPULSIVE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "attractive"
+    },
+    {
+     "key": "B",
+     "text": "disgusting"
+    },
+    {
+     "key": "C",
+     "text": "nasty"
+    },
+    {
+     "key": "D",
+     "text": "harsh"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Repulsive = disgusting, so the opposite is attractive. Why the others tempt: disgusting and nasty are synonyms; harsh describes manner, not appearance.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 6
+   }
+  },
+  {
+   "n": 34,
+   "type": "single",
+   "question": "BILATERAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "mutual"
+    },
+    {
+     "key": "B",
+     "text": "joint"
+    },
+    {
+     "key": "C",
+     "text": "unilateral"
+    },
+    {
+     "key": "D",
+     "text": "reciprocal"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Bilateral = involving two sides, so the opposite is unilateral (one side). Why the others tempt: mutual, joint and reciprocal all mean “shared by two”, i.e. synonyms.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 35,
+   "type": "single",
+   "question": "AGGRAVATE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "worsen"
+    },
+    {
+     "key": "B",
+     "text": "alleviate"
+    },
+    {
+     "key": "C",
+     "text": "inflame"
+    },
+    {
+     "key": "D",
+     "text": "increase"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Aggravate = make worse, so the opposite is alleviate (ease). Why the others tempt: worsen, inflame and increase are all synonyms — aggravate literally means “to add weight”.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 36,
+   "type": "single",
+   "question": "IMPARTIAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "fair"
+    },
+    {
+     "key": "B",
+     "text": "neutral"
+    },
+    {
+     "key": "C",
+     "text": "honest"
+    },
+    {
+     "key": "D",
+     "text": "biased"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Impartial = not taking sides, so the opposite is biased. Why the others tempt: fair, neutral and honest are its synonyms.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 37,
+   "type": "single",
+   "question": "OBSOLETE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "current"
+    },
+    {
+     "key": "B",
+     "text": "outdated"
+    },
+    {
+     "key": "C",
+     "text": "ancient"
+    },
+    {
+     "key": "D",
+     "text": "useless"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Obsolete = outdated, so the opposite is current. Why the others tempt: outdated and ancient are synonyms (ancient is merely older); useless is a consequence, not an antonym.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 38,
+   "type": "single",
+   "question": "VIVID:",
+   "options": [
+    {
+     "key": "A",
+     "text": "bright"
+    },
+    {
+     "key": "B",
+     "text": "lively"
+    },
+    {
+     "key": "C",
+     "text": "dull"
+    },
+    {
+     "key": "D",
+     "text": "clear"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Vivid = bright, clear and lively, so the opposite is dull. Why the others tempt: bright, lively and clear are all synonyms of vivid.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 39,
+   "type": "single",
+   "question": "MUNDANE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "ordinary"
+    },
+    {
+     "key": "B",
+     "text": "extraordinary"
+    },
+    {
+     "key": "C",
+     "text": "routine"
+    },
+    {
+     "key": "D",
+     "text": "common"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Mundane = ordinary, dull, so the opposite is extraordinary. Why the others tempt: ordinary, routine and common are synonyms.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 40,
+   "type": "single",
+   "question": "ABSTAIN:",
+   "options": [
+    {
+     "key": "A",
+     "text": "avoid"
+    },
+    {
+     "key": "B",
+     "text": "refrain"
+    },
+    {
+     "key": "C",
+     "text": "resist"
+    },
+    {
+     "key": "D",
+     "text": "indulge"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Abstain = keep from doing something, so the opposite is indulge. Why the others tempt: avoid, refrain and resist all mean holding back.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 41,
+   "type": "single",
+   "question": "The smell of fresh bread was REMINISCENT of his grandmother’s kitchen.",
+   "options": [
+    {
+     "key": "A",
+     "text": "forgetful"
+    },
+    {
+     "key": "B",
+     "text": "ignorant"
+    },
+    {
+     "key": "C",
+     "text": "evocative"
+    },
+    {
+     "key": "D",
+     "text": "unrelated"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Reminiscent of = bringing something back to mind → evocative of. Why the others tempt: forgetful sounds like “remind” but means a bad memory; ignorant is lack of knowledge; unrelated is the opposite of evoking a memory.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 42,
+   "type": "single",
+   "question": "Rice is the STAPLE food of many countries.",
+   "options": [
+    {
+     "key": "A",
+     "text": "basic"
+    },
+    {
+     "key": "B",
+     "text": "rare"
+    },
+    {
+     "key": "C",
+     "text": "luxurious"
+    },
+    {
+     "key": "D",
+     "text": "seasonal"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Staple = the basic, main item of a diet. Why the others tempt: rare and luxurious are the opposite of everyday; seasonal describes availability over the year, not importance.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 43,
+   "type": "single",
+   "question": "The two countries signed a RECIPROCAL trade agreement.",
+   "options": [
+    {
+     "key": "A",
+     "text": "secret"
+    },
+    {
+     "key": "B",
+     "text": "temporary"
+    },
+    {
+     "key": "C",
+     "text": "unfair"
+    },
+    {
+     "key": "D",
+     "text": "mutual"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Reciprocal = mutual, given in return. Why the others tempt: one-sided/unfair is its antonym; secret and temporary describe the agreement's timing or publicity, not its balance.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 44,
+   "type": "single",
+   "question": "He waited with APPREHENSION for the exam result.",
+   "options": [
+    {
+     "key": "A",
+     "text": "joy"
+    },
+    {
+     "key": "B",
+     "text": "anxiety"
+    },
+    {
+     "key": "C",
+     "text": "boredom"
+    },
+    {
+     "key": "D",
+     "text": "pride"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Apprehension = anxiety about the future (apprehendere, “to seize” — dread seizes you). Why the others tempt: joy and pride are the feelings of a good result; boredom is indifference, not dread.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 45,
+   "type": "single",
+   "question": "The doctor’s kind words DISPELLED her fears.",
+   "options": [
+    {
+     "key": "A",
+     "text": "increased"
+    },
+    {
+     "key": "B",
+     "text": "recorded"
+    },
+    {
+     "key": "C",
+     "text": "drove away"
+    },
+    {
+     "key": "D",
+     "text": "hid"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Dispel = drive away, scatter (dis- “apart” + pellere “to push”). Why the others tempt: increased is the opposite; hid confuses removing a fear with concealing it.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 7
+   }
+  },
+  {
+   "n": 46,
+   "type": "single",
+   "question": "The dark clouds were an OMINOUS sign.",
+   "options": [
+    {
+     "key": "A",
+     "text": "promising"
+    },
+    {
+     "key": "B",
+     "text": "threatening"
+    },
+    {
+     "key": "C",
+     "text": "unusual"
+    },
+    {
+     "key": "D",
+     "text": "sudden"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Asked for the OPPOSITE of ominous (= threatening, a bad sign), so promising is the answer. Why the others tempt: threatening is a synonym (the trap); unusual and sudden describe how the sign appeared, not what it foretells.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 8
+   }
+  },
+  {
+   "n": 47,
+   "type": "single",
+   "question": "His excuse sounded PLAUSIBLE.",
+   "options": [
+    {
+     "key": "A",
+     "text": "believable"
+    },
+    {
+     "key": "B",
+     "text": "convincing"
+    },
+    {
+     "key": "C",
+     "text": "polite"
+    },
+    {
+     "key": "D",
+     "text": "far-fetched"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Plausible = believable, so the opposite is far-fetched. Why the others tempt: believable and convincing are synonyms (the trap); polite describes tone, not credibility.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 8
+   }
+  },
+  {
+   "n": 48,
+   "type": "single",
+   "question": "The meaning of the poem was OBSCURE.",
+   "options": [
+    {
+     "key": "A",
+     "text": "hidden"
+    },
+    {
+     "key": "B",
+     "text": "clear"
+    },
+    {
+     "key": "C",
+     "text": "deep"
+    },
+    {
+     "key": "D",
+     "text": "unclear"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Obscure = unclear, so the opposite is clear. Why the others tempt: hidden and unclear are synonyms (the trap); deep is often used approvingly of difficult poetry but is not an antonym.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 8
+   }
+  },
+  {
+   "n": 49,
+   "type": "single",
+   "question": "He is a TENACIOUS fighter who never gives in.",
+   "options": [
+    {
+     "key": "A",
+     "text": "weak-willed"
+    },
+    {
+     "key": "B",
+     "text": "stubborn"
+    },
+    {
+     "key": "C",
+     "text": "brave"
+    },
+    {
+     "key": "D",
+     "text": "fierce"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Tenacious = persistent, holding firm, so the opposite is weak-willed. Why the others tempt: stubborn is a close synonym (the trap); brave and fierce are admired qualities, not opposites of persistence.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 8
+   }
+  },
+  {
+   "n": 50,
+   "type": "single",
+   "question": "She showed great RESOLVE during the crisis.",
+   "options": [
+    {
+     "key": "A",
+     "text": "determination"
+    },
+    {
+     "key": "B",
+     "text": "courage"
+    },
+    {
+     "key": "C",
+     "text": "hesitation"
+    },
+    {
+     "key": "D",
+     "text": "patience"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Resolve = firm determination, so the opposite is hesitation. Why the others tempt: determination is a synonym (the trap), courage is a companion quality, and patience is endurance rather than wavering.",
+   "difficulty": "medium",
+   "sourceRef": {
+    "page": 8
+   }
+  }
+ ],
+ "assets": {}
+}

@@ -23,7 +23,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-ui);
+  /* --font-urdu is listed last: it only supplies the Arabic-script glyphs the
+     Latin fonts do not have, so mixed Urdu/English text stays consistent. */
+  font-family: var(--font-ui), var(--font-urdu);
   font-size: calc(16px * var(--type-scale));
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -1415,4 +1417,23 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
 @media (prefers-reduced-motion: reduce) {
   .splash__orb { animation: none; }
   .logo-draw { animation: none; stroke-dashoffset: 0; }
+}
+
+/* ---------------- Urdu / RTL text ---------------- */
+
+/*
+ * Urdu strings inside an LTR layout: the Unicode bidi algorithm keeps the Latin
+ * furniture (option letters, "means:") in place and orders the Arabic run
+ * right-to-left on its own. We only need the right font and slightly looser
+ * leading, plus isolation so punctuation cannot leak across runs.
+ */
+.option__text,
+.q-text {
+  unicode-bidi: isolate;
+}
+/* the :dir() hooks let a future mixed pack opt into the Urdu face per block */
+.option__text:dir(rtl),
+.q-text:dir(rtl) {
+  font-family: var(--font-urdu);
+  line-height: 2;
 }

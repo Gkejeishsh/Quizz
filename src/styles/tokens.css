@@ -8,6 +8,8 @@
   --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
   --font-ui: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Urdu script (the vocab tests are bilingual) — falls back to the system font */
+  --font-urdu: 'Noto Sans Arabic Variable', 'Noto Naskh Arabic', 'Segoe UI', Tahoma, sans-serif;
 
   /* spacing (8pt) */
   --s-1: 4px;

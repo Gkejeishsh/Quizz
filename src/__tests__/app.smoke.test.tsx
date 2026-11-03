@@ -22,9 +22,16 @@ function stubEnvironment() {
   Object.defineProperty(globalThis, 'indexedDB', { writable: true, value: undefined })
 }
 
-beforeEach(() => {
+/**
+ * The store module is shared by every test in this file, so the navigation stack
+ * has to be reset — otherwise a test that ends mid-quiz leaves the next render()
+ * starting on that screen (and the history-sync logic counts stale entries).
+ */
+beforeEach(async () => {
   stubEnvironment()
   localStorage.clear()
+  const { useStore } = await import('../lib/store')
+  useStore.setState({ routes: [{ name: 'home' }] })
 })
 afterEach(cleanup)
 
@@ -46,6 +53,43 @@ it('plays the launch animation, then hands over to the app', async () => {
   await waitFor(() => expect(document.querySelector('.splash')).toBeNull(), { timeout: 5000 })
   expect(document.body.textContent).toContain('Add new test')
 }, 15000)
+
+it('opens the Urdu vocabulary pack and renders its Arabic-script text', async () => {
+  render(<App />)
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
+  fireEvent.click(screen.getByText('Saved tests'))
+  await waitFor(() => expect(document.body.textContent).toContain('HEC Vocabulary'), { timeout: 4000 })
+
+  fireEvent.click(screen.getByText('HEC Vocabulary — 50 Words (English & Urdu)'))
+  await waitFor(() => expect(document.body.textContent).toContain('Start test'), { timeout: 4000 })
+  fireEvent.click(screen.getByText('Start test'))
+  await waitFor(() => expect(document.body.textContent).toContain('One-time only'), { timeout: 3000 })
+  fireEvent.click(screen.getByRole('button', { name: 'Start' }))
+
+  // Q1 is the PDF's "CAJOLE means:" with the same four options in the same order
+  await waitFor(() => expect(document.body.textContent).toContain('CAJOLE'), { timeout: 4000 })
+  const first = Array.from(document.querySelectorAll('button.option')).map((o) => o.textContent ?? '')
+  expect(first[0]).toContain('A')
+  expect(first[0]).toContain('force someone with threats')
+  expect(first[2]).toContain('persuade by flattery')
+}, 25000)
+
+it('keeps Urdu question text intact (bidi-safe, no lost glyphs)', async () => {
+  render(<App />)
+  await waitFor(() => expect(document.body.textContent).toContain('Add new test'), { timeout: 4000 })
+  fireEvent.click(screen.getByText('Saved tests'))
+  await waitFor(() => expect(document.body.textContent).toContain('newest first'), { timeout: 3000 })
+  // the pack is stored verbatim: the Urdu strings survive the round-trip
+  const { useStore } = await import('../lib/store')
+  const pack = useStore.getState().tests.find((t) => t.name.includes('Vocabulary'))?.pack
+  expect(pack).toBeTruthy()
+  const q11 = pack!.questions.find((q) => q.n === 11)!
+  expect(q11.question).toContain('خود مختار')
+  expect(q11.options.map((o) => o.text)).toEqual(['reciprocal', 'autonomous', 'obsolete', 'notorious'])
+  const q12 = pack!.questions.find((q) => q.n === 12)!
+  expect(q12.options[3].text).toBe('ذلت و رسوائی')
+  expect(q12.answer).toEqual(['D'])
+}, 20000)
 
 it('navigates from home into saved tests and back', async () => {
   render(<App />)
