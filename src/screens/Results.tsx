@@ -6,6 +6,7 @@ import { formatDuration } from '../lib/dates'
 import { Page, ScoreRing, Confetti } from '../components/ui'
 import { BookOpen, CheckCircle, ChevronDown, ChevronRight, Clock, Refresh, Share, Sparkles, Target, X } from '../components/Icons'
 import { MathText } from '../components/MathText'
+import { isUrduBlock } from '../lib/text'
 import { cn } from '../lib/cn'
 
 function tier(pct: number) {
@@ -221,7 +222,7 @@ export function Results({ attemptId }: { attemptId: string }) {
                     <span className="q-number">Q{r.q.n}</span>
                     {!r.answered ? <span className="badge badge--warn">skipped</span> : <span className="badge badge--bad"><X /> your answer</span>}
                   </div>
-                  <div className="review-q">
+                  <div className={cn('review-q', isUrduBlock(r.q.question) && 'review-q--rtl')}>
                     <MathText text={r.q.question} />
                   </div>
                   <div className="review-opts">
@@ -238,7 +239,7 @@ export function Results({ attemptId }: { attemptId: string }) {
                           )}
                         >
                           <b>{o.key}</b>
-                          <span className="grow">
+                          <span className={cn('grow review-opt__text', isUrduBlock(o.text) && 'review-opt__text--rtl')}>
                             <MathText text={o.text} />
                           </span>
                           {isCorrect && <span style={{ color: 'var(--success)' }}><CheckCircle style={{ width: 15, height: 15 }} /></span>}

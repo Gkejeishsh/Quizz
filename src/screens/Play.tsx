@@ -7,6 +7,7 @@ import { MathText } from '../components/MathText'
 import { Sheet } from '../components/ui'
 import { ArrowLeft, ArrowRight, Check, Clock, Flag, X } from '../components/Icons'
 import { haptic } from '../lib/haptics'
+import { isUrduBlock } from '../lib/text'
 import { cn } from '../lib/cn'
 import { SPRING_SETTLE } from '../components/ui'
 
@@ -295,7 +296,7 @@ export function Play({ testId }: { testId: string }) {
               {isMulti && <span className="badge">select all that apply</span>}
             </div>
 
-            <h2 className="q-text">
+            <h2 className={cn('q-text', isUrduBlock(q.question) && 'q-text--rtl')}>
               <MathText text={q.question} />
             </h2>
 
@@ -311,7 +312,7 @@ export function Play({ testId }: { testId: string }) {
                     aria-pressed={isPicked}
                   >
                     <span className="option__key">{o.key}</span>
-                    <span className="option__text">
+                    <span className={cn('option__text', isUrduBlock(o.text) && 'option__text--rtl')}>
                       <MathText text={o.text} />
                     </span>
                     {isPicked && (

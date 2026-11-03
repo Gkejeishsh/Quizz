@@ -1,0 +1,6516 @@
+{
+ "format": "quizz-pack",
+ "formatVersion": 1,
+ "id": "pck_hecvocab_study_1",
+ "revision": 1,
+ "supersedes": null,
+ "title": "HEC Vocabulary Study Drill (196)",
+ "subject": "English",
+ "language": "en-ur",
+ "createdAt": "2026-11-03T05:00:00Z",
+ "instructions": "Generated from the 50-word HEC vocabulary list. Five rounds: Urdu meaning, synonym (past-paper words 1–25), antonym (new words 26–50), part of speech, and sentence completion. Every wrong option is a real word from the same list. Word numbers match the list.",
+ "source": {
+  "fileName": "HEC_Vocabulary_50_Words_Urdu_Test-1.pdf",
+  "pages": 3,
+  "checksum": "sha256:0129555d6628fb0e0f40607ea0eebf04352949633b1a2b849a240098917d3fc2"
+ },
+ "groups": [
+  {
+   "id": "g-urdu",
+   "type": "section",
+   "title": "Round 1 — Urdu meaning",
+   "text": "Questions 1–50"
+  },
+  {
+   "id": "g-syn",
+   "type": "section",
+   "title": "Round 2 — Synonym",
+   "text": "Questions 51–75"
+  },
+  {
+   "id": "g-ant",
+   "type": "section",
+   "title": "Round 3 — Antonym",
+   "text": "Questions 76–100"
+  },
+  {
+   "id": "g-pos",
+   "type": "section",
+   "title": "Round 4 — Part of speech",
+   "text": "Questions 101–150"
+  },
+  {
+   "id": "g-sentence",
+   "type": "section",
+   "title": "Round 5 — Sentence completion",
+   "text": "Questions 151–196"
+  }
+ ],
+ "questions": [
+  {
+   "n": 1,
+   "type": "single",
+   "question": "What does “Geniality” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "خوش مزاجی، ملنساری"
+    },
+    {
+     "key": "B",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "C",
+     "text": "شوقیہ، غیر پیشہ ور"
+    },
+    {
+     "key": "D",
+     "text": "دو متضاد حصوں میں تقسیم"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Geniality (n.) = خوش مزاجی، ملنساری — English meaning: “friendly warmth”. Remember it with its synonym cordiality and its opposite coldness.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 2,
+   "type": "single",
+   "question": "What does “Cajole” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "خوشامد یا میٹھی باتوں سے راضی کرنا"
+    },
+    {
+     "key": "B",
+     "text": "ضرورت سے زیادہ الفاظ استعمال کرنے والا"
+    },
+    {
+     "key": "C",
+     "text": "کراہت انگیز"
+    },
+    {
+     "key": "D",
+     "text": "پرہیز کرنا، باز رہنا"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Cajole (v.) = خوشامد یا میٹھی باتوں سے راضی کرنا — English meaning: “persuade by flattery”. Remember it with its synonym coax and its opposite compel.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 3,
+   "type": "single",
+   "question": "What does “Imperious” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "متکبر، تحکمانہ"
+    },
+    {
+     "key": "B",
+     "text": "محنتی"
+    },
+    {
+     "key": "C",
+     "text": "غیر جانبدار"
+    },
+    {
+     "key": "D",
+     "text": "دشمنی، عداوت"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Imperious (adj.) = متکبر، تحکمانہ — English meaning: “arrogant, commanding”. Remember it with its synonym domineering and its opposite humble.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 4,
+   "type": "single",
+   "question": "What does “Imminent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "B",
+     "text": "کفایت شعار"
+    },
+    {
+     "key": "C",
+     "text": "قریب الوقوع"
+    },
+    {
+     "key": "D",
+     "text": "دو متضاد حصوں میں تقسیم"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Imminent (adj.) = قریب الوقوع — English meaning: “about to happen”. Remember it with its synonym impending and its opposite remote.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 5,
+   "type": "single",
+   "question": "What does “Bilateral” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "کفایت شعار"
+    },
+    {
+     "key": "B",
+     "text": "روشن، واضح، جاندار"
+    },
+    {
+     "key": "C",
+     "text": "ثابت قدم، ڈٹا رہنے والا"
+    },
+    {
+     "key": "D",
+     "text": "دو طرفہ"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Bilateral (adj.) = دو طرفہ — English meaning: “involving two sides”. Remember it with its synonym two-sided and its opposite unilateral.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 6,
+   "type": "single",
+   "question": "What does “Amateur” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "عام، روزمرہ کا، غیر دلچسپ"
+    },
+    {
+     "key": "B",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "C",
+     "text": "شوقیہ، غیر پیشہ ور"
+    },
+    {
+     "key": "D",
+     "text": "مبہم"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Amateur (n.) = شوقیہ، غیر پیشہ ور — English meaning: “non-professional”. Remember it with its synonym novice and its opposite professional.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 7,
+   "type": "single",
+   "question": "What does “Confront” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "ڈٹ کر سامنا کرنا"
+    },
+    {
+     "key": "B",
+     "text": "قریب قیاس"
+    },
+    {
+     "key": "C",
+     "text": "غیر جانبدار"
+    },
+    {
+     "key": "D",
+     "text": "بدنام"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Confront (v.) = ڈٹ کر سامنا کرنا — English meaning: “face boldly”. Remember it with its synonym face and its opposite evade.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 8,
+   "type": "single",
+   "question": "What does “Siege” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دشمنی، عداوت"
+    },
+    {
+     "key": "B",
+     "text": "قریب قیاس"
+    },
+    {
+     "key": "C",
+     "text": "روشن، واضح، جاندار"
+    },
+    {
+     "key": "D",
+     "text": "محاصرہ"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Siege (n.) = محاصرہ — English meaning: “blockade of a place”. Remember it with its synonym blockade.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 9,
+   "type": "single",
+   "question": "What does “Humiliation” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "B",
+     "text": "گھناؤنا، نہایت قبیح"
+    },
+    {
+     "key": "C",
+     "text": "ڈٹ کر سامنا کرنا"
+    },
+    {
+     "key": "D",
+     "text": "ذلت، رسوائی"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Humiliation (n.) = ذلت، رسوائی — English meaning: “loss of dignity”. Remember it with its synonym disgrace and its opposite honour.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 10,
+   "type": "single",
+   "question": "What does “Reminiscent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "B",
+     "text": "ناگزیر"
+    },
+    {
+     "key": "C",
+     "text": "پرجوش، جوشیلا"
+    },
+    {
+     "key": "D",
+     "text": "عملی، حقیقت پسند"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Reminiscent (adj.) = یاد دلانے والا — English meaning: “reminding of something”. Remember it with its synonym evocative.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 11,
+   "type": "single",
+   "question": "What does “Dichotomy” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "خوشامد یا میٹھی باتوں سے راضی کرنا"
+    },
+    {
+     "key": "B",
+     "text": "دو متضاد حصوں میں تقسیم"
+    },
+    {
+     "key": "C",
+     "text": "دشمنی، عداوت"
+    },
+    {
+     "key": "D",
+     "text": "نرمی برتنے والا، رعایت دینے والا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Dichotomy (n.) = دو متضاد حصوں میں تقسیم — English meaning: “sharp split into two opposites”. Remember it with its synonym split and its opposite union.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 12,
+   "type": "single",
+   "question": "What does “Pragmatic” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "ڈٹ کر سامنا کرنا"
+    },
+    {
+     "key": "B",
+     "text": "ناگزیر"
+    },
+    {
+     "key": "C",
+     "text": "بنیادی (خوراک)"
+    },
+    {
+     "key": "D",
+     "text": "عملی، حقیقت پسند"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Pragmatic (adj.) = عملی، حقیقت پسند — English meaning: “practical”. Remember it with its synonym realistic and its opposite idealistic.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 13,
+   "type": "single",
+   "question": "What does “Sanctity” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "محاصرہ"
+    },
+    {
+     "key": "B",
+     "text": "منحوس، بدشگون"
+    },
+    {
+     "key": "C",
+     "text": "نرمی برتنے والا، رعایت دینے والا"
+    },
+    {
+     "key": "D",
+     "text": "تقدس، حرمت"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Sanctity (n.) = تقدس، حرمت — English meaning: “holiness”. Remember it with its synonym holiness and its opposite profanity.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 14,
+   "type": "single",
+   "question": "What does “Heinous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "گھناؤنا، نہایت قبیح"
+    },
+    {
+     "key": "B",
+     "text": "ناگزیر"
+    },
+    {
+     "key": "C",
+     "text": "روشن، واضح، جاندار"
+    },
+    {
+     "key": "D",
+     "text": "مہربان، نیک دل"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Heinous (adj.) = گھناؤنا، نہایت قبیح — English meaning: “shockingly wicked”. Remember it with its synonym atrocious and its opposite noble.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 15,
+   "type": "single",
+   "question": "What does “Repulsive” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "کراہت انگیز"
+    },
+    {
+     "key": "B",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "C",
+     "text": "پرہیز کرنا، باز رہنا"
+    },
+    {
+     "key": "D",
+     "text": "خود مختار"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Repulsive (adj.) = کراہت انگیز — English meaning: “disgusting”. Remember it with its synonym revolting and its opposite attractive.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 16,
+   "type": "single",
+   "question": "What does “Curtail” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "B",
+     "text": "بگاڑنا، بدتر کرنا"
+    },
+    {
+     "key": "C",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "D",
+     "text": "کم کرنا، مختصر کرنا"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Curtail (v.) = کم کرنا، مختصر کرنا — English meaning: “cut short”. Remember it with its synonym reduce and its opposite extend.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 17,
+   "type": "single",
+   "question": "What does “Staple” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "پرہیز کرنا، باز رہنا"
+    },
+    {
+     "key": "B",
+     "text": "بنیادی (خوراک)"
+    },
+    {
+     "key": "C",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "D",
+     "text": "دور کرنا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Staple (adj.) = بنیادی (خوراک) — English meaning: “basic, main”. Remember it with its synonym basic and its opposite minor.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 18,
+   "type": "single",
+   "question": "What does “Autonomous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "غیر جانبدار"
+    },
+    {
+     "key": "B",
+     "text": "منحوس، بدشگون"
+    },
+    {
+     "key": "C",
+     "text": "خود مختار"
+    },
+    {
+     "key": "D",
+     "text": "خوشامد یا میٹھی باتوں سے راضی کرنا"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Autonomous (adj.) = خود مختار — English meaning: “self-governing”. Remember it with its synonym independent and its opposite dependent.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 19,
+   "type": "single",
+   "question": "What does “Reciprocal” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "باہمی، ایک دوسرے کے جواب میں کیا جانے والا"
+    },
+    {
+     "key": "B",
+     "text": "خدشہ، اندیشہ"
+    },
+    {
+     "key": "C",
+     "text": "متروک، فرسودہ"
+    },
+    {
+     "key": "D",
+     "text": "کراہت انگیز"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Reciprocal (adj.) = باہمی، ایک دوسرے کے جواب میں کیا جانے والا — English meaning: “mutual, in return”. Remember it with its synonym mutual and its opposite one-sided.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 20,
+   "type": "single",
+   "question": "What does “Apprehension” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "خدشہ، اندیشہ"
+    },
+    {
+     "key": "B",
+     "text": "دو طرفہ"
+    },
+    {
+     "key": "C",
+     "text": "رکاوٹ"
+    },
+    {
+     "key": "D",
+     "text": "کم کرنا، مختصر کرنا"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Apprehension (n.) = خدشہ، اندیشہ — English meaning: “anxiety about the future”. Remember it with its synonym dread and its opposite confidence.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 21,
+   "type": "single",
+   "question": "What does “Obstruction” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "B",
+     "text": "رکاوٹ"
+    },
+    {
+     "key": "C",
+     "text": "صاف گو، کھرا"
+    },
+    {
+     "key": "D",
+     "text": "پرجوش، جوشیلا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Obstruction (n.) = رکاوٹ — English meaning: “blockage”. Remember it with its synonym hindrance and its opposite aid.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 22,
+   "type": "single",
+   "question": "What does “Aggravate” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "بگاڑنا، بدتر کرنا"
+    },
+    {
+     "key": "B",
+     "text": "ضرورت سے زیادہ الفاظ استعمال کرنے والا"
+    },
+    {
+     "key": "C",
+     "text": "خود مختار"
+    },
+    {
+     "key": "D",
+     "text": "بنیادی (خوراک)"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Aggravate (v.) = بگاڑنا، بدتر کرنا — English meaning: “make worse”. Remember it with its synonym worsen and its opposite alleviate.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 23,
+   "type": "single",
+   "question": "What does “Dispel” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "باہمی، ایک دوسرے کے جواب میں کیا جانے والا"
+    },
+    {
+     "key": "B",
+     "text": "دور کرنا"
+    },
+    {
+     "key": "C",
+     "text": "شوقیہ، غیر پیشہ ور"
+    },
+    {
+     "key": "D",
+     "text": "ڈٹ کر سامنا کرنا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Dispel (v.) = دور کرنا — English meaning: “drive away”. Remember it with its synonym banish and its opposite gather.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 24,
+   "type": "single",
+   "question": "What does “Hostility” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "عام، روزمرہ کا، غیر دلچسپ"
+    },
+    {
+     "key": "B",
+     "text": "دشمنی، عداوت"
+    },
+    {
+     "key": "C",
+     "text": "بگاڑنا، بدتر کرنا"
+    },
+    {
+     "key": "D",
+     "text": "باہمی، ایک دوسرے کے جواب میں کیا جانے والا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Hostility (n.) = دشمنی، عداوت — English meaning: “enmity”. Remember it with its synonym animosity and its opposite friendliness.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 25,
+   "type": "single",
+   "question": "What does “Resolve” (n.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "B",
+     "text": "پختہ ارادہ"
+    },
+    {
+     "key": "C",
+     "text": "عملی، حقیقت پسند"
+    },
+    {
+     "key": "D",
+     "text": "ڈٹ کر سامنا کرنا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Resolve (n.) = پختہ ارادہ — English meaning: “firm determination”. Remember it with its synonym determination and its opposite hesitation.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 26,
+   "type": "single",
+   "question": "What does “Candid” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "B",
+     "text": "دو متضاد حصوں میں تقسیم"
+    },
+    {
+     "key": "C",
+     "text": "صاف گو، کھرا"
+    },
+    {
+     "key": "D",
+     "text": "وافر"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Candid (adj.) = صاف گو، کھرا — English meaning: “frank”. Remember it with its synonym frank and its opposite evasive.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 27,
+   "type": "single",
+   "question": "What does “Prudent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "B",
+     "text": "ذلت، رسوائی"
+    },
+    {
+     "key": "C",
+     "text": "غیر جانبدار"
+    },
+    {
+     "key": "D",
+     "text": "ثابت قدم، ڈٹا رہنے والا"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Prudent (adj.) = دانشمند، محتاط — English meaning: “wise and careful”. Remember it with its synonym cautious and its opposite reckless.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 28,
+   "type": "single",
+   "question": "What does “Frugal” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "تقدس، حرمت"
+    },
+    {
+     "key": "B",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "C",
+     "text": "کفایت شعار"
+    },
+    {
+     "key": "D",
+     "text": "روشن، واضح، جاندار"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Frugal (adj.) = کفایت شعار — English meaning: “thrifty”. Remember it with its synonym thrifty and its opposite extravagant.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 29,
+   "type": "single",
+   "question": "What does “Mundane” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "B",
+     "text": "منحوس، بدشگون"
+    },
+    {
+     "key": "C",
+     "text": "محنتی"
+    },
+    {
+     "key": "D",
+     "text": "عام، روزمرہ کا، غیر دلچسپ"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Mundane (adj.) = عام، روزمرہ کا، غیر دلچسپ — English meaning: “ordinary, dull”. Remember it with its synonym routine and its opposite extraordinary.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 30,
+   "type": "single",
+   "question": "What does “Obsolete” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "متروک، فرسودہ"
+    },
+    {
+     "key": "B",
+     "text": "ذلت، رسوائی"
+    },
+    {
+     "key": "C",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "D",
+     "text": "یاد دلانے والا"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Obsolete (adj.) = متروک، فرسودہ — English meaning: “outdated”. Remember it with its synonym outdated and its opposite current.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 31,
+   "type": "single",
+   "question": "What does “Verbose” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "متروک، فرسودہ"
+    },
+    {
+     "key": "B",
+     "text": "ضرورت سے زیادہ الفاظ استعمال کرنے والا"
+    },
+    {
+     "key": "C",
+     "text": "عام، روزمرہ کا، غیر دلچسپ"
+    },
+    {
+     "key": "D",
+     "text": "خوش مزاجی، ملنساری"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Verbose (adj.) = ضرورت سے زیادہ الفاظ استعمال کرنے والا — English meaning: “wordy”. Remember it with its synonym wordy and its opposite concise.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 32,
+   "type": "single",
+   "question": "What does “Benevolent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "B",
+     "text": "قریب الوقوع"
+    },
+    {
+     "key": "C",
+     "text": "مہربان، نیک دل"
+    },
+    {
+     "key": "D",
+     "text": "پرجوش، جوشیلا"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Benevolent (adj.) = مہربان، نیک دل — English meaning: “kind, generous”. Remember it with its synonym kind and its opposite malevolent.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 33,
+   "type": "single",
+   "question": "What does “Abundant” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "خدشہ، اندیشہ"
+    },
+    {
+     "key": "B",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "C",
+     "text": "بے سود، لاحاصل"
+    },
+    {
+     "key": "D",
+     "text": "وافر"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Abundant (adj.) = وافر — English meaning: “plentiful”. Remember it with its synonym plentiful and its opposite scarce.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 34,
+   "type": "single",
+   "question": "What does “Ambiguous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "عملی، حقیقت پسند"
+    },
+    {
+     "key": "B",
+     "text": "مبہم"
+    },
+    {
+     "key": "C",
+     "text": "ذلت، رسوائی"
+    },
+    {
+     "key": "D",
+     "text": "پرہیز کرنا، باز رہنا"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Ambiguous (adj.) = مبہم — English meaning: “unclear, with two meanings”. Remember it with its synonym vague and its opposite clear.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 35,
+   "type": "single",
+   "question": "What does “Diligent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "محنتی"
+    },
+    {
+     "key": "B",
+     "text": "محاصرہ"
+    },
+    {
+     "key": "C",
+     "text": "عملی، حقیقت پسند"
+    },
+    {
+     "key": "D",
+     "text": "کفایت شعار"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Diligent (adj.) = محنتی — English meaning: “hardworking”. Remember it with its synonym industrious and its opposite lazy.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 36,
+   "type": "single",
+   "question": "What does “Futile” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "بے سود، لاحاصل"
+    },
+    {
+     "key": "B",
+     "text": "دو متضاد حصوں میں تقسیم"
+    },
+    {
+     "key": "C",
+     "text": "محنتی"
+    },
+    {
+     "key": "D",
+     "text": "دو طرفہ"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Futile (adj.) = بے سود، لاحاصل — English meaning: “useless”. Remember it with its synonym pointless and its opposite fruitful.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 37,
+   "type": "single",
+   "question": "What does “Impartial” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دور کرنا"
+    },
+    {
+     "key": "B",
+     "text": "غیر جانبدار"
+    },
+    {
+     "key": "C",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "D",
+     "text": "ناگزیر"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Impartial (adj.) = غیر جانبدار — English meaning: “unbiased”. Remember it with its synonym neutral and its opposite biased.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 38,
+   "type": "single",
+   "question": "What does “Inevitable” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "فصیح، شیریں بیان"
+    },
+    {
+     "key": "B",
+     "text": "تقدس، حرمت"
+    },
+    {
+     "key": "C",
+     "text": "ناگزیر"
+    },
+    {
+     "key": "D",
+     "text": "غیر جانبدار"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Inevitable (adj.) = ناگزیر — English meaning: “unavoidable”. Remember it with its synonym unavoidable and its opposite avoidable.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 39,
+   "type": "single",
+   "question": "What does “Lenient” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "نرمی برتنے والا، رعایت دینے والا"
+    },
+    {
+     "key": "B",
+     "text": "خوشامد یا میٹھی باتوں سے راضی کرنا"
+    },
+    {
+     "key": "C",
+     "text": "پرجوش، جوشیلا"
+    },
+    {
+     "key": "D",
+     "text": "ڈٹ کر سامنا کرنا"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Lenient (adj.) = نرمی برتنے والا، رعایت دینے والا — English meaning: “merciful, not strict”. Remember it with its synonym merciful and its opposite strict.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 40,
+   "type": "single",
+   "question": "What does “Meticulous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "تقدس، حرمت"
+    },
+    {
+     "key": "B",
+     "text": "قریب الوقوع"
+    },
+    {
+     "key": "C",
+     "text": "ناگزیر"
+    },
+    {
+     "key": "D",
+     "text": "نہایت محتاط، باریک بیں"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Meticulous (adj.) = نہایت محتاط، باریک بیں — English meaning: “very careful about details”. Remember it with its synonym precise and its opposite careless.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 41,
+   "type": "single",
+   "question": "What does “Notorious” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "گھناؤنا، نہایت قبیح"
+    },
+    {
+     "key": "B",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "C",
+     "text": "بدنام"
+    },
+    {
+     "key": "D",
+     "text": "مہربان، نیک دل"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Notorious (adj.) = بدنام — English meaning: “famous for something bad”. Remember it with its synonym infamous and its opposite reputable.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 42,
+   "type": "single",
+   "question": "What does “Obscure” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "یاد دلانے والا"
+    },
+    {
+     "key": "B",
+     "text": "متروک، فرسودہ"
+    },
+    {
+     "key": "C",
+     "text": "غیر واضح، کم معروف"
+    },
+    {
+     "key": "D",
+     "text": "متکبر، تحکمانہ"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Obscure (adj.) = غیر واضح، کم معروف — English meaning: “unclear, little known”. Remember it with its synonym vague and its opposite clear.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 43,
+   "type": "single",
+   "question": "What does “Ominous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "دو متضاد حصوں میں تقسیم"
+    },
+    {
+     "key": "B",
+     "text": "منحوس، بدشگون"
+    },
+    {
+     "key": "C",
+     "text": "ضرورت سے زیادہ الفاظ استعمال کرنے والا"
+    },
+    {
+     "key": "D",
+     "text": "گھناؤنا، نہایت قبیح"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Ominous (adj.) = منحوس، بدشگون — English meaning: “threatening, a bad sign”. Remember it with its synonym sinister and its opposite promising.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 44,
+   "type": "single",
+   "question": "What does “Plausible” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "بگاڑنا، بدتر کرنا"
+    },
+    {
+     "key": "B",
+     "text": "خود مختار"
+    },
+    {
+     "key": "C",
+     "text": "کفایت شعار"
+    },
+    {
+     "key": "D",
+     "text": "قریب قیاس"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Plausible (adj.) = قریب قیاس — English meaning: “believable”. Remember it with its synonym believable and its opposite far-fetched.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 45,
+   "type": "single",
+   "question": "What does “Tenacious” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "نہایت محتاط، باریک بیں"
+    },
+    {
+     "key": "B",
+     "text": "پرجوش، جوشیلا"
+    },
+    {
+     "key": "C",
+     "text": "ثابت قدم، ڈٹا رہنے والا"
+    },
+    {
+     "key": "D",
+     "text": "کفایت شعار"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Tenacious (adj.) = ثابت قدم، ڈٹا رہنے والا — English meaning: “persistent, holding firm”. Remember it with its synonym persistent and its opposite yielding.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 46,
+   "type": "single",
+   "question": "What does “Trivial” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "محنتی"
+    },
+    {
+     "key": "B",
+     "text": "پختہ ارادہ"
+    },
+    {
+     "key": "C",
+     "text": "معمولی، غیر اہم"
+    },
+    {
+     "key": "D",
+     "text": "یاد دلانے والا"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Trivial (adj.) = معمولی، غیر اہم — English meaning: “unimportant”. Remember it with its synonym petty and its opposite significant.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 47,
+   "type": "single",
+   "question": "What does “Vivid” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "پختہ ارادہ"
+    },
+    {
+     "key": "B",
+     "text": "بنیادی (خوراک)"
+    },
+    {
+     "key": "C",
+     "text": "دانشمند، محتاط"
+    },
+    {
+     "key": "D",
+     "text": "روشن، واضح، جاندار"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Vivid (adj.) = روشن، واضح، جاندار — English meaning: “bright, clear, lively”. Remember it with its synonym bright and its opposite dull.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 48,
+   "type": "single",
+   "question": "What does “Zealous” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "پرہیز کرنا، باز رہنا"
+    },
+    {
+     "key": "B",
+     "text": "پرجوش، جوشیلا"
+    },
+    {
+     "key": "C",
+     "text": "ذلت، رسوائی"
+    },
+    {
+     "key": "D",
+     "text": "خود مختار"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Zealous (adj.) = پرجوش، جوشیلا — English meaning: “very enthusiastic”. Remember it with its synonym enthusiastic and its opposite apathetic.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 49,
+   "type": "single",
+   "question": "What does “Abstain” (v.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "صاف گو، کھرا"
+    },
+    {
+     "key": "B",
+     "text": "پرہیز کرنا، باز رہنا"
+    },
+    {
+     "key": "C",
+     "text": "خود مختار"
+    },
+    {
+     "key": "D",
+     "text": "روشن، واضح، جاندار"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Abstain (v.) = پرہیز کرنا، باز رہنا — English meaning: “keep from doing”. Remember it with its synonym refrain and its opposite indulge.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 50,
+   "type": "single",
+   "question": "What does “Eloquent” (adj.) mean in Urdu?",
+   "options": [
+    {
+     "key": "A",
+     "text": "منحوس، بدشگون"
+    },
+    {
+     "key": "B",
+     "text": "ضرورت سے زیادہ الفاظ استعمال کرنے والا"
+    },
+    {
+     "key": "C",
+     "text": "فصیح، شیریں بیان"
+    },
+    {
+     "key": "D",
+     "text": "خدشہ، اندیشہ"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Eloquent (adj.) = فصیح، شیریں بیان — English meaning: “fluent and persuasive”. Remember it with its synonym articulate and its opposite inarticulate.",
+   "difficulty": "easy",
+   "tags": [
+    "urdu-meaning"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 51,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to GENIALITY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "bright"
+    },
+    {
+     "key": "B",
+     "text": "cordiality"
+    },
+    {
+     "key": "C",
+     "text": "blockade"
+    },
+    {
+     "key": "D",
+     "text": "two-sided"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Geniality = cordiality. Urdu: خوش مزاجی، ملنساری. Its opposite is coldness.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 52,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to CAJOLE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "banish"
+    },
+    {
+     "key": "B",
+     "text": "petty"
+    },
+    {
+     "key": "C",
+     "text": "plentiful"
+    },
+    {
+     "key": "D",
+     "text": "coax"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Cajole = coax. Urdu: خوشامد یا میٹھی باتوں سے راضی کرنا. Its opposite is compel.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 53,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to IMPERIOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "mutual"
+    },
+    {
+     "key": "B",
+     "text": "domineering"
+    },
+    {
+     "key": "C",
+     "text": "thrifty"
+    },
+    {
+     "key": "D",
+     "text": "disgrace"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Imperious = domineering. Urdu: متکبر، تحکمانہ. Its opposite is humble.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 54,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to IMMINENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "split"
+    },
+    {
+     "key": "B",
+     "text": "domineering"
+    },
+    {
+     "key": "C",
+     "text": "impending"
+    },
+    {
+     "key": "D",
+     "text": "novice"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Imminent = impending. Urdu: قریب الوقوع. Its opposite is remote.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 55,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to BILATERAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "two-sided"
+    },
+    {
+     "key": "B",
+     "text": "cautious"
+    },
+    {
+     "key": "C",
+     "text": "holiness"
+    },
+    {
+     "key": "D",
+     "text": "sinister"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Bilateral = two-sided. Urdu: دو طرفہ. Its opposite is unilateral.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 56,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to AMATEUR:",
+   "options": [
+    {
+     "key": "A",
+     "text": "cautious"
+    },
+    {
+     "key": "B",
+     "text": "novice"
+    },
+    {
+     "key": "C",
+     "text": "evocative"
+    },
+    {
+     "key": "D",
+     "text": "blockade"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Amateur = novice. Urdu: شوقیہ، غیر پیشہ ور. Its opposite is professional.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 57,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to CONFRONT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "face"
+    },
+    {
+     "key": "B",
+     "text": "neutral"
+    },
+    {
+     "key": "C",
+     "text": "domineering"
+    },
+    {
+     "key": "D",
+     "text": "animosity"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Confront = face. Urdu: ڈٹ کر سامنا کرنا. Its opposite is evade.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 58,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to SIEGE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "sinister"
+    },
+    {
+     "key": "B",
+     "text": "realistic"
+    },
+    {
+     "key": "C",
+     "text": "blockade"
+    },
+    {
+     "key": "D",
+     "text": "routine"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Siege = blockade. Urdu: محاصرہ.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 59,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to HUMILIATION:",
+   "options": [
+    {
+     "key": "A",
+     "text": "disgrace"
+    },
+    {
+     "key": "B",
+     "text": "sinister"
+    },
+    {
+     "key": "C",
+     "text": "pointless"
+    },
+    {
+     "key": "D",
+     "text": "reduce"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Humiliation = disgrace. Urdu: ذلت، رسوائی. Its opposite is honour.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 60,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to REMINISCENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "evocative"
+    },
+    {
+     "key": "B",
+     "text": "disgrace"
+    },
+    {
+     "key": "C",
+     "text": "outdated"
+    },
+    {
+     "key": "D",
+     "text": "unavoidable"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Reminiscent = evocative. Urdu: یاد دلانے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 61,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to DICHOTOMY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "independent"
+    },
+    {
+     "key": "B",
+     "text": "plentiful"
+    },
+    {
+     "key": "C",
+     "text": "basic"
+    },
+    {
+     "key": "D",
+     "text": "split"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Dichotomy = split. Urdu: دو متضاد حصوں میں تقسیم. Its opposite is union.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 62,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to PRAGMATIC:",
+   "options": [
+    {
+     "key": "A",
+     "text": "blockade"
+    },
+    {
+     "key": "B",
+     "text": "realistic"
+    },
+    {
+     "key": "C",
+     "text": "infamous"
+    },
+    {
+     "key": "D",
+     "text": "evocative"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Pragmatic = realistic. Urdu: عملی، حقیقت پسند. Its opposite is idealistic.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 63,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to SANCTITY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "unavoidable"
+    },
+    {
+     "key": "B",
+     "text": "worsen"
+    },
+    {
+     "key": "C",
+     "text": "holiness"
+    },
+    {
+     "key": "D",
+     "text": "outdated"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Sanctity = holiness. Urdu: تقدس، حرمت. Its opposite is profanity.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 64,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to HEINOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "atrocious"
+    },
+    {
+     "key": "B",
+     "text": "cautious"
+    },
+    {
+     "key": "C",
+     "text": "banish"
+    },
+    {
+     "key": "D",
+     "text": "wordy"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Heinous = atrocious. Urdu: گھناؤنا، نہایت قبیح. Its opposite is noble.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 65,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to REPULSIVE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "banish"
+    },
+    {
+     "key": "B",
+     "text": "revolting"
+    },
+    {
+     "key": "C",
+     "text": "atrocious"
+    },
+    {
+     "key": "D",
+     "text": "worsen"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Repulsive = revolting. Urdu: کراہت انگیز. Its opposite is attractive.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 66,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to CURTAIL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "banish"
+    },
+    {
+     "key": "B",
+     "text": "reduce"
+    },
+    {
+     "key": "C",
+     "text": "animosity"
+    },
+    {
+     "key": "D",
+     "text": "unavoidable"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Curtail = reduce. Urdu: کم کرنا، مختصر کرنا. Its opposite is extend.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 67,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to STAPLE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "industrious"
+    },
+    {
+     "key": "B",
+     "text": "atrocious"
+    },
+    {
+     "key": "C",
+     "text": "basic"
+    },
+    {
+     "key": "D",
+     "text": "hindrance"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Staple = basic. Urdu: بنیادی (خوراک). Its opposite is minor.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 68,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to AUTONOMOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "independent"
+    },
+    {
+     "key": "B",
+     "text": "cautious"
+    },
+    {
+     "key": "C",
+     "text": "disgrace"
+    },
+    {
+     "key": "D",
+     "text": "two-sided"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Autonomous = independent. Urdu: خود مختار. Its opposite is dependent.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 69,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to RECIPROCAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "wordy"
+    },
+    {
+     "key": "B",
+     "text": "holiness"
+    },
+    {
+     "key": "C",
+     "text": "basic"
+    },
+    {
+     "key": "D",
+     "text": "mutual"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Reciprocal = mutual. Urdu: باہمی، ایک دوسرے کے جواب میں کیا جانے والا. Its opposite is one-sided.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 70,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to APPREHENSION:",
+   "options": [
+    {
+     "key": "A",
+     "text": "holiness"
+    },
+    {
+     "key": "B",
+     "text": "dread"
+    },
+    {
+     "key": "C",
+     "text": "novice"
+    },
+    {
+     "key": "D",
+     "text": "reduce"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Apprehension = dread. Urdu: خدشہ، اندیشہ. Its opposite is confidence.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 71,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to OBSTRUCTION:",
+   "options": [
+    {
+     "key": "A",
+     "text": "animosity"
+    },
+    {
+     "key": "B",
+     "text": "evocative"
+    },
+    {
+     "key": "C",
+     "text": "worsen"
+    },
+    {
+     "key": "D",
+     "text": "hindrance"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Obstruction = hindrance. Urdu: رکاوٹ. Its opposite is aid.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 72,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to AGGRAVATE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "worsen"
+    },
+    {
+     "key": "B",
+     "text": "blockade"
+    },
+    {
+     "key": "C",
+     "text": "evocative"
+    },
+    {
+     "key": "D",
+     "text": "domineering"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Aggravate = worsen. Urdu: بگاڑنا، بدتر کرنا. Its opposite is alleviate.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 73,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to DISPEL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "banish"
+    },
+    {
+     "key": "B",
+     "text": "evocative"
+    },
+    {
+     "key": "C",
+     "text": "kind"
+    },
+    {
+     "key": "D",
+     "text": "coax"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Dispel = banish. Urdu: دور کرنا. Its opposite is gather.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 74,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to HOSTILITY:",
+   "options": [
+    {
+     "key": "A",
+     "text": "animosity"
+    },
+    {
+     "key": "B",
+     "text": "determination"
+    },
+    {
+     "key": "C",
+     "text": "hindrance"
+    },
+    {
+     "key": "D",
+     "text": "infamous"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Hostility = animosity. Urdu: دشمنی، عداوت. Its opposite is friendliness.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 75,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY SIMILAR in meaning to RESOLVE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "frank"
+    },
+    {
+     "key": "B",
+     "text": "banish"
+    },
+    {
+     "key": "C",
+     "text": "determination"
+    },
+    {
+     "key": "D",
+     "text": "plentiful"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Resolve = determination. Urdu: پختہ ارادہ. Its opposite is hesitation.",
+   "difficulty": "easy",
+   "tags": [
+    "synonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 76,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to CANDID:",
+   "options": [
+    {
+     "key": "A",
+     "text": "alleviate"
+    },
+    {
+     "key": "B",
+     "text": "clear"
+    },
+    {
+     "key": "C",
+     "text": "coldness"
+    },
+    {
+     "key": "D",
+     "text": "evasive"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Candid = frank; its opposite is evasive. Urdu: صاف گو، کھرا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 77,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to PRUDENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "humble"
+    },
+    {
+     "key": "B",
+     "text": "dependent"
+    },
+    {
+     "key": "C",
+     "text": "reckless"
+    },
+    {
+     "key": "D",
+     "text": "concise"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Prudent = wise and careful (= cautious); its opposite is reckless. Urdu: دانشمند، محتاط.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 78,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to FRUGAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "concise"
+    },
+    {
+     "key": "B",
+     "text": "extravagant"
+    },
+    {
+     "key": "C",
+     "text": "friendliness"
+    },
+    {
+     "key": "D",
+     "text": "dependent"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Frugal = thrifty; its opposite is extravagant. Urdu: کفایت شعار.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 79,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to MUNDANE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "extraordinary"
+    },
+    {
+     "key": "B",
+     "text": "clear"
+    },
+    {
+     "key": "C",
+     "text": "evasive"
+    },
+    {
+     "key": "D",
+     "text": "concise"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Mundane = ordinary, dull (= routine); its opposite is extraordinary. Urdu: عام، روزمرہ کا، غیر دلچسپ.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 80,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to OBSOLETE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "malevolent"
+    },
+    {
+     "key": "B",
+     "text": "current"
+    },
+    {
+     "key": "C",
+     "text": "alleviate"
+    },
+    {
+     "key": "D",
+     "text": "friendliness"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Obsolete = outdated; its opposite is current. Urdu: متروک، فرسودہ.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 81,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to VERBOSE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "professional"
+    },
+    {
+     "key": "B",
+     "text": "extend"
+    },
+    {
+     "key": "C",
+     "text": "alleviate"
+    },
+    {
+     "key": "D",
+     "text": "concise"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Verbose = wordy; its opposite is concise. Urdu: ضرورت سے زیادہ الفاظ استعمال کرنے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 82,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to BENEVOLENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "noble"
+    },
+    {
+     "key": "B",
+     "text": "extraordinary"
+    },
+    {
+     "key": "C",
+     "text": "malevolent"
+    },
+    {
+     "key": "D",
+     "text": "promising"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Benevolent = kind, generous (= kind); its opposite is malevolent. Urdu: مہربان، نیک دل.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 83,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to ABUNDANT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "yielding"
+    },
+    {
+     "key": "B",
+     "text": "professional"
+    },
+    {
+     "key": "C",
+     "text": "far-fetched"
+    },
+    {
+     "key": "D",
+     "text": "scarce"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Abundant = plentiful; its opposite is scarce. Urdu: وافر.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 84,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to AMBIGUOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "idealistic"
+    },
+    {
+     "key": "B",
+     "text": "honour"
+    },
+    {
+     "key": "C",
+     "text": "clear"
+    },
+    {
+     "key": "D",
+     "text": "indulge"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Ambiguous = unclear, with two meanings (= vague); its opposite is clear. Urdu: مبہم.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 85,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to DILIGENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "promising"
+    },
+    {
+     "key": "B",
+     "text": "careless"
+    },
+    {
+     "key": "C",
+     "text": "lazy"
+    },
+    {
+     "key": "D",
+     "text": "union"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Diligent = hardworking (= industrious); its opposite is lazy. Urdu: محنتی.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 86,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to FUTILE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "fruitful"
+    },
+    {
+     "key": "B",
+     "text": "careless"
+    },
+    {
+     "key": "C",
+     "text": "promising"
+    },
+    {
+     "key": "D",
+     "text": "friendliness"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Futile = useless (= pointless); its opposite is fruitful. Urdu: بے سود، لاحاصل.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 87,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to IMPARTIAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "lazy"
+    },
+    {
+     "key": "B",
+     "text": "biased"
+    },
+    {
+     "key": "C",
+     "text": "compel"
+    },
+    {
+     "key": "D",
+     "text": "evasive"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Impartial = unbiased (= neutral); its opposite is biased. Urdu: غیر جانبدار.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 88,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to INEVITABLE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "attractive"
+    },
+    {
+     "key": "B",
+     "text": "scarce"
+    },
+    {
+     "key": "C",
+     "text": "avoidable"
+    },
+    {
+     "key": "D",
+     "text": "compel"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Inevitable = unavoidable; its opposite is avoidable. Urdu: ناگزیر.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 89,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to LENIENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "evade"
+    },
+    {
+     "key": "B",
+     "text": "strict"
+    },
+    {
+     "key": "C",
+     "text": "union"
+    },
+    {
+     "key": "D",
+     "text": "extraordinary"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Lenient = merciful, not strict (= merciful); its opposite is strict. Urdu: نرمی برتنے والا، رعایت دینے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 90,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to METICULOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "inarticulate"
+    },
+    {
+     "key": "B",
+     "text": "unilateral"
+    },
+    {
+     "key": "C",
+     "text": "careless"
+    },
+    {
+     "key": "D",
+     "text": "strict"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Meticulous = very careful about details (= precise); its opposite is careless. Urdu: نہایت محتاط، باریک بیں.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 91,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to NOTORIOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "reputable"
+    },
+    {
+     "key": "B",
+     "text": "one-sided"
+    },
+    {
+     "key": "C",
+     "text": "aid"
+    },
+    {
+     "key": "D",
+     "text": "strict"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Notorious = famous for something bad (= infamous); its opposite is reputable. Urdu: بدنام.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 92,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to OBSCURE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "minor"
+    },
+    {
+     "key": "B",
+     "text": "reckless"
+    },
+    {
+     "key": "C",
+     "text": "honour"
+    },
+    {
+     "key": "D",
+     "text": "clear"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Obscure = unclear, little known (= vague); its opposite is clear. Urdu: غیر واضح، کم معروف.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 93,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to OMINOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "idealistic"
+    },
+    {
+     "key": "B",
+     "text": "humble"
+    },
+    {
+     "key": "C",
+     "text": "promising"
+    },
+    {
+     "key": "D",
+     "text": "dull"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Ominous = threatening, a bad sign (= sinister); its opposite is promising. Urdu: منحوس، بدشگون.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 94,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to PLAUSIBLE:",
+   "options": [
+    {
+     "key": "A",
+     "text": "humble"
+    },
+    {
+     "key": "B",
+     "text": "far-fetched"
+    },
+    {
+     "key": "C",
+     "text": "clear"
+    },
+    {
+     "key": "D",
+     "text": "avoidable"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Plausible = believable; its opposite is far-fetched. Urdu: قریب قیاس.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 95,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to TENACIOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "idealistic"
+    },
+    {
+     "key": "B",
+     "text": "yielding"
+    },
+    {
+     "key": "C",
+     "text": "friendliness"
+    },
+    {
+     "key": "D",
+     "text": "aid"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Tenacious = persistent, holding firm (= persistent); its opposite is yielding. Urdu: ثابت قدم، ڈٹا رہنے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 96,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to TRIVIAL:",
+   "options": [
+    {
+     "key": "A",
+     "text": "evasive"
+    },
+    {
+     "key": "B",
+     "text": "noble"
+    },
+    {
+     "key": "C",
+     "text": "significant"
+    },
+    {
+     "key": "D",
+     "text": "apathetic"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Trivial = unimportant (= petty); its opposite is significant. Urdu: معمولی، غیر اہم.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 97,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to VIVID:",
+   "options": [
+    {
+     "key": "A",
+     "text": "yielding"
+    },
+    {
+     "key": "B",
+     "text": "indulge"
+    },
+    {
+     "key": "C",
+     "text": "biased"
+    },
+    {
+     "key": "D",
+     "text": "dull"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Vivid = bright, clear, lively (= bright); its opposite is dull. Urdu: روشن، واضح، جاندار.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 98,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to ZEALOUS:",
+   "options": [
+    {
+     "key": "A",
+     "text": "biased"
+    },
+    {
+     "key": "B",
+     "text": "professional"
+    },
+    {
+     "key": "C",
+     "text": "dull"
+    },
+    {
+     "key": "D",
+     "text": "apathetic"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Zealous = very enthusiastic (= enthusiastic); its opposite is apathetic. Urdu: پرجوش، جوشیلا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 99,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to ABSTAIN:",
+   "options": [
+    {
+     "key": "A",
+     "text": "dull"
+    },
+    {
+     "key": "B",
+     "text": "humble"
+    },
+    {
+     "key": "C",
+     "text": "one-sided"
+    },
+    {
+     "key": "D",
+     "text": "indulge"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "Abstain = keep from doing (= refrain); its opposite is indulge. Urdu: پرہیز کرنا، باز رہنا.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 100,
+   "type": "single",
+   "question": "Choose the word MOST NEARLY OPPOSITE in meaning to ELOQUENT:",
+   "options": [
+    {
+     "key": "A",
+     "text": "indulge"
+    },
+    {
+     "key": "B",
+     "text": "inarticulate"
+    },
+    {
+     "key": "C",
+     "text": "humble"
+    },
+    {
+     "key": "D",
+     "text": "apathetic"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Eloquent = fluent and persuasive (= articulate); its opposite is inarticulate. Urdu: فصیح، شیریں بیان.",
+   "difficulty": "easy",
+   "tags": [
+    "antonym"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 101,
+   "type": "single",
+   "question": "What part of speech is “Geniality”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Geniality is n. — friendly warmth. Urdu: خوش مزاجی، ملنساری.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 102,
+   "type": "single",
+   "question": "What part of speech is “Cajole”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Cajole is v. — persuade by flattery. Urdu: خوشامد یا میٹھی باتوں سے راضی کرنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 103,
+   "type": "single",
+   "question": "What part of speech is “Imperious”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Imperious is adj. — arrogant, commanding. Urdu: متکبر، تحکمانہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 104,
+   "type": "single",
+   "question": "What part of speech is “Imminent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Imminent is adj. — about to happen. Urdu: قریب الوقوع.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 105,
+   "type": "single",
+   "question": "What part of speech is “Bilateral”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Bilateral is adj. — involving two sides. Urdu: دو طرفہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 106,
+   "type": "single",
+   "question": "What part of speech is “Amateur”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Amateur is n. — non-professional. Urdu: شوقیہ، غیر پیشہ ور.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 107,
+   "type": "single",
+   "question": "What part of speech is “Confront”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Confront is v. — face boldly. Urdu: ڈٹ کر سامنا کرنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 108,
+   "type": "single",
+   "question": "What part of speech is “Siege”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Siege is n. — blockade of a place. Urdu: محاصرہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 109,
+   "type": "single",
+   "question": "What part of speech is “Humiliation”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Humiliation is n. — loss of dignity. Urdu: ذلت، رسوائی.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 110,
+   "type": "single",
+   "question": "What part of speech is “Reminiscent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Reminiscent is adj. — reminding of something. Urdu: یاد دلانے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 111,
+   "type": "single",
+   "question": "What part of speech is “Dichotomy”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Dichotomy is n. — sharp split into two opposites. Urdu: دو متضاد حصوں میں تقسیم.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 112,
+   "type": "single",
+   "question": "What part of speech is “Pragmatic”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Pragmatic is adj. — practical. Urdu: عملی، حقیقت پسند.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 113,
+   "type": "single",
+   "question": "What part of speech is “Sanctity”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Sanctity is n. — holiness. Urdu: تقدس، حرمت.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 114,
+   "type": "single",
+   "question": "What part of speech is “Heinous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Heinous is adj. — shockingly wicked. Urdu: گھناؤنا، نہایت قبیح.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 115,
+   "type": "single",
+   "question": "What part of speech is “Repulsive”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Repulsive is adj. — disgusting. Urdu: کراہت انگیز.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 116,
+   "type": "single",
+   "question": "What part of speech is “Curtail”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Curtail is v. — cut short. Urdu: کم کرنا، مختصر کرنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 117,
+   "type": "single",
+   "question": "What part of speech is “Staple”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Staple is adj. — basic, main. Urdu: بنیادی (خوراک).",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 118,
+   "type": "single",
+   "question": "What part of speech is “Autonomous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Autonomous is adj. — self-governing. Urdu: خود مختار.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 119,
+   "type": "single",
+   "question": "What part of speech is “Reciprocal”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Reciprocal is adj. — mutual, in return. Urdu: باہمی، ایک دوسرے کے جواب میں کیا جانے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 120,
+   "type": "single",
+   "question": "What part of speech is “Apprehension”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Apprehension is n. — anxiety about the future. Urdu: خدشہ، اندیشہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 121,
+   "type": "single",
+   "question": "What part of speech is “Obstruction”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Obstruction is n. — blockage. Urdu: رکاوٹ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 122,
+   "type": "single",
+   "question": "What part of speech is “Aggravate”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Aggravate is v. — make worse. Urdu: بگاڑنا، بدتر کرنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 123,
+   "type": "single",
+   "question": "What part of speech is “Dispel”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Dispel is v. — drive away. Urdu: دور کرنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 124,
+   "type": "single",
+   "question": "What part of speech is “Hostility”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Hostility is n. — enmity. Urdu: دشمنی، عداوت.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 125,
+   "type": "single",
+   "question": "What part of speech is “Resolve”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Resolve is n. — firm determination. Urdu: پختہ ارادہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 126,
+   "type": "single",
+   "question": "What part of speech is “Candid”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Candid is adj. — frank. Urdu: صاف گو، کھرا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 127,
+   "type": "single",
+   "question": "What part of speech is “Prudent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Prudent is adj. — wise and careful. Urdu: دانشمند، محتاط.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 128,
+   "type": "single",
+   "question": "What part of speech is “Frugal”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Frugal is adj. — thrifty. Urdu: کفایت شعار.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 129,
+   "type": "single",
+   "question": "What part of speech is “Mundane”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Mundane is adj. — ordinary, dull. Urdu: عام، روزمرہ کا، غیر دلچسپ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 130,
+   "type": "single",
+   "question": "What part of speech is “Obsolete”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Obsolete is adj. — outdated. Urdu: متروک، فرسودہ.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 131,
+   "type": "single",
+   "question": "What part of speech is “Verbose”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Verbose is adj. — wordy. Urdu: ضرورت سے زیادہ الفاظ استعمال کرنے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 132,
+   "type": "single",
+   "question": "What part of speech is “Benevolent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Benevolent is adj. — kind, generous. Urdu: مہربان، نیک دل.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 133,
+   "type": "single",
+   "question": "What part of speech is “Abundant”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Abundant is adj. — plentiful. Urdu: وافر.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 134,
+   "type": "single",
+   "question": "What part of speech is “Ambiguous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Ambiguous is adj. — unclear, with two meanings. Urdu: مبہم.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 135,
+   "type": "single",
+   "question": "What part of speech is “Diligent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Diligent is adj. — hardworking. Urdu: محنتی.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 136,
+   "type": "single",
+   "question": "What part of speech is “Futile”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Futile is adj. — useless. Urdu: بے سود، لاحاصل.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 137,
+   "type": "single",
+   "question": "What part of speech is “Impartial”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Impartial is adj. — unbiased. Urdu: غیر جانبدار.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 138,
+   "type": "single",
+   "question": "What part of speech is “Inevitable”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Inevitable is adj. — unavoidable. Urdu: ناگزیر.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 139,
+   "type": "single",
+   "question": "What part of speech is “Lenient”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Lenient is adj. — merciful, not strict. Urdu: نرمی برتنے والا، رعایت دینے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 140,
+   "type": "single",
+   "question": "What part of speech is “Meticulous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "Meticulous is adj. — very careful about details. Urdu: نہایت محتاط، باریک بیں.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 141,
+   "type": "single",
+   "question": "What part of speech is “Notorious”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Notorious is adj. — famous for something bad. Urdu: بدنام.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 142,
+   "type": "single",
+   "question": "What part of speech is “Obscure”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Obscure is adj. — unclear, little known. Urdu: غیر واضح، کم معروف.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 143,
+   "type": "single",
+   "question": "What part of speech is “Ominous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Ominous is adj. — threatening, a bad sign. Urdu: منحوس، بدشگون.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 144,
+   "type": "single",
+   "question": "What part of speech is “Plausible”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Plausible is adj. — believable. Urdu: قریب قیاس.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 145,
+   "type": "single",
+   "question": "What part of speech is “Tenacious”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Tenacious is adj. — persistent, holding firm. Urdu: ثابت قدم، ڈٹا رہنے والا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 146,
+   "type": "single",
+   "question": "What part of speech is “Trivial”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Trivial is adj. — unimportant. Urdu: معمولی، غیر اہم.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 147,
+   "type": "single",
+   "question": "What part of speech is “Vivid”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "adj."
+    },
+    {
+     "key": "B",
+     "text": "v."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Vivid is adj. — bright, clear, lively. Urdu: روشن، واضح، جاندار.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 148,
+   "type": "single",
+   "question": "What part of speech is “Zealous”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "n."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Zealous is adj. — very enthusiastic. Urdu: پرجوش، جوشیلا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 149,
+   "type": "single",
+   "question": "What part of speech is “Abstain”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "v."
+    },
+    {
+     "key": "B",
+     "text": "n."
+    },
+    {
+     "key": "C",
+     "text": "adj."
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "Abstain is v. — keep from doing. Urdu: پرہیز کرنا، باز رہنا.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 150,
+   "type": "single",
+   "question": "What part of speech is “Eloquent”?",
+   "options": [
+    {
+     "key": "A",
+     "text": "n."
+    },
+    {
+     "key": "B",
+     "text": "adj."
+    },
+    {
+     "key": "C",
+     "text": "v."
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "Eloquent is adj. — fluent and persuasive. Urdu: فصیح، شیریں بیان.",
+   "difficulty": "easy",
+   "tags": [
+    "part-of-speech"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 151,
+   "type": "single",
+   "question": "Which word fits? “Cordiality is the same as ______ (friendly warmth).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Geniality"
+    },
+    {
+     "key": "B",
+     "text": "Curtail"
+    },
+    {
+     "key": "C",
+     "text": "Vivid"
+    },
+    {
+     "key": "D",
+     "text": "Siege"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "cordiality means friendly warmth, so the word is Geniality (n.). Urdu: خوش مزاجی، ملنساری. The opposite is coldness.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 152,
+   "type": "single",
+   "question": "Which word fits? “Coax is the same as ______ (persuade by flattery).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cajole"
+    },
+    {
+     "key": "B",
+     "text": "Obsolete"
+    },
+    {
+     "key": "C",
+     "text": "Diligent"
+    },
+    {
+     "key": "D",
+     "text": "Staple"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "coax means persuade by flattery, so the word is Cajole (v.). Urdu: خوشامد یا میٹھی باتوں سے راضی کرنا. The opposite is compel.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 153,
+   "type": "single",
+   "question": "Which word fits? “Domineering is the same as ______ (arrogant, commanding).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Geniality"
+    },
+    {
+     "key": "B",
+     "text": "Obscure"
+    },
+    {
+     "key": "C",
+     "text": "Cajole"
+    },
+    {
+     "key": "D",
+     "text": "Imperious"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "domineering means arrogant, commanding, so the word is Imperious (adj.). Urdu: متکبر، تحکمانہ. The opposite is humble.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 154,
+   "type": "single",
+   "question": "Which word fits? “Impending is the same as ______ (about to happen).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cajole"
+    },
+    {
+     "key": "B",
+     "text": "Imminent"
+    },
+    {
+     "key": "C",
+     "text": "Tenacious"
+    },
+    {
+     "key": "D",
+     "text": "Confront"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "impending means about to happen, so the word is Imminent (adj.). Urdu: قریب الوقوع. The opposite is remote.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 155,
+   "type": "single",
+   "question": "Which word fits? “Two-sided is the same as ______ (involving two sides).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bilateral"
+    },
+    {
+     "key": "B",
+     "text": "Diligent"
+    },
+    {
+     "key": "C",
+     "text": "Notorious"
+    },
+    {
+     "key": "D",
+     "text": "Eloquent"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "two-sided means involving two sides, so the word is Bilateral (adj.). Urdu: دو طرفہ. The opposite is unilateral.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 156,
+   "type": "single",
+   "question": "Which word fits? “Novice is the same as ______ (non-professional).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Amateur"
+    },
+    {
+     "key": "B",
+     "text": "Heinous"
+    },
+    {
+     "key": "C",
+     "text": "Plausible"
+    },
+    {
+     "key": "D",
+     "text": "Candid"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "novice means non-professional, so the word is Amateur (n.). Urdu: شوقیہ، غیر پیشہ ور. The opposite is professional.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 157,
+   "type": "single",
+   "question": "Which word fits? “Face is the same as ______ (face boldly).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Curtail"
+    },
+    {
+     "key": "B",
+     "text": "Abundant"
+    },
+    {
+     "key": "C",
+     "text": "Frugal"
+    },
+    {
+     "key": "D",
+     "text": "Confront"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "face means face boldly, so the word is Confront (v.). Urdu: ڈٹ کر سامنا کرنا. The opposite is evade.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 158,
+   "type": "single",
+   "question": "Which word fits? “Disgrace is the same as ______ (loss of dignity).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Hostility"
+    },
+    {
+     "key": "B",
+     "text": "Plausible"
+    },
+    {
+     "key": "C",
+     "text": "Humiliation"
+    },
+    {
+     "key": "D",
+     "text": "Candid"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "disgrace means loss of dignity, so the word is Humiliation (n.). Urdu: ذلت، رسوائی. The opposite is honour.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 159,
+   "type": "single",
+   "question": "Which word fits? “Split is the same as ______ (sharp split into two opposites).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bilateral"
+    },
+    {
+     "key": "B",
+     "text": "Sanctity"
+    },
+    {
+     "key": "C",
+     "text": "Dichotomy"
+    },
+    {
+     "key": "D",
+     "text": "Ominous"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "split means sharp split into two opposites, so the word is Dichotomy (n.). Urdu: دو متضاد حصوں میں تقسیم. The opposite is union.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 160,
+   "type": "single",
+   "question": "Which word fits? “Realistic is the same as ______ (practical).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pragmatic"
+    },
+    {
+     "key": "B",
+     "text": "Humiliation"
+    },
+    {
+     "key": "C",
+     "text": "Futile"
+    },
+    {
+     "key": "D",
+     "text": "Mundane"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "realistic means practical, so the word is Pragmatic (adj.). Urdu: عملی، حقیقت پسند. The opposite is idealistic.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 161,
+   "type": "single",
+   "question": "Which word fits? “Holiness is the same as ______ (holiness).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Cajole"
+    },
+    {
+     "key": "B",
+     "text": "Eloquent"
+    },
+    {
+     "key": "C",
+     "text": "Imperious"
+    },
+    {
+     "key": "D",
+     "text": "Sanctity"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "holiness means holiness, so the word is Sanctity (n.). Urdu: تقدس، حرمت. The opposite is profanity.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 162,
+   "type": "single",
+   "question": "Which word fits? “Atrocious is the same as ______ (shockingly wicked).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "B",
+     "text": "Heinous"
+    },
+    {
+     "key": "C",
+     "text": "Impartial"
+    },
+    {
+     "key": "D",
+     "text": "Ominous"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "atrocious means shockingly wicked, so the word is Heinous (adj.). Urdu: گھناؤنا، نہایت قبیح. The opposite is noble.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 163,
+   "type": "single",
+   "question": "Which word fits? “Revolting is the same as ______ (disgusting).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Abundant"
+    },
+    {
+     "key": "B",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "C",
+     "text": "Repulsive"
+    },
+    {
+     "key": "D",
+     "text": "Imminent"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "revolting means disgusting, so the word is Repulsive (adj.). Urdu: کراہت انگیز. The opposite is attractive.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 164,
+   "type": "single",
+   "question": "Which word fits? “Reduce is the same as ______ (cut short).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Bilateral"
+    },
+    {
+     "key": "B",
+     "text": "Heinous"
+    },
+    {
+     "key": "C",
+     "text": "Curtail"
+    },
+    {
+     "key": "D",
+     "text": "Ominous"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "reduce means cut short, so the word is Curtail (v.). Urdu: کم کرنا، مختصر کرنا. The opposite is extend.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 165,
+   "type": "single",
+   "question": "Which word fits? “Basic is the same as ______ (basic, main).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "B",
+     "text": "Imperious"
+    },
+    {
+     "key": "C",
+     "text": "Benevolent"
+    },
+    {
+     "key": "D",
+     "text": "Staple"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "basic means basic, main, so the word is Staple (adj.). Urdu: بنیادی (خوراک). The opposite is minor.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 1
+   }
+  },
+  {
+   "n": 166,
+   "type": "single",
+   "question": "Which word fits? “Independent is the same as ______ (self-governing).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Siege"
+    },
+    {
+     "key": "B",
+     "text": "Autonomous"
+    },
+    {
+     "key": "C",
+     "text": "Amateur"
+    },
+    {
+     "key": "D",
+     "text": "Inevitable"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "independent means self-governing, so the word is Autonomous (adj.). Urdu: خود مختار. The opposite is dependent.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 167,
+   "type": "single",
+   "question": "Which word fits? “Mutual is the same as ______ (mutual, in return).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Apprehension"
+    },
+    {
+     "key": "B",
+     "text": "Reciprocal"
+    },
+    {
+     "key": "C",
+     "text": "Siege"
+    },
+    {
+     "key": "D",
+     "text": "Vivid"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "mutual means mutual, in return, so the word is Reciprocal (adj.). Urdu: باہمی، ایک دوسرے کے جواب میں کیا جانے والا. The opposite is one-sided.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 168,
+   "type": "single",
+   "question": "Which word fits? “Dread is the same as ______ (anxiety about the future).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Apprehension"
+    },
+    {
+     "key": "B",
+     "text": "Amateur"
+    },
+    {
+     "key": "C",
+     "text": "Prudent"
+    },
+    {
+     "key": "D",
+     "text": "Notorious"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "dread means anxiety about the future, so the word is Apprehension (n.). Urdu: خدشہ، اندیشہ. The opposite is confidence.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 169,
+   "type": "single",
+   "question": "Which word fits? “Hindrance is the same as ______ (blockage).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Frugal"
+    },
+    {
+     "key": "B",
+     "text": "Humiliation"
+    },
+    {
+     "key": "C",
+     "text": "Trivial"
+    },
+    {
+     "key": "D",
+     "text": "Obstruction"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "hindrance means blockage, so the word is Obstruction (n.). Urdu: رکاوٹ. The opposite is aid.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 170,
+   "type": "single",
+   "question": "Which word fits? “Worsen is the same as ______ (make worse).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reciprocal"
+    },
+    {
+     "key": "B",
+     "text": "Candid"
+    },
+    {
+     "key": "C",
+     "text": "Repulsive"
+    },
+    {
+     "key": "D",
+     "text": "Aggravate"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "worsen means make worse, so the word is Aggravate (v.). Urdu: بگاڑنا، بدتر کرنا. The opposite is alleviate.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 171,
+   "type": "single",
+   "question": "Which word fits? “Banish is the same as ______ (drive away).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Dispel"
+    },
+    {
+     "key": "B",
+     "text": "Prudent"
+    },
+    {
+     "key": "C",
+     "text": "Cajole"
+    },
+    {
+     "key": "D",
+     "text": "Futile"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "banish means drive away, so the word is Dispel (v.). Urdu: دور کرنا. The opposite is gather.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 172,
+   "type": "single",
+   "question": "Which word fits? “Animosity is the same as ______ (enmity).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Pragmatic"
+    },
+    {
+     "key": "B",
+     "text": "Hostility"
+    },
+    {
+     "key": "C",
+     "text": "Futile"
+    },
+    {
+     "key": "D",
+     "text": "Obscure"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "animosity means enmity, so the word is Hostility (n.). Urdu: دشمنی، عداوت. The opposite is friendliness.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 173,
+   "type": "single",
+   "question": "Which word fits? “Determination is the same as ______ (firm determination).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Aggravate"
+    },
+    {
+     "key": "B",
+     "text": "Obscure"
+    },
+    {
+     "key": "C",
+     "text": "Resolve"
+    },
+    {
+     "key": "D",
+     "text": "Impartial"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "determination means firm determination, so the word is Resolve (n.). Urdu: پختہ ارادہ. The opposite is hesitation.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 174,
+   "type": "single",
+   "question": "Which word fits? “Frank is the same as ______ (frank).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Trivial"
+    },
+    {
+     "key": "B",
+     "text": "Candid"
+    },
+    {
+     "key": "C",
+     "text": "Aggravate"
+    },
+    {
+     "key": "D",
+     "text": "Geniality"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "frank means frank, so the word is Candid (adj.). Urdu: صاف گو، کھرا. The opposite is evasive.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 175,
+   "type": "single",
+   "question": "Which word fits? “Cautious is the same as ______ (wise and careful).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Prudent"
+    },
+    {
+     "key": "B",
+     "text": "Dispel"
+    },
+    {
+     "key": "C",
+     "text": "Pragmatic"
+    },
+    {
+     "key": "D",
+     "text": "Ambiguous"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "cautious means wise and careful, so the word is Prudent (adj.). Urdu: دانشمند، محتاط. The opposite is reckless.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 176,
+   "type": "single",
+   "question": "Which word fits? “Thrifty is the same as ______ (thrifty).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Frugal"
+    },
+    {
+     "key": "B",
+     "text": "Obscure"
+    },
+    {
+     "key": "C",
+     "text": "Diligent"
+    },
+    {
+     "key": "D",
+     "text": "Abundant"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "thrifty means thrifty, so the word is Frugal (adj.). Urdu: کفایت شعار. The opposite is extravagant.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 177,
+   "type": "single",
+   "question": "Which word fits? “Routine is the same as ______ (ordinary, dull).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Mundane"
+    },
+    {
+     "key": "B",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "C",
+     "text": "Futile"
+    },
+    {
+     "key": "D",
+     "text": "Candid"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "routine means ordinary, dull, so the word is Mundane (adj.). Urdu: عام، روزمرہ کا، غیر دلچسپ. The opposite is extraordinary.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 178,
+   "type": "single",
+   "question": "Which word fits? “Outdated is the same as ______ (outdated).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Vivid"
+    },
+    {
+     "key": "B",
+     "text": "Obsolete"
+    },
+    {
+     "key": "C",
+     "text": "Zealous"
+    },
+    {
+     "key": "D",
+     "text": "Confront"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "outdated means outdated, so the word is Obsolete (adj.). Urdu: متروک، فرسودہ. The opposite is current.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 179,
+   "type": "single",
+   "question": "Which word fits? “Wordy is the same as ______ (wordy).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Prudent"
+    },
+    {
+     "key": "B",
+     "text": "Autonomous"
+    },
+    {
+     "key": "C",
+     "text": "Verbose"
+    },
+    {
+     "key": "D",
+     "text": "Heinous"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "wordy means wordy, so the word is Verbose (adj.). Urdu: ضرورت سے زیادہ الفاظ استعمال کرنے والا. The opposite is concise.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 180,
+   "type": "single",
+   "question": "Which word fits? “Kind is the same as ______ (kind, generous).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Benevolent"
+    },
+    {
+     "key": "B",
+     "text": "Hostility"
+    },
+    {
+     "key": "C",
+     "text": "Sanctity"
+    },
+    {
+     "key": "D",
+     "text": "Meticulous"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "kind means kind, generous, so the word is Benevolent (adj.). Urdu: مہربان، نیک دل. The opposite is malevolent.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 181,
+   "type": "single",
+   "question": "Which word fits? “Plentiful is the same as ______ (plentiful).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Resolve"
+    },
+    {
+     "key": "B",
+     "text": "Aggravate"
+    },
+    {
+     "key": "C",
+     "text": "Abundant"
+    },
+    {
+     "key": "D",
+     "text": "Inevitable"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "plentiful means plentiful, so the word is Abundant (adj.). Urdu: وافر. The opposite is scarce.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 182,
+   "type": "single",
+   "question": "Which word fits? “Industrious is the same as ______ (hardworking).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "B",
+     "text": "Candid"
+    },
+    {
+     "key": "C",
+     "text": "Diligent"
+    },
+    {
+     "key": "D",
+     "text": "Ambiguous"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "industrious means hardworking, so the word is Diligent (adj.). Urdu: محنتی. The opposite is lazy.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 183,
+   "type": "single",
+   "question": "Which word fits? “Pointless is the same as ______ (useless).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Futile"
+    },
+    {
+     "key": "B",
+     "text": "Ominous"
+    },
+    {
+     "key": "C",
+     "text": "Abstain"
+    },
+    {
+     "key": "D",
+     "text": "Obsolete"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "pointless means useless, so the word is Futile (adj.). Urdu: بے سود، لاحاصل. The opposite is fruitful.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 184,
+   "type": "single",
+   "question": "Which word fits? “Neutral is the same as ______ (unbiased).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Staple"
+    },
+    {
+     "key": "B",
+     "text": "Imminent"
+    },
+    {
+     "key": "C",
+     "text": "Imperious"
+    },
+    {
+     "key": "D",
+     "text": "Impartial"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "neutral means unbiased, so the word is Impartial (adj.). Urdu: غیر جانبدار. The opposite is biased.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 185,
+   "type": "single",
+   "question": "Which word fits? “Unavoidable is the same as ______ (unavoidable).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Sanctity"
+    },
+    {
+     "key": "B",
+     "text": "Candid"
+    },
+    {
+     "key": "C",
+     "text": "Plausible"
+    },
+    {
+     "key": "D",
+     "text": "Inevitable"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "unavoidable means unavoidable, so the word is Inevitable (adj.). Urdu: ناگزیر. The opposite is avoidable.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 186,
+   "type": "single",
+   "question": "Which word fits? “Merciful is the same as ______ (merciful, not strict).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Lenient"
+    },
+    {
+     "key": "B",
+     "text": "Dichotomy"
+    },
+    {
+     "key": "C",
+     "text": "Ominous"
+    },
+    {
+     "key": "D",
+     "text": "Mundane"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "merciful means merciful, not strict, so the word is Lenient (adj.). Urdu: نرمی برتنے والا، رعایت دینے والا. The opposite is strict.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 187,
+   "type": "single",
+   "question": "Which word fits? “Precise is the same as ______ (very careful about details).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ambiguous"
+    },
+    {
+     "key": "B",
+     "text": "Benevolent"
+    },
+    {
+     "key": "C",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "D",
+     "text": "Meticulous"
+    }
+   ],
+   "answer": [
+    "D"
+   ],
+   "explanation": "precise means very careful about details, so the word is Meticulous (adj.). Urdu: نہایت محتاط، باریک بیں. The opposite is careless.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 2
+   }
+  },
+  {
+   "n": 188,
+   "type": "single",
+   "question": "Which word fits? “Infamous is the same as ______ (famous for something bad).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Diligent"
+    },
+    {
+     "key": "B",
+     "text": "Notorious"
+    },
+    {
+     "key": "C",
+     "text": "Vivid"
+    },
+    {
+     "key": "D",
+     "text": "Obscure"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "infamous means famous for something bad, so the word is Notorious (adj.). Urdu: بدنام. The opposite is reputable.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 189,
+   "type": "single",
+   "question": "Which word fits? “Sinister is the same as ______ (threatening, a bad sign).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Ominous"
+    },
+    {
+     "key": "B",
+     "text": "Obsolete"
+    },
+    {
+     "key": "C",
+     "text": "Obscure"
+    },
+    {
+     "key": "D",
+     "text": "Curtail"
+    }
+   ],
+   "answer": [
+    "A"
+   ],
+   "explanation": "sinister means threatening, a bad sign, so the word is Ominous (adj.). Urdu: منحوس، بدشگون. The opposite is promising.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 190,
+   "type": "single",
+   "question": "Which word fits? “Believable is the same as ______ (believable).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Geniality"
+    },
+    {
+     "key": "B",
+     "text": "Plausible"
+    },
+    {
+     "key": "C",
+     "text": "Benevolent"
+    },
+    {
+     "key": "D",
+     "text": "Verbose"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "believable means believable, so the word is Plausible (adj.). Urdu: قریب قیاس. The opposite is far-fetched.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 191,
+   "type": "single",
+   "question": "Which word fits? “Persistent is the same as ______ (persistent, holding firm).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Obstruction"
+    },
+    {
+     "key": "B",
+     "text": "Tenacious"
+    },
+    {
+     "key": "C",
+     "text": "Aggravate"
+    },
+    {
+     "key": "D",
+     "text": "Autonomous"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "persistent means persistent, holding firm, so the word is Tenacious (adj.). Urdu: ثابت قدم، ڈٹا رہنے والا. The opposite is yielding.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 192,
+   "type": "single",
+   "question": "Which word fits? “Petty is the same as ______ (unimportant).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Repulsive"
+    },
+    {
+     "key": "B",
+     "text": "Trivial"
+    },
+    {
+     "key": "C",
+     "text": "Reminiscent"
+    },
+    {
+     "key": "D",
+     "text": "Mundane"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "petty means unimportant, so the word is Trivial (adj.). Urdu: معمولی، غیر اہم. The opposite is significant.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 193,
+   "type": "single",
+   "question": "Which word fits? “Bright is the same as ______ (bright, clear, lively).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Heinous"
+    },
+    {
+     "key": "B",
+     "text": "Ominous"
+    },
+    {
+     "key": "C",
+     "text": "Vivid"
+    },
+    {
+     "key": "D",
+     "text": "Geniality"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "bright means bright, clear, lively, so the word is Vivid (adj.). Urdu: روشن، واضح، جاندار. The opposite is dull.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 194,
+   "type": "single",
+   "question": "Which word fits? “Enthusiastic is the same as ______ (very enthusiastic).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Imminent"
+    },
+    {
+     "key": "B",
+     "text": "Frugal"
+    },
+    {
+     "key": "C",
+     "text": "Zealous"
+    },
+    {
+     "key": "D",
+     "text": "Resolve"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "enthusiastic means very enthusiastic, so the word is Zealous (adj.). Urdu: پرجوش، جوشیلا. The opposite is apathetic.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 195,
+   "type": "single",
+   "question": "Which word fits? “Refrain is the same as ______ (keep from doing).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Verbose"
+    },
+    {
+     "key": "B",
+     "text": "Confront"
+    },
+    {
+     "key": "C",
+     "text": "Abstain"
+    },
+    {
+     "key": "D",
+     "text": "Cajole"
+    }
+   ],
+   "answer": [
+    "C"
+   ],
+   "explanation": "refrain means keep from doing, so the word is Abstain (v.). Urdu: پرہیز کرنا، باز رہنا. The opposite is indulge.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  },
+  {
+   "n": 196,
+   "type": "single",
+   "question": "Which word fits? “Articulate is the same as ______ (fluent and persuasive).”",
+   "options": [
+    {
+     "key": "A",
+     "text": "Zealous"
+    },
+    {
+     "key": "B",
+     "text": "Eloquent"
+    },
+    {
+     "key": "C",
+     "text": "Reciprocal"
+    },
+    {
+     "key": "D",
+     "text": "Bilateral"
+    }
+   ],
+   "answer": [
+    "B"
+   ],
+   "explanation": "articulate means fluent and persuasive, so the word is Eloquent (adj.). Urdu: فصیح، شیریں بیان. The opposite is inarticulate.",
+   "difficulty": "easy",
+   "tags": [
+    "sentence"
+   ],
+   "sourceRef": {
+    "page": 3
+   }
+  }
+ ],
+ "assets": {}
+}

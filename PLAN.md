@@ -631,11 +631,11 @@ Theme (System/Light/Dark), text size, haptics, sound, reduce motion, backup expo
 |---|---|---|
 | M0 | Plan + format contract | ✅ done (v2.0) |
 | M1 | Design system, logo, shell, home, navigation, motion | ✅ done |
-| M2 | Content pipeline | 🟡 HEC Quantitative Test 2 + HEC Vocabulary 50 Words (Urdu) converted, 50/50 questions, keys and explanations each; more PDFs welcome |
+| M2 | Content pipeline | 🟡 HEC Quantitative Test 2 + HEC Vocabulary 50 Words (Urdu) converted, 50/50 questions, keys and explanations each; plus a 196-question vocabulary study drill generated from the same list; more PDFs welcome |
 | M3 | Import + library | ✅ done |
 | M4 | Quiz core (timer, play, results, explanations, retry-wrong) | ✅ done |
 | M5 | History + settings + backup | ✅ done |
-| M6 | Polish + QA | 🟡 automated tests green (36); real-device pass pending |
+| M6 | Polish + QA | 🟡 automated tests green (59, incl. Urdu RTL + pack tests); real-device pass pending |
 | M7 | APK | ✅ signed release APK built in CI and attached to GitHub Releases (Capacitor 8, targetSdk 36, minSdk 24) |
 
 Implemented ahead of plan: per-question flagging, review search, share summary, Android-style back handling, offline service worker, PWA manifest, sample packs in `packs/`.

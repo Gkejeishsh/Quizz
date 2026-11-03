@@ -1,5 +1,6 @@
 import { memo, useEffect, useMemo, useState } from 'react'
 import { cn } from '../lib/cn'
+import { textDir } from '../lib/text'
 
 type Katex = typeof import('katex').default
 let katexPromise: Promise<Katex> | null = null
@@ -13,6 +14,11 @@ function loadKatex(): Promise<Katex> {
 
 const MATH_RE = /\$([^$]+)\$/g
 
+/**
+ * Renders quiz text: LaTeX between `$…$` through KaTeX, everything else as-is.
+ * Urdu strings additionally get the right-to-left direction, the Urdu font and
+ * RTL alignment (see src/lib/text.ts) — English and Maths text is untouched.
+ */
 export const MathText = memo(function MathText({
   text,
   className,
@@ -21,6 +27,10 @@ export const MathText = memo(function MathText({
   className?: string
 }) {
   const hasMath = useMemo(() => /\$[^$]+\$/.test(text), [text])
+  const rtl = useMemo(() => textDir(text) === 'rtl', [text])
+  const dirProps = rtl
+    ? ({ dir: 'rtl' as const, lang: 'ur', className: cn(className, 'is-rtl') })
+    : ({ className })
   const [katex, setKatex] = useState<Katex | null>(null)
 
   useEffect(() => {
@@ -38,7 +48,7 @@ export const MathText = memo(function MathText({
     }
   }, [hasMath])
 
-  if (!hasMath || !katex) return <span className={className}>{text}</span>
+  if (!hasMath || !katex) return <span {...dirProps}>{text}</span>
 
   const parts: React.ReactNode[] = []
   let last = 0
@@ -60,5 +70,5 @@ export const MathText = memo(function MathText({
     last = match.index + match[0].length
   }
   if (last < text.length) parts.push(text.slice(last))
-  return <span className={cn(className)}>{parts}</span>
+  return <span {...dirProps}>{parts}</span>
 })

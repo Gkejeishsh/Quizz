@@ -76,9 +76,10 @@ function seedTests(categories: Category[]): TestRecord[] {
   const maths = categories.find((c) => c.name === 'Maths')
   const english = categories.find((c) => c.name === 'English')
   const picks: [Pack, string | undefined][] = [
-    [DEMO_PACKS[0], english?.id], // HEC Vocabulary — 50 Words (English ⇄ Urdu)
-    [DEMO_PACKS[1], maths?.id], // HEC Quantitative Practice Test 2
-    [DEMO_PACKS[2], chem?.id], // Chemical Bonding — Practice Test
+    [DEMO_PACKS[0], english?.id], // HEC Vocabulary — 50 Words (English & Urdu)
+    [DEMO_PACKS[2], maths?.id], // HEC Quantitative Practice Test 2
+    [DEMO_PACKS[3], chem?.id], // Chemical Bonding — Practice Test
+    [DEMO_PACKS[1], english?.id], // HEC Vocabulary Study Drill (196)
   ]
   const now = Date.now()
   return picks.map(([pack, categoryId], i) => ({

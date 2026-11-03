@@ -8,6 +8,7 @@ Scripts used to turn a test PDF into a `.quizz` pack, and to check packs before 
 | `validate_pack.py` | Re-checks a `.quizz` file against the app's import rules (the same 12 rules). Exit `0` ok, `1` warnings, `2` errors. |
 | `test_quizzify.py` | Builds synthetic PDFs (clean + messy) and asserts the converter output. `python3 tools/test_quizzify.py` |
 | `vocab_pack.py` | Builds the HEC Vocabulary (Urdu) pack by hand, because that PDF's Urdu text layer is unusable (see below). |
+| `vocab_study_pack.py` | Generates the 196-question study drill from the same 50-word list (Urdu meaning, synonym, antonym, part of speech, sentence completion). |
 | `make_assets.py` | Regenerates the Android launcher icons, splash screens and PWA icons from the Quizz mark. |
 
 ## Usage
@@ -44,3 +45,24 @@ Workflow for those files:
 4. Run `validate_pack.py` before committing.
 
 The app bundles Noto Sans Arabic, so Urdu strings render identically offline.
+
+## Generating study drills from a word list
+
+`vocab_study_pack.py` turns the transcribed 50-word list into practice rounds, so
+one PDF yields more than one pass over the same vocabulary. Rules it enforces
+(they are assertions, not conventions — a violation stops the build):
+
+* **Distractors come from the same list.** A wrong option is always another real
+  word (or its real meaning), never invented filler.
+* **One option per meaning cluster.** Words are grouped by shared meaning; an
+  option is never drawn from the cluster the answer belongs to, so no two
+  options can both be defensible.
+* **No duplicate options**, and exactly one key that exists in the option list.
+* **Question numbers are 1…N with no holes.** Rows skipped for a clean question
+  (e.g. two words sharing a synonym) are not numbered, and group ranges are
+  computed from the questions, not hardcoded.
+* **Options are shuffled** with a fixed seed (`20261103`), so the run is
+  reproducible and the key is spread over A–D.
+
+If a round cannot host enough questions, fix the data — do not lower the
+uniqueness checks.

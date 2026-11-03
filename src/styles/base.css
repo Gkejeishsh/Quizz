@@ -137,7 +137,7 @@ a {
 /* ---------------- typography ---------------- */
 
 .display {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-weight: 800;
   font-size: clamp(30px, 9vw, 40px);
   line-height: 1.04;
@@ -146,7 +146,7 @@ a {
 }
 
 .display-xl {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-weight: 800;
   font-size: clamp(46px, 15vw, 66px);
   line-height: 0.98;
@@ -154,7 +154,7 @@ a {
 }
 
 .title {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-weight: 700;
   font-size: 22px;
   line-height: 1.18;
@@ -176,7 +176,7 @@ a {
 }
 
 .mono {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
 }
@@ -223,7 +223,7 @@ a {
 .appbar.scrolled { border-bottom-color: var(--line); }
 
 .appbar-title {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -278,7 +278,7 @@ a {
 .logo-mark svg { display: block; position: relative; z-index: 1; }
 
 .logo-word {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-weight: 800;
   font-size: 22px;
   letter-spacing: -0.045em;
@@ -566,7 +566,7 @@ button {
 .action-card__icon svg { width: 24px; height: 24px; }
 
 .action-card__title {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-size: 19px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -597,7 +597,7 @@ button {
   text-align: center;
 }
 .stat__value {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 19px;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -656,7 +656,7 @@ button {
 }
 
 .chip__count {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 11px;
   opacity: 0.7;
 }
@@ -840,7 +840,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   margin: 2px auto 14px;
 }
 .sheet__title {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-size: 21px;
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -899,7 +899,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   gap: 10px;
 }
 .quiz-counter {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 13px;
   font-weight: 600;
   color: var(--ink-2);
@@ -915,7 +915,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   padding: 0 10px;
   border-radius: var(--r-pill);
   background: var(--surface-2);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 12.5px;
   font-weight: 600;
   color: var(--ink-2);
@@ -930,7 +930,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -941,7 +941,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
 }
 
 .q-text {
-  font-family: var(--font-ui);
+  font-family: var(--font-ui), var(--font-urdu);
   font-size: calc(19.5px * var(--type-scale));
   font-weight: 600;
   line-height: 1.45;
@@ -993,7 +993,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   border-radius: 9px;
   background: var(--surface-2);
   border: 1px solid var(--line);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 13px;
   font-weight: 700;
   color: var(--ink-2);
@@ -1044,7 +1044,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
 .ring-fill { stroke-linecap: round; }
 .ring-center { position: relative; text-align: center; z-index: 1; }
 .ring-score {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-size: 52px;
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -1067,7 +1067,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   border: 1px solid var(--line);
   background: var(--surface);
 }
-.result-stat__v { font-family: var(--font-mono); font-size: 20px; font-weight: 600; line-height: 1.1; }
+.result-stat__v { font-family: var(--font-mono), var(--font-urdu); font-size: 20px; font-weight: 600; line-height: 1.1; }
 .result-stat__l { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-3); margin-top: 4px; font-weight: 600; }
 .result-stat--good { background: var(--success-soft); border-color: color-mix(in srgb, var(--success) 26%, transparent); }
 .result-stat--good .result-stat__v { color: var(--success); }
@@ -1097,7 +1097,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   border-radius: 10px;
   background: var(--surface-2);
 }
-.review-opt b { font-family: var(--font-mono); font-weight: 700; font-size: 12px; color: var(--ink-3); flex: none; width: 14px; }
+.review-opt b { font-family: var(--font-mono), var(--font-urdu); font-weight: 700; font-size: 12px; color: var(--ink-3); flex: none; width: 14px; }
 .review-opt--correct { background: var(--success-soft); color: var(--ink); }
 .review-opt--correct b { color: var(--success); }
 .review-opt--picked-wrong { background: var(--danger-soft); color: var(--ink); }
@@ -1145,7 +1145,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   color: var(--primary);
 }
 .empty__art svg { width: 46px; height: 46px; }
-.empty__title { font-family: var(--font-display); font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
+.empty__title { font-family: var(--font-display), var(--font-urdu); font-size: 19px; font-weight: 700; letter-spacing: -0.02em; }
 .empty__text { font-size: 14px; color: var(--ink-2); max-width: 280px; line-height: 1.55; }
 
 /* ---------------- misc ---------------- */
@@ -1153,7 +1153,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
 .divider { height: 1px; background: var(--line); margin: var(--s-2) 0; }
 
 .kbd {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), var(--font-urdu);
   font-size: 11px;
   padding: 2px 6px;
   border-radius: 6px;
@@ -1348,7 +1348,7 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
   margin-top: 2px;
 }
 .splash__letter {
-  font-family: var(--font-display);
+  font-family: var(--font-display), var(--font-urdu);
   font-size: clamp(40px, 13vw, 58px);
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -1422,18 +1422,52 @@ textarea.input { height: auto; padding: 13px 15px; resize: none; line-height: 1.
 /* ---------------- Urdu / RTL text ---------------- */
 
 /*
- * Urdu strings inside an LTR layout: the Unicode bidi algorithm keeps the Latin
- * furniture (option letters, "means:") in place and orders the Arabic run
- * right-to-left on its own. We only need the right font and slightly looser
- * leading, plus isolation so punctuation cannot leak across runs.
+ * Urdu strings inside an LTR layout. Mixed lines such as `“خود مختار” means:`
+ * stay LTR so they read exactly as in the source PDF (the bidi algorithm orders
+ * the Arabic run itself); only purely-Urdu blocks become RTL. MathText tags those
+ * with .is-rtl — see src/lib/text.ts.
+ *
+ * Note the letter-spacing reset: negative tracking breaks the cursive joins of
+ * the Arabic script, so the display-face tracking must not apply here.
  */
-.option__text,
-.q-text {
-  unicode-bidi: isolate;
-}
-/* the :dir() hooks let a future mixed pack opt into the Urdu face per block */
-.option__text:dir(rtl),
-.q-text:dir(rtl) {
+/* applied by <MathText> to purely-Urdu strings */
+.is-rtl {
   font-family: var(--font-urdu);
-  line-height: 2;
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: 1.9;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* the surrounding blocks: right-align the line, keep the letter key on the left
+   (the printed paper puts the option letter on the left too) */
+.q-text--rtl,
+.review-q--rtl,
+.option__text--rtl,
+.review-opt__text--rtl {
+  text-align: right;
+}
+
+/* Urdu needs a touch more size than Latin at the same nominal size */
+.q-text--rtl,
+.q-text .is-rtl {
+  font-size: calc(20.5px * var(--type-scale));
+  line-height: 1.9;
+}
+.option__text--rtl,
+.option .is-rtl {
+  font-size: calc(17px * var(--type-scale));
+  line-height: 1.9;
+}
+.review-q--rtl,
+.review-q .is-rtl {
+  font-size: calc(16px * var(--type-scale));
+  line-height: 1.9;
+}
+.review-opt__text--rtl,
+.review-opt .is-rtl {
+  font-size: calc(14.5px * var(--type-scale));
+  line-height: 1.85;
 }

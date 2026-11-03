@@ -5,6 +5,7 @@ import { scoreQuestions, percent } from '../lib/scoring'
 import { Page, EmptyState } from '../components/ui'
 import { BookOpen, CheckCircle, Flag, X, ChevronDown } from '../components/Icons'
 import { MathText } from '../components/MathText'
+import { isUrduBlock } from '../lib/text'
 import { cn } from '../lib/cn'
 
 type Filter = 'all' | 'wrong' | 'unanswered' | 'correct' | 'flagged'
@@ -170,7 +171,7 @@ export function Review({ testId, attemptId }: { testId: string; attemptId?: stri
                         )}
                       >
                         <b>{o.key}</b>
-                        <span className="grow">
+                        <span className={cn('grow', 'review-opt__text', isUrduBlock(o.text) && 'review-opt__text--rtl')}>
                           <MathText text={o.text} />
                         </span>
                         {isCorrect && <span style={{ color: 'var(--success)' }}><CheckCircle style={{ width: 15, height: 15 }} /></span>}
