@@ -631,7 +631,7 @@ Theme (System/Light/Dark), text size, haptics, sound, reduce motion, backup expo
 |---|---|---|
 | M0 | Plan + format contract | ✅ done (v2.0) |
 | M1 | Design system, logo, shell, home, navigation, motion | ✅ done |
-| M2 | Content pipeline | 🟡 HEC Quantitative Test 2 converted (50/50 questions, keys, explanations); more PDFs welcome |
+| M2 | Content pipeline | 🟡 HEC Quantitative Test 2 + HEC Vocabulary 50 Words (Urdu) converted, 50/50 questions, keys and explanations each; more PDFs welcome |
 | M3 | Import + library | ✅ done |
 | M4 | Quiz core (timer, play, results, explanations, retry-wrong) | ✅ done |
 | M5 | History + settings + backup | ✅ done |

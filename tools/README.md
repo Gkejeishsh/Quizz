@@ -7,6 +7,8 @@ Scripts used to turn a test PDF into a `.quizz` pack, and to check packs before 
 | `quizzify.py` | PDF (or `.txt`) → `.quizz`. Detects questions, options, answer keys (block or inline), explanations, wraps, sections. Refuses to output a pack with a missing/invalid key. |
 | `validate_pack.py` | Re-checks a `.quizz` file against the app's import rules (the same 12 rules). Exit `0` ok, `1` warnings, `2` errors. |
 | `test_quizzify.py` | Builds synthetic PDFs (clean + messy) and asserts the converter output. `python3 tools/test_quizzify.py` |
+| `vocab_pack.py` | Builds the HEC Vocabulary (Urdu) pack by hand, because that PDF's Urdu text layer is unusable (see below). |
+| `make_assets.py` | Regenerates the Android launcher icons, splash screens and PWA icons from the Quizz mark. |
 
 ## Usage
 
@@ -23,4 +25,22 @@ python3 tools/test_quizzify.py
 ```
 
 Dependencies: `pip install pdfplumber` for PDFs (`reportlab` only for the tests).
-Plain `.txt` input needs no dependencies.
+Plain `.txt` input needs no dependencies. `make_assets.py` needs `pillow`.
+
+## PDFs with broken Urdu/Arabic text layers
+
+Some generators (Chrome print-to-PDF with an Arabic font, for example) draw every
+Urdu glyph as a **Type3 font** whose `ToUnicode` map resolves to `U+0000`. The
+extracted text then contains NUL characters and the words cannot be recovered
+programmatically — not by `pdfplumber`, not by `pypdf`.
+
+Workflow for those files:
+
+1. Render the page at 3–4× with `pypdfium2` and read the Urdu from the image.
+2. Transcribe into a small data file (`vocab_pack.py` is the template for this
+   test) with the question numbers, options and key exactly as printed.
+3. Assert every key against the printed answer-key grid (the script does this —
+   it caught a mis-transcribed letter in Q50).
+4. Run `validate_pack.py` before committing.
+
+The app bundles Noto Sans Arabic, so Urdu strings render identically offline.
