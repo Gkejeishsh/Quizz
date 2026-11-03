@@ -2,13 +2,13 @@
  "format": "quizz-pack",
  "formatVersion": 1,
  "id": "pck_hecvocab_urdu_1",
- "revision": 1,
+ "revision": 2,
  "supersedes": null,
  "title": "HEC Vocabulary — 50 Words (English & Urdu)",
  "subject": "English",
  "language": "en-ur",
- "createdAt": "2026-11-03T04:43:06Z",
- "instructions": "50 questions in five parts: English meaning (1–10), Urdu meaning (11–20), synonym (21–30), antonym (31–40) and HEC-style sentences (41–50). Q1–Q25 are from past papers, Q26–Q50 are new words at the same level. No negative marking.",
+ "createdAt": "2026-11-03T05:07:08Z",
+ "instructions": "50 questions in five parts: English meaning (1–10), Urdu meaning (11–20), synonym (21–30), antonym (31–40) and HEC-style sentences (41–50). Q1–Q25 are past-paper words, Q26–Q50 new words at the same level. No negative marking. Paper bands: 45–50 strong, 38–44 good (revise the missed words), below 38 re-learn the list and retest in two days.",
  "source": {
   "fileName": "HEC_Vocabulary_50_Words_Urdu_Test-1.pdf",
   "pages": 10,
@@ -43,7 +43,7 @@
    "id": "part-e",
    "type": "section",
    "title": "Part E — HEC-style sentences",
-   "text": "Q41–Q45: most nearly similar. Q46–Q50: most nearly opposite."
+   "text": "Choose the word that fits the sentence (Q41–Q45 similar, Q46–Q50 opposite). (Q41–Q50)"
   }
  ],
  "questions": [
@@ -73,7 +73,7 @@
     "C"
    ],
    "explanation": "Cajole = persuade by flattery. The word's Latin root is caveola, a small cage — you trap someone sweetly rather than by force. Why the others tempt: “force someone with threats” and “scold harshly” are its opposite (coerce, berate); “ignore completely” drops the influence entirely.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -104,7 +104,7 @@
     "A"
    ],
    "explanation": "Imminent = about to happen. Note the -minent root (as in “imminent danger”): it hangs over you now. Why the others tempt: “very old” confuses it with eminent or ancient, “hard to believe” with incredible, “impossible to find” with inscrutable.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -135,7 +135,7 @@
     "D"
    ],
    "explanation": "Siege = a blockade of a place by an army, from sedere, “to sit” — the army sits outside until the town gives in. Why the others tempt: the -iege spelling resembles “siege of celebration” parties, and a siege is the opposite of both a peace treaty and a retreat.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -166,7 +166,7 @@
     "B"
    ],
    "explanation": "Curtail = to cut short (curt- “short”). Why the others tempt: “to lengthen” is the direct antonym (extend); “to hide” borrows the disguise sense of cover; “to praise” is the meaning of extol, a different verb.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -197,7 +197,7 @@
     "A"
    ],
    "explanation": "Candid = frank and honest. In Latin candidus meant “white, bright”, hence a plain, open answer. Why the others tempt: “secretive” is the exact opposite, and it is easy to blend with “candid camera” trickiness (deceptive) rather than openness.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -228,7 +228,7 @@
     "C"
    ],
    "explanation": "Frugal = careful with money, thrifty, from frux, “fruit/produce” — getting full value. Why the others tempt: “wasteful” is the antonym (extravagant); “generous” confuses thrift with meanness; “very rich” is about how much you have, not how you spend.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -259,7 +259,7 @@
     "D"
    ],
    "explanation": "Dichotomy = a sharp division into two opposites (di- “two” + tomia “cutting”). Why the others tempt: “a union of similar things” is the antonym; the “-tomy” ending is mistaken for “-nomy” (economy) or for a path/travel sense.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -290,7 +290,7 @@
     "B"
    ],
    "explanation": "Verbose = using more words than needed — verbose comes from verbum plus the -ose suffix meaning “full of”. Why the others tempt: “silent” and “speaking briefly” are opposites (terse, laconic); “speaking very softly” confuses wordiness with volume.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -321,7 +321,7 @@
     "A"
    ],
    "explanation": "Lenient = not strict, merciful (from lenire, “to soften”). Why the others tempt: “cruel” is the opposite (severe, harsh); “careless” confuses a deliberate leniency with negligence.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -352,7 +352,7 @@
     "C"
    ],
    "explanation": "Meticulous = very careful about small details. Why the others tempt: “hurried” and “lazy” both miss the painstaking sense; “forgetful” confuses care with memory, and meticulous attention is precisely the opposite of forgetting details.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 4
    }
@@ -383,7 +383,7 @@
     "B"
    ],
    "explanation": "خود مختار = self-governing, i.e. autonomous (khud = self, mukhtar = in charge). Why the others tempt: reciprocal (with ہم آہنگ / باہمی) is the vocabulary word for mutual; obsolete (فرسودہ) and notorious (بدنام) are nearby list words but unrelated to self-rule.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -414,7 +414,7 @@
     "D"
    ],
    "explanation": "Humiliation = ذلت و رسوائی (disgrace). Why the others tempt: عزت افزائی means the opposite — increasing someone's honour; خوشی (joy) and حیرت (astonishment) pick up the emotion of the moment without the loss of dignity.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -445,7 +445,7 @@
     "A"
    ],
    "explanation": "مبہم = unclear, with two possible meanings → ambiguous. Why the others tempt: candid (صاف گو) is about being plain-spoken, the opposite of ambiguous; abundant (کثیر) and diligent (محنتی) are list words with no link to vagueness.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -476,7 +476,7 @@
     "C"
    ],
    "explanation": "Benevolent = well-wishing: bene- “good” + volens “wishing” → مہربان و نیک دل. Why the others tempt: بدنیت (ill-intentioned) and کنجوس (miserly) are opposites; جلد باز (hasty) replaces the “well-wishing” root with a false “bold” reading.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -507,7 +507,7 @@
     "B"
    ],
    "explanation": "بے سود = without profit/use → futile. Why the others tempt: vivid (روشن) and eloquent (فصیح) both sound positive, the reverse of futility; zealous (سرگرم) is enthusiasm, not uselessness.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -538,7 +538,7 @@
     "D"
    ],
    "explanation": "Notorious = famous for something bad → بدنام. Why the others tempt: نیک نام (of good repute) is the opposite; گمنام (unknown) confuses fame with obscurity; بہادر (brave) is a virtue, not a bad reputation.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -569,7 +569,7 @@
     "C"
    ],
    "explanation": "ناگزیر = unavoidable → inevitable (from guzar, “to pass/escape”; what cannot be escaped). Why the others tempt: trivial (معمولی) and lenient (نرم) are unrelated list words; prudent (محتاط) sounds careful but means cautious, not certain to happen.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -600,7 +600,7 @@
     "A"
    ],
    "explanation": "Hostility = enmity → دشمنی (hostis = enemy). Why the others tempt: دوستی (friendship) is the antonym; رحم (mercy) and صبر (patience) are calm virtues, not active ill will.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -631,7 +631,7 @@
     "D"
    ],
    "explanation": "فصیح = fluent and persuasive → eloquent. Why the others tempt: verbose (لفظوں کا زیادہ استعمال) is wordiness without force; obscure (مبہم) is the opposite of clear speech; meticulous (محقق) is about detail, not delivery.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }
@@ -662,7 +662,7 @@
     "B"
    ],
    "explanation": "Prudent = wise and careful about the future → دانشمند و محتاط. Why the others tempt: لاپرواہ (careless) and غصہ ور (irritable) are opposites of prudence; سست (lazy) confuses caution with slowness.",
-   "difficulty": "medium",
+   "difficulty": "easy",
    "sourceRef": {
     "page": 5
    }

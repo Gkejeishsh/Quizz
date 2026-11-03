@@ -7,7 +7,7 @@ Scripts used to turn a test PDF into a `.quizz` pack, and to check packs before 
 | `quizzify.py` | PDF (or `.txt`) → `.quizz`. Detects questions, options, answer keys (block or inline), explanations, wraps, sections. Refuses to output a pack with a missing/invalid key. |
 | `validate_pack.py` | Re-checks a `.quizz` file against the app's import rules (the same 12 rules). Exit `0` ok, `1` warnings, `2` errors. |
 | `test_quizzify.py` | Builds synthetic PDFs (clean + messy) and asserts the converter output. `python3 tools/test_quizzify.py` |
-| `vocab_pack.py` | Builds the HEC Vocabulary (Urdu) pack by hand, because that PDF's Urdu text layer is unusable (see below). |
+| `vocab_pack.py` | Rebuilds the HEC Vocabulary (Urdu) pack straight from the PDF: questions 1–10 and 21–50 are parsed from the text layer, the ten Urdu items are transcribed from a render, and every key is read from the printed answer-key grid. `--check` prints the table without writing. |
 | `vocab_study_pack.py` | Generates the 196-question study drill from the same 50-word list (Urdu meaning, synonym, antonym, part of speech, sentence completion). |
 | `make_assets.py` | Regenerates the Android launcher icons, splash screens and PWA icons from the Quizz mark. |
 
@@ -38,8 +38,9 @@ programmatically — not by `pdfplumber`, not by `pypdf`.
 Workflow for those files:
 
 1. Render the page at 3–4× with `pypdfium2` and read the Urdu from the image.
-2. Transcribe into a small data file (`vocab_pack.py` is the template for this
-   test) with the question numbers, options and key exactly as printed.
+2. Transcribe only the affected questions into the script's `URDU` table (the
+   template is `vocab_pack.py`); everything else stays parsed from the PDF, so
+   the English side can never drift from the paper.
 3. Assert every key against the printed answer-key grid (the script does this —
    it caught a mis-transcribed letter in Q50).
 4. Run `validate_pack.py` before committing.
