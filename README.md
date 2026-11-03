@@ -7,9 +7,11 @@ An offline Android quiz player for AI-generated PDF tests. You give me a test PD
 
 ## Install on Android
 
-1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.3.0.apk`.
+1. Open **[Releases](https://github.com/Gkejeishsh/Quizz/releases/latest)** and download `Quizz-1.4.0.apk`.
 2. Tap the file → allow *Install unknown apps* for your browser or file manager → **Install**.
-3. Open **Quizz**. It ships with five tests already loaded — including **HEC Quantitative Practice Test 2** (50 Q) and **HEC Vocabulary, 50 Words (English & Urdu)**.
+3. Open **Quizz**. It ships with tests already loaded — including **HEC Quantitative Practice Test 2** (50 Q), **HEC Vocabulary, 50 Words (English & Urdu)** and the 196-question **HEC Vocabulary Study Drill**.
+
+Urdu text renders right-to-left in the app with the bundled Noto Sans Arabic font, while English and Maths questions keep their normal left-to-right layout.
 
 The APK is signed with the project key committed in `android/quizz-release.jks`, so
 every later build installs straight over the previous one — your saved tests, scores
@@ -29,6 +31,8 @@ file instead of opening it as text:
 | Algebra & Geometry — Quick Check (8 Q) | [`maths-algebra-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/maths-algebra-demo.quizz) |
 | Chemical Bonding — Practice Test (8 Q) | [`chemistry-bonding-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/chemistry-bonding-demo.quizz) |
 | English Grammar & Usage (8 Q) | [`english-grammar-demo.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/english-grammar-demo.quizz) |
+| HEC Vocabulary, 50 Words (English & Urdu) (50 Q) | [`hec-vocab-urdu-test-1.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/hec-vocab-urdu-test-1.quizz) |
+| HEC Vocabulary Study Drill (196 Q) | [`hec-vocab-urdu-study.quizz`](https://github.com/Gkejeishsh/Quizz/releases/download/packs/hec-vocab-urdu-study.quizz) |
 
 Open Quizz → **Add new test** → pick the file from Downloads. The pack is copied
 into the app's own database, so the downloaded file can be deleted afterwards.
